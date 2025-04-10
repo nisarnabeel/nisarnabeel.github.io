@@ -22,7 +22,7 @@ main:
 
   - title: "Investigating Inconsistencies in PRNU based camera identification"
     authors: <strong>Nabeel Nisar Bhat</strong>, Tiziano Bianchi
-    conference: 2022, Published.
+    conference: IEEE ICIP (oral) 2022, Published.
     pdf: https://ieeexplore.ieee.org/document/9897923
     #code: https://github.com/fdenoodt/Smooth-InfoMax
     notes: Based on master thesis
