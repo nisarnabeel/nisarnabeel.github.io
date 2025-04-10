@@ -3,7 +3,7 @@ layout: homepage
 ---
 
 ## About
-I am a Researcher in the field of Integrated sensing and communication at imec Belgium.The goal of research is to enable device-free interactivity in Extended reality application using mmWave ISAC.
+I am a Researcher in the field of Integrated sensing and communication at imec Belgium.The goal of research is to enable device-free interactivity in Extended reality applications using mmWave ISAC.
 
 ## Education
 - Ph.D., Integrated communication and Sensing *(Ongoing)* |
