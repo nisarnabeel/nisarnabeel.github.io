@@ -24,8 +24,6 @@ I am a Researcher in the field of Integrated sensing and communication at imec B
 
 
 
-[Publication](https://arxiv.org/abs/2408.12936), [GitHub](https://github.com/fdenoodt/Smooth-InfoMax)
-
 
 {% include_relative _includes/publications.md %}
 
