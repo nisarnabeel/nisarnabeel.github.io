@@ -28,11 +28,12 @@ main:
     notes: Based on master thesis
     image: ./assets/bbbb.jpg
 
-  - title: "Label-Efficient Learning for Radio Frequency Fingerprint Identification"
-    authors:  Thayheng Nhem*, <strong>Fabian Denoodt*</strong>, José Oramas (* equal contribution)
-    conference: IEEE Wireless Communications and Networking Conference, 2025.
+  - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
+    authors: <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey.
+    conference: IEEE WoWMoM 2023
     pdf: https://github.com/fdenoodt/Portfolio/blob/master/CPC4RFI.pdf
     code: https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentification
+    
     image: ./assets/cpc4rfi.png
 
   - title: "Efficient Bayesian Ultra-Q Learning for Multi-Agent Games"
