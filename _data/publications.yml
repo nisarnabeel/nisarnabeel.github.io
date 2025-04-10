@@ -26,7 +26,7 @@ main:
     pdf: https://ieeexplore.ieee.org/document/9897923
     #code: https://github.com/fdenoodt/Smooth-InfoMax
     notes: Based on master thesis
-    image: https://github.com/fdenoodt/Smooth-InfoMax/raw/main/assets/image-20230613111315897.png
+    image: ./assets/bbbb.jpg
 
   - title: "Label-Efficient Learning for Radio Frequency Fingerprint Identification"
     authors:  Thayheng Nhem*, <strong>Fabian Denoodt*</strong>, José Oramas (* equal contribution)
