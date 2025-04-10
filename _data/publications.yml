@@ -1,0 +1,44 @@
+main:
+  # - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
+  #   authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
+  #   conference_short: MICCAI
+  #   conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
+  #   pdf: https://arxiv.org/pdf/2306.00988.pdf
+  #   code: https://github.com/MrGiovanni/ContinualLearning
+  #   bibtex: https://bib.yliu.me/MICCAI23.txt
+  #   image: ./assets/img/teaser_example_2.png
+  #   notes: Early Accept
+
+  # - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
+  #   authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+  #   conference_short: CVPR
+  #   conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+  #   pdf: https://arxiv.org/pdf/2002.10211.pdf
+  #   code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+  #   page: https://class-il.mpi-inf.mpg.de/mnemonics/
+  #   bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+  #   notes: Oral Presentation
+  #   image: ./assets/img/teaser_example.png
+
+  - title: "Smooth InfoMax - Towards easier Post-Hoc interpretability"
+    authors: <strong>Fabian Denoodt</strong>, Bart de Boer, José Oramas
+    conference: 2024, Under review.
+    pdf: https://www.arxiv.org/abs/2408.12936
+    code: https://github.com/fdenoodt/Smooth-InfoMax
+    notes: Based on master thesis
+    image: https://github.com/fdenoodt/Smooth-InfoMax/raw/main/assets/image-20230613111315897.png
+
+  - title: "Label-Efficient Learning for Radio Frequency Fingerprint Identification"
+    authors:  Thayheng Nhem*, <strong>Fabian Denoodt*</strong>, José Oramas (* equal contribution)
+    conference: IEEE Wireless Communications and Networking Conference, 2025.
+    pdf: https://github.com/fdenoodt/Portfolio/blob/master/CPC4RFI.pdf
+    code: https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentification
+    image: ./assets/cpc4rfi.png
+
+  - title: "Efficient Bayesian Ultra-Q Learning for Multi-Agent Games"
+    authors:  Ward Gauderis, <strong>Fabian Denoodt</strong>, Bram Silue, Pierre Vanvolsem, Andries Rosseau 
+    conference: Adaptive and Learning Agents Workshop, 2023.
+    pdf: https://researchportal.vub.be/en/publications/efficient-bayesian-ultra-q-learning-for-multi-agent-games-2
+    code: https://github.com/WardGauderis/Hyper-Q
+    notes: Published as a master student
+    image: ./assets/ultra-q.png
