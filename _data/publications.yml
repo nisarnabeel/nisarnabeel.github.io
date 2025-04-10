@@ -36,10 +36,10 @@ main:
     
     image: ./assets/beamsnrpic.png
 
-  - title: "Efficient Bayesian Ultra-Q Learning for Multi-Agent Games"
-    authors:  Ward Gauderis, <strong>Fabian Denoodt</strong>, Bram Silue, Pierre Vanvolsem, Andries Rosseau 
-    conference: Adaptive and Learning Agents Workshop, 2023.
-    pdf: https://researchportal.vub.be/en/publications/efficient-bayesian-ultra-q-learning-for-multi-agent-games-2
-    code: https://github.com/WardGauderis/Hyper-Q
-    notes: Published as a master student
+  - title: "Multi-modal pose estimation in XR applications leveraging integrated sensing and communication"
+    authors:  <strong>Nabeel Nisar Bhat</strong>, Javad Sameri, Jakob Struye, Maria Torres Vega, Rafael Berkvens, Jeoren Famaey 
+    conference: ACM MobiCom Workshop, 2023.
+    pdf: https://dl.acm.org/doi/10.1145/3615452.3617944
+    #code: https://github.com/WardGauderis/Hyper-Q
+    #notes: Published as a master student
     image: ./assets/ultra-q.png
