@@ -20,11 +20,11 @@ main:
   #   notes: Oral Presentation
   #   image: ./assets/img/teaser_example.png
 
-  - title: "Smooth InfoMax - Towards easier Post-Hoc interpretability"
-    authors: <strong>Fabian Denoodt</strong>, Bart de Boer, José Oramas
-    conference: 2024, Under review.
-    pdf: https://www.arxiv.org/abs/2408.12936
-    code: https://github.com/fdenoodt/Smooth-InfoMax
+  - title: "Investigating Inconsistencies in PRNU based camera identification"
+    authors: <strong>Nabeel Nisar Bhat</strong>, Tiziano Bianchi
+    conference: 2022, Published.
+    pdf: https://ieeexplore.ieee.org/document/9897923
+    #code: https://github.com/fdenoodt/Smooth-InfoMax
     notes: Based on master thesis
     image: https://github.com/fdenoodt/Smooth-InfoMax/raw/main/assets/image-20230613111315897.png
 
