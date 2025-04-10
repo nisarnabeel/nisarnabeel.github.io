@@ -30,7 +30,7 @@ main:
 
   - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
     authors: <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey.
-    conference: IEEE WoWMoM 2023
+    conference: IEEE WoWMoM 2023, Published.
     pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10195292
     #code: https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentificatio
     
