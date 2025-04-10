@@ -31,10 +31,10 @@ main:
   - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
     authors: <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey.
     conference: IEEE WoWMoM 2023
-    pdf: https://github.com/fdenoodt/Portfolio/blob/master/CPC4RFI.pdf
-    code: https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentification
+    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10195292
+    #code: https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentificatio
     
-    image: ./assets/cpc4rfi.png
+    image: ./assets/beamsnrpic.png
 
   - title: "Efficient Bayesian Ultra-Q Learning for Multi-Agent Games"
     authors:  Ward Gauderis, <strong>Fabian Denoodt</strong>, Bram Silue, Pierre Vanvolsem, Andries Rosseau 
