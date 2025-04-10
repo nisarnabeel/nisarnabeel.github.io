@@ -26,7 +26,7 @@ main:
     pdf: https://ieeexplore.ieee.org/document/9897923
     #code: https://github.com/fdenoodt/Smooth-InfoMax
     notes: Based on master thesis
-    image: ./assets/bbbb.jpg
+    image: ./assets/baadgood2.jpg
 
   - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
     authors: <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey.
