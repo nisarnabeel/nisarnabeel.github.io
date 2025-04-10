@@ -1,8 +1,8 @@
 # Basic Information 
-title: Fabian Denoodt
-position: Ph.D. Student
-affiliation: Antwerp University
-email: fabian (dot) denoodt (at) uantwerpen (dot) be
+title: Nabeel Nisar Bhat
+position: Researcher
+affiliation: imec Belgium
+email: nabeel (dot) bhat (at) imec (dot) be
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -12,10 +12,10 @@ canonical: https://minimal-light-theme.yliu.me/
 
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
-google_scholar: https://scholar.google.com/citations?user=A4o7IsMAAAAJ&hl=en&oi=ao
-# cv_link: assets/files/curriculum_vitae.pdf
-github_link: https://github.com/fdenoodt/
-linkedin: https://www.linkedin.com/in/fabian-denoodt/
+# google_scholar: https://scholar.google.com/citations?user=A4o7IsMAAAAJ&hl=en&oi=ao
+# # cv_link: assets/files/curriculum_vitae.pdf
+# github_link: https://github.com/fdenoodt/
+# linkedin: https://www.linkedin.com/in/fabian-denoodt/
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
