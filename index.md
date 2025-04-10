@@ -3,7 +3,7 @@ layout: homepage
 ---
 
 ## About
-I am a Researcher in the field of Integrated sensing and communication at imec Beglium. I have interdisciplinary expertise in signal processing, communication, and deep learning.
+I am a Researcher in the field of Integrated sensing and communication at imec Belgium. I have interdisciplinary expertise in signal processing, communication, and deep learning.
 
 ## Education
 - Ph.D., Integrated communication and Sensing *(Ongoing)* |
