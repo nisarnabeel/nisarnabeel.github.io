@@ -2,7 +2,7 @@
 title: Nabeel Nisar Bhat
 position: Researcher
 affiliation: imec Belgium
-email: nabeel (dot) bhat (at) imec (dot) be
+email: nabeel.bhat@imec.be
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -19,7 +19,7 @@ canonical: https://minimal-light-theme.yliu.me/
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/me.jpg
+avatar: ./assets/nabeelpic.jpg
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
 
