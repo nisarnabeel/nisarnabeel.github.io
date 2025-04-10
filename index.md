@@ -3,12 +3,12 @@ layout: homepage
 ---
 
 ## About
-I’m a Ph.D student in Artificial Intelligence. My research focuses on making deep learning models more trustworthy and reliable. I want to ensure that the models I train solve the actual problem, not just find shortcuts in the data. To achieve this, I explore different approaches, such as designing neural networks that are easier to interpret, measuring how certain models are in their predictions, and using special layers to guide the model's output.
+I am a Researcher in the field of Integrated sensing and communication at imec Beglium. I have interdisciplinary expertise in signal processing, communication, and deep learning.
 
 ## Education
-- Ph.D., Artificial Intelligence *(Ongoing)* |
-- M.S., Computer Science *(Greatest Distinction)* |
-- B.S., Applied Information Technology *(Great Distinction)* |
+- Ph.D., Integrated communication and Sensing *(Ongoing)* |
+- M.S., Communications and Computer Networks at Poltecnico di Torino, Italy *(Gpa: 110/110)* |
+- B.S., Electronics and Communication Engineering at NIT Srinagar, India  |
 
 &nbsp;
 
