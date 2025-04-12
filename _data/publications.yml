@@ -44,5 +44,6 @@ main:
     pdf: https://dl.acm.org/doi/10.1145/3615452.3617944
     #code: https://github.com/WardGauderis/Hyper-Q
     #notes: Published as a master student
+    page: https://nisarnabeel.github.io/multi-modal_pose_estimation
     image: ./assets/Picture17.jpg
 
