@@ -24,8 +24,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Investigating Inconsistencies in PRNU based Camera Identification</title>
-  <link rel="icon" type="image/x-icon" href="static/images/baadgood2.jpg">
+  <title>Gesture Recognition with mmWave Wi-Fi Access
+Points: Lessons Learned</title>
+  <link rel="icon" type="image/x-icon" href="static/images/ad setup1.jpg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,26 +53,29 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Investigating Inconsistencies in PRNU based camera identification</h1>
+            <h1 class="title is-1 publication-title">Gesture Recognition with mmWave Wi-Fi Access
+Points: Lessons Learned</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               
               <span class="author-block">
                 <a href="https://www.uantwerpen.be/en/staff/nabeel-nisar-bhat_23861/research/" target="_blank">Nabeel Nisar Bhat</a><sup></sup>,</span>
                 <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=KtxtAgoAAAAJ&hl=en" target="_blank">Tiziano Bianchi</a><sup></sup></span>
+                  <a href="https://scholar.google.be/citations?user=63qtezcAAAAJ&hl=en" target="_blank">Rafael Berkvens</a><sup></sup></span>
+                 <span class="author-block">
+                  <a href="https://scholar.google.be/citations?user=mpIxFGoAAAAJ&hl=en" target="_blank">Jeroen Famaey</a><sup></sup></span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Politecnico di Torino<br>IEEE International Conference on Image Processing, ICIP 2022</span>
+                    <span class="author-block">University of Antwerp-imec<br>IEEE 24th International Symposium on a World of Wireless, Mobile and Multimedia Networks (IEEE WoWMoM),2023</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://ieeexplore.ieee.org/document/9897923" target="_blank"
+                        <a href="https://arxiv.org/abs/2306.17062" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -82,7 +86,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/Investigating_Inconsistencies_in_PRNU-Based_Camera_Identification.pdf" target="_blank"
+                      <a href="static/pdfs/2306.17062v1.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -93,7 +97,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/nisarnabeel/mmWave-CSI-dataset-60-GHz-for-gesture-recognition" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -150,17 +154,22 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            PRNU (Photo-response non-uniformity) is widely considered
-a unique and reliable fingerprint for identifying the source of
-an image. The PRNU patterns of two different sensors, even
-if belonging to the same camera model, are strongly uncorrelated. Therefore, such a fingerprint is used as evidence by
-various law enforcement agencies for source identification,
-manipulation detection, etc. However, in recent smartphones,
-images are subjected to significant in-camera processing associated with computational photography. This heavy processing introduces non-unique artifacts (NUA) in such images and masks the uniqueness of the PRNU fingerprint. In
-this work, we investigate the robustness of PRNU in modern
-smartphones. We propose a model that explains the unexpected behavior of PRNU in such smartphones. Finally, we
-present two methods to identify images suffering from NUA.
-Our methods achieve high accuracy in identifying such images.
+            In recent years, channel state information (CSI)
+at sub-6 GHz has been widely exploited for Wi-Fi sensing,
+particularly for activity and gesture recognition. In this work,
+we instead explore mmWave (60 GHz) Wi-Fi signals for gesture
+recognition/pose estimation. Our focus is on the mmWave WiFi signals so that they can be used not only for high data
+rate communication but also for improved sensing e.g., for
+extended reality (XR) applications. For this reason, we extract
+spatial beam signal-to-noise ratios (SNRs) from the periodic
+beam training employed by IEEE 802.11ad devices. We consider
+a set of 10 gestures/poses motivated by XR applications. We
+conduct experiments in two environments and with three people.
+As a comparison, we also collect CSI from IEEE 802.11ac
+devices. To extract features from the CSI and the beam SNR,
+we leverage a deep neural network (DNN). The DNN classifier
+achieves promising results on the beam SNR task with stateof-the-art 96.7% accuracy in a single environment, even with a
+limited dataset.
           </p>
         </div>
       </div>
@@ -178,26 +187,26 @@ Our methods achieve high accuracy in identifying such images.
         <div class="item">
           <!-- Your image here -->
           <div class="image-container">
-            <img src="static/images/baadgood2.jpg" alt="MY ALT TEXT" />
+            <img src="static/images/ad setup1.jpg" alt="MY ALT TEXT" />
           </div>
           <h2 class="subtitle has-text-centered">
-            Unexpectedly high correlation values in bad images.
+            Experimental Setup.
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/ds.jpg" alt="MY ALT TEXT" />
+          <img src="static/images/NABEEL_GESTURES_2_2.jpg" alt="MY ALT TEXT" />
           <h2 class="subtitle has-text-centered">
-            Algorithm 1 based on SPAM features.
+           Considered gestures and poses.
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
           <div class="image-container">
-            <img src="static/images/spamfont.jpg" alt="MY ALT TEXT" />
+            <img src="static/images/network22.jpg" alt="MY ALT TEXT" />
           </div>
           <h2 class="subtitle has-text-centered">
-            Confusion matrix: Performance of Algorithm 1
+            Deep Neural Nework
           </h2>
         </div>
       </div>
@@ -230,13 +239,14 @@ Our methods achieve high accuracy in identifying such images.
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{bhat2022investigating,
-  title={Investigating inconsistencies in prnu-based camera identification},
-  author={Bhat, Nabeel Nisar and Bianchi, Tiziano},
-  booktitle={2022 IEEE International Conference on Image Processing (ICIP)},
-  pages={851--855},
-  year={2022},
+      <pre><code>@inproceedings{bhat2023gesture,
+  title={Gesture recognition with mmWave Wi-Fi access points: Lessons learned},
+  author={Bhat, Nabeel Nisar and Berkvens, Rafael and Famaey, Jeroen},
+  booktitle={2023 IEEE 24th International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM)},
+  pages={127--136},
+  year={2023},
   organization={IEEE}
+}
 }</code></pre>
     </div>
 </section>

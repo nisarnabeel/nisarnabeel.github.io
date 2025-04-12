@@ -34,6 +34,7 @@ main:
     conference: IEEE WoWMoM 2023, Published.
     pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10195292
     #code: https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentificatio
+    page:  https://nisarnabeel.github.io/gesture_recognition_mmWave_Wi-Fi
     
     image: ./assets/beamsnrpic.png
 
