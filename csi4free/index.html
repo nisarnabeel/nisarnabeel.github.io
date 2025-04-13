@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Gesture Recognition with mmWave Wi-Fi Access
-Points: Lessons Learned</title>
+  <title>CSI4Free: GAN-Augmented mmWave CSI for
+Improved Pose Classification</title>
   <link rel="icon" type="image/x-icon" href="static/images/ad setup1.jpg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -53,8 +53,8 @@ Points: Lessons Learned</title>
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Gesture Recognition with mmWave Wi-Fi Access
-Points: Lessons Learned</h1>
+            <h1 class="title is-1 publication-title">CSI4Free: GAN-Augmented mmWave CSI for
+Improved Pose Classification</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               
@@ -68,14 +68,14 @@ Points: Lessons Learned</h1>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">University of Antwerp-imec<br>IEEE 24th International Symposium on a World of Wireless, Mobile and Multimedia Networks (IEEE WoWMoM),2023</span>
+                    <span class="author-block">University of Antwerp-imec<br>2024 IEEE 4th International Symposium on Joint Communications & Sensing (JC&S)</span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/abs/2306.17062" target="_blank"
+                        <a href="https://arxiv.org/abs/2406.18684" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -86,7 +86,7 @@ Points: Lessons Learned</h1>
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/2306.17062v1.pdf" target="_blank"
+                      <a href="static/pdfs/IEEE_JC_S.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -97,7 +97,7 @@ Points: Lessons Learned</h1>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/nisarnabeel/mmWave-CSI-dataset-60-GHz-for-gesture-recognition" target="_blank"
+                    <a href="https://github.com/nisarnabeel/Dataset-GAN-Augmented-mmWave-CSI-for-improved-pose-classification" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -154,22 +154,7 @@ Points: Lessons Learned</h1>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In recent years, channel state information (CSI)
-at sub-6 GHz has been widely exploited for Wi-Fi sensing,
-particularly for activity and gesture recognition. In this work,
-we instead explore mmWave (60 GHz) Wi-Fi signals for gesture
-recognition/pose estimation. Our focus is on the mmWave WiFi signals so that they can be used not only for high data
-rate communication but also for improved sensing e.g., for
-extended reality (XR) applications. For this reason, we extract
-spatial beam signal-to-noise ratios (SNRs) from the periodic
-beam training employed by IEEE 802.11ad devices. We consider
-a set of 10 gestures/poses motivated by XR applications. We
-conduct experiments in two environments and with three people.
-As a comparison, we also collect CSI from IEEE 802.11ac
-devices. To extract features from the CSI and the beam SNR,
-we leverage a deep neural network (DNN). The DNN classifier
-achieves promising results on the beam SNR task with stateof-the-art 96.7% accuracy in a single environment, even with a
-limited dataset.
+            In recent years, Joint Communication and Sensing (JC&S), has demonstrated significant success, particularly in utilizing sub-6 GHz frequencies with commercial-off-the-shelf (COTS) Wi-Fi devices for applications such as localization, gesture recognition, and pose classification. Deep learning and the existence of large public datasets has been pivotal in achieving such results. However, at mmWave frequencies (30-300 GHz), which has shown potential for more accurate sensing performance, there is a noticeable lack of research in the domain of COTS Wi-Fi sensing. Challenges such as limited research hardware, the absence of large datasets, limited functionality in COTS hardware, and the complexities of data collection present obstacles to a comprehensive exploration of this field. In this work, we aim to address these challenges by developing a method that can generate synthetic mmWave channel state information (CSI) samples. In particular, we use a generative adversarial network (GAN) on an existing dataset, to generate 30,000 additional CSI samples. The augmented samples exhibit a remarkable degree of consistency with the original data, as indicated by the notably high GAN-train and GAN-test scores. Furthermore, we integrate the augmented samples in training a pose classification model. We observe that the augmented samples complement the real data and improve the generalization of the classification model.
           </p>
         </div>
       </div>
@@ -185,12 +170,11 @@ limited dataset.
         <h2 class="title is-3">Key Takeaways</h2>
         <div class="content has-text-justified">
           <ul>
-            <li>Gesture recognition using cheap commercial off-the-shelf mmWave Wi-Fi access points.</li>
-            <li>Beam SNR as a signal feature extracted from beam sweeping, part of the IEEE 802.11ad standard.</li>
-            <li>Unlike CSI or CIR, beam SNR can be accessed without additional overhead as it is required to be reported in sector sweep frames.</li>
-            <li>Diverse range of gestures and poses considered, including head rotations.</li>
-            <li>Low-sampling frequency of beam SNR, not misemploying the concept of ISAC, occasional sensing. No effect on communication.</li>
-            <li>96.7% accuracy in the best case using mmWave beam SNR.</li>
+            <li>Highlight the problem of dataset collection associated with mmWave ISAC.</li>
+            <li>Propose a method based on conditional GANs to generate realistic synthetic data to increase the dataset's size and reduce overfitting.</li>
+            <li>Validate the dataset's quality using GAN-train and GAN-test scores.</li>
+            <li>Generated data complements the real data and improves the performance of the downstream classifier.</li>
+            
           </ul>
         </div>
       </div>
@@ -209,26 +193,26 @@ limited dataset.
         <div class="item">
           <!-- Your image here -->
           <div class="image-container">
-            <img src="static/images/ad setup1.jpg" alt="MY ALT TEXT" />
+            <img src="static/images/JCS_pipeline.jpg" alt="MY ALT TEXT" />
           </div>
           <h2 class="subtitle has-text-centered">
-            Experimental Setup.
+            JCAS pipeline.
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
-          <img src="static/images/NABEEL_GESTURES_2_2.jpg" alt="MY ALT TEXT" />
+          <img src="static/images/generate_new.jpg" alt="MY ALT TEXT" />
           <h2 class="subtitle has-text-centered">
-           Considered gestures and poses.
+           Methodolgy: Conditional GAN.
           </h2>
         </div>
         <div class="item">
           <!-- Your image here -->
           <div class="image-container">
-            <img src="static/images/network22.jpg" alt="MY ALT TEXT" />
+            <img src="static/images/cwgann.jpg" alt="MY ALT TEXT" />
           </div>
           <h2 class="subtitle has-text-centered">
-            Deep Neural Nework
+            GAN training loss
           </h2>
         </div>
       </div>
@@ -261,14 +245,13 @@ limited dataset.
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{bhat2023gesture,
-  title={Gesture recognition with mmWave Wi-Fi access points: Lessons learned},
+      <pre><code>@inproceedings{bhat2024csi4free,
+  title={CSI4Free: GAN-Augmented mmWave CSI for Improved Pose Classification},
   author={Bhat, Nabeel Nisar and Berkvens, Rafael and Famaey, Jeroen},
-  booktitle={2023 IEEE 24th International Symposium on a World of Wireless, Mobile and Multimedia Networks (WoWMoM)},
-  pages={127--136},
-  year={2023},
+  booktitle={2024 IEEE 4th International Symposium on Joint Communications \& Sensing (JC\&S)},
+  pages={1--6},
+  year={2024},
   organization={IEEE}
-}
 }</code></pre>
     </div>
 </section>
