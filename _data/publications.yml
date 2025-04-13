@@ -29,7 +29,7 @@ main:
     image: ./assets/baadgood2.jpg
     page: https://nisarnabeel.github.io/camera_identification/
 
-    title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
+   - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
     authors: <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey.
     conference: IEEE WoWMoM 2023, Published.
     pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10195292
@@ -38,7 +38,7 @@ main:
     
     image: ./assets/beamsnrpic.png
 
-    title: "Multi-modal pose estimation in XR applications leveraging integrated sensing and communication"
+  - title: "Multi-modal pose estimation in XR applications leveraging integrated sensing and communication"
     authors:  <strong>Nabeel Nisar Bhat</strong>, Javad Sameri, Jakob Struye, Maria Torres Vega, Rafael Berkvens, Jeoren Famaey 
     conference: ACM MobiCom Workshop, 2023, Published.
     pdf: https://dl.acm.org/doi/10.1145/3615452.3617944
@@ -47,7 +47,7 @@ main:
     page: https://nisarnabeel.github.io/multi-modal_pose_estimation
     image: ./assets/Picture17.jpg
 
-    title: "CSI4Free: GAN-Augmented mmWave CSI for Improved Pose Classification"
+  - title: "CSI4Free: GAN-Augmented mmWave CSI for Improved Pose Classification"
     authors:  <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeoren Famaey 
     conference: IEEE JC&S.
     pdf: https://arxiv.org/abs/2406.18684
