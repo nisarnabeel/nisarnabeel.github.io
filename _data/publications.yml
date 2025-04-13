@@ -20,39 +20,39 @@ main:
   #   notes: Oral Presentation
   #   image: ./assets/img/teaser_example.png
 
+publications:
   - title: "Investigating Inconsistencies in PRNU based camera identification"
-    authors: <strong>Nabeel Nisar Bhat</strong>, Tiziano Bianchi
-    conference: IEEE ICIP (oral) 2022, Published.
-    pdf: https://ieeexplore.ieee.org/document/9897923
-    #code: https://github.com/fdenoodt/Smooth-InfoMax
-    notes: Based on master thesis
-    image: ./assets/baadgood2.jpg
-    page: https://nisarnabeel.github.io/camera_identification/
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Tiziano Bianchi"
+    conference: "IEEE ICIP (oral) 2022, Published."
+    pdf: "https://ieeexplore.ieee.org/document/9897923"
+    #code: "https://github.com/fdenoodt/Smooth-InfoMax"
+    notes: "Based on master thesis"
+    image: "./assets/baadgood2.jpg"
+    page: "https://nisarnabeel.github.io/camera_identification/"
 
-   - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
-    authors: <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey.
-    conference: IEEE WoWMoM 2023, Published.
-    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10195292
-    #code: https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentificatio
-    page:  https://nisarnabeel.github.io/gesture_recognition_mmWave_Wi-Fi
-    
-    image: ./assets/beamsnrpic.png
+  - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey"
+    conference: "IEEE WoWMoM 2023, Published."
+    pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10195292"
+    #code: "https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentificatio"
+    page: "https://nisarnabeel.github.io/gesture_recognition_mmWave_Wi-Fi"
+    image: "./assets/beamsnrpic.png"
 
   - title: "Multi-modal pose estimation in XR applications leveraging integrated sensing and communication"
-    authors:  <strong>Nabeel Nisar Bhat</strong>, Javad Sameri, Jakob Struye, Maria Torres Vega, Rafael Berkvens, Jeoren Famaey 
-    conference: ACM MobiCom Workshop, 2023, Published.
-    pdf: https://dl.acm.org/doi/10.1145/3615452.3617944
-    #code: https://github.com/WardGauderis/Hyper-Q
-    #notes: Published as a master student
-    page: https://nisarnabeel.github.io/multi-modal_pose_estimation
-    image: ./assets/Picture17.jpg
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Javad Sameri, Jakob Struye, Maria Torres Vega, Rafael Berkvens, Jeoren Famaey"
+    conference: "ACM MobiCom Workshop, 2023, Published."
+    pdf: "https://dl.acm.org/doi/10.1145/3615452.3617944"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+    page: "https://nisarnabeel.github.io/multi-modal_pose_estimation"
+    image: "./assets/Picture17.jpg"
 
   - title: "CSI4Free: GAN-Augmented mmWave CSI for Improved Pose Classification"
-    authors:  <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeoren Famaey 
-    conference: IEEE JC&S.
-    pdf: https://arxiv.org/abs/2406.18684
-    #code: https://github.com/WardGauderis/Hyper-Q
-    #notes: Published as a master student
-    page: https://nisarnabeel.github.io/csi4free
-    image: ./assets/generate_new.jpg
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeoren Famaey"
+    conference: "IEEE JC&S"
+    pdf: "https://arxiv.org/abs/2406.18684"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+    page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/generate_new.jpg"
 
