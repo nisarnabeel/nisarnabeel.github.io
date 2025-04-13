@@ -38,7 +38,7 @@ main:
     
     image: ./assets/beamsnrpic.png
 
-   title: "Multi-modal pose estimation in XR applications leveraging integrated sensing and communication"
+    title: "Multi-modal pose estimation in XR applications leveraging integrated sensing and communication"
     authors:  <strong>Nabeel Nisar Bhat</strong>, Javad Sameri, Jakob Struye, Maria Torres Vega, Rafael Berkvens, Jeoren Famaey 
     conference: ACM MobiCom Workshop, 2023, Published.
     pdf: https://dl.acm.org/doi/10.1145/3615452.3617944
