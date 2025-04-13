@@ -47,3 +47,12 @@ main:
     page: https://nisarnabeel.github.io/multi-modal_pose_estimation
     image: ./assets/Picture17.jpg
 
+    title: "CSI4Free: GAN-Augmented mmWave CSI for Improved Pose Classification"
+    authors:  <strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeoren Famaey 
+    conference: IEEE JC&S.
+    pdf: https://arxiv.org/abs/2406.18684
+    #code: https://github.com/WardGauderis/Hyper-Q
+    #notes: Published as a master student
+    page: https://nisarnabeel.github.io/csi4free
+    image: ./assets/generate_new.jpg
+
