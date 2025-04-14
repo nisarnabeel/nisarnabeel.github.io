@@ -56,3 +56,12 @@ main:
     page: "https://nisarnabeel.github.io/csi4free"
     image: "./assets/generate_new.jpg"
 
+  - title: "Toward Interactive Multi-User Extended Reality using Millimeter-Wave Networking"
+    authors: "Jakob Struye, Sam Van Damme, <strong>Nabeel Nisar Bhat</strong>, Arno Troch, Barend van Liempd, Hany Assasa, Filip Lemic, Jeoren Famaey, Maria Torres Vega"
+    conference: "IEEE JC&S"
+    pdf: "https://arxiv.org/html/2501.08100v1"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+   # page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/generate_new.jpg"
+
