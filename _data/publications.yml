@@ -58,7 +58,7 @@ main:
 
   - title: "Toward Interactive Multi-User Extended Reality using Millimeter-Wave Networking"
     authors: "Jakob Struye, Sam Van Damme, <strong>Nabeel Nisar Bhat</strong>, Arno Troch, Barend van Liempd, Hany Assasa, Filip Lemic, Jeoren Famaey, Maria Torres Vega"
-    conference: "IEEE JC&S"
+    conference: "IEEE Communications Magazine"
     pdf: "https://arxiv.org/html/2501.08100v1"
     #code: "https://github.com/WardGauderis/Hyper-Q"
     #notes: "Published as a master student"
