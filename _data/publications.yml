@@ -65,7 +65,7 @@ main:
    # page: "https://nisarnabeel.github.io/csi4free"
     image: "./assets/covrage_page-0001.jpg"
    
-    - title: "6G AI-Driven Air Interface—Hexa-X-II View"
+  - title: "6G AI-Driven Air Interface—Hexa-X-II View"
     authors: "Hamed Farhadi, Bitan Banerjee, Rafael Berkvens, <strong>Nabeel Nisar Bhat </strong> et al."
     conference: "IEEE Communications Magazine"
     pdf: "https://ieeexplore.ieee.org/abstract/document/11098641"
