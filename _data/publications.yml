@@ -72,4 +72,4 @@ main:
     #code: "https://github.com/WardGauderis/Hyper-Q"
     #notes: "Published as a master student"
    # page: "https://nisarnabeel.github.io/csi4free"
-    image: "https://github.com/nisarnabeel/nisarnabeel.github.io/blob/main/6G_AI/static/images/picture_paper.png"
+    image: "./assets/picture_paper.png"
