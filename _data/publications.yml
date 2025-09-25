@@ -51,7 +51,7 @@ main:
     authors: "<strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeoren Famaey"
     conference: "IEEE JC&S"
     pdf: "https://arxiv.org/abs/2406.18684"
-    #code: "https://github.com/WardGauderis/Hyper-Q"
+    code: https://github.com/nisarnabeel/Dataset-GAN-Augmented-mmWave-CSI-for-improved-pose-classification"
     #notes: "Published as a master student"
     page: "https://nisarnabeel.github.io/csi4free"
     image: "./assets/generate_new.jpg"
