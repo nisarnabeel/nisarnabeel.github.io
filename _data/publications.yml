@@ -73,3 +73,12 @@ main:
     #notes: "Published as a master student"
    # page: "https://nisarnabeel.github.io/csi4free"
     image: "./assets/picture_paper.png"
+
+  - title: "Cross-layer Integrated Sensing and Communication: A Joint Industrial and Academic Perspective"
+    authors: "Henk Wymeersch et al."
+    conference: "IEEE C"
+    pdf: "https://arxiv.org/pdf/2505.10933"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+   # page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/picture_pose.png"
