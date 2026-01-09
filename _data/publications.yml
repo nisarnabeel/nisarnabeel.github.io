@@ -62,7 +62,7 @@ main:
     #code: "https://github.com/WardGauderis/Hyper-Q"
     #notes: "Published as a master student"
    # page: "https://nisarnabeel.github.io/csi4free"
-    image: "./assets/picture_pose.png"
+    image: "./assets/Screenshot.jpg"
 
   - title: "Toward Interactive Multi-User Extended Reality using Millimeter-Wave Networking"
     authors: "Jakob Struye, Sam Van Damme, <strong>Nabeel Nisar Bhat</strong>, Arno Troch, Barend van Liempd, Hany Assasa, Filip Lemic, Jeoren Famaey, Maria Torres Vega"
