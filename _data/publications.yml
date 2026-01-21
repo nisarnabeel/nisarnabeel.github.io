@@ -85,12 +85,12 @@ main:
     image: "./assets/picture_pose.png"
 
   - title: "mmGAN: Semi-Supervised GAN for Improved Gesture Recognition in mmWave ISAC Systems"
-    authors: " <strong>Nabeel Nisar Bhat</strong>, Siddhartha Kumar, Mohammad Hossein Moghaddam, Jakob Struye, Jesus Omar Lacruz, Jacopo Pegoraro, Joerg Widmer, Rafael Berkvens, Jeroen Famaey"
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Siddhartha Kumar, Mohammad Hossein Moghaddam, Jakob Struye, Jesus Omar Lacruz, Jacopo Pegoraro, Joerg Widmer, Rafael Berkvens, Jeroen Famaey"
     conference: "IEEE Open Journal of Communications Society 2026"
     pdf: "https://ieeexplore.ieee.org/document/11317966"
     #code: "https://github.com/WardGauderis/Hyper-Q"
     #notes: "Published as a master student"
-   # page: "https://nisarnabeel.github.io/csi4free"
+    #page: "https://nisarnabeel.github.io/csi4free"
     image: "./assets/Screenshot.jpg"
 
   - title: "Millimeter-Wave Gesture Recognition in ISAC: Does Reducing Sensing Airtime Hamper Accuracy?"
@@ -99,5 +99,5 @@ main:
     pdf: "https://arxiv.org/abs/2601.10733"
     #code: "https://github.com/WardGauderis/Hyper-Q"
     #notes: "Published as a master student"
-   #page: "https://nisarnabeel.github.io/csi4free"
+    #page: "https://nisarnabeel.github.io/csi4free"
     image: "./assets/Screenshotjakob.png"
