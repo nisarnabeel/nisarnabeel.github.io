@@ -1,65 +1,101 @@
 main:
-  2022:
-    - title: "Investigating Inconsistencies in PRNU based camera identification"
-      authors: "<strong>Nabeel Nisar Bhat</strong>, Tiziano Bianchi"
-      conference: "IEEE ICIP (oral) 2022, Published."
-      pdf: "https://ieeexplore.ieee.org/document/9897923"
-      #code: "https://github.com/fdenoodt/Smooth-InfoMax"
-      notes: "Based on master thesis"
-      image: "./assets/baadgood2.jpg"
-      page: "https://nisarnabeel.github.io/camera_identification/"
+  # - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
+  #   authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
+  #   conference_short: MICCAI
+  #   conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
+  #   pdf: https://arxiv.org/pdf/2306.00988.pdf
+  #   code: https://github.com/MrGiovanni/ContinualLearning
+  #   bibtex: https://bib.yliu.me/MICCAI23.txt
+  #   image: ./assets/img/teaser_example_2.png
+  #   notes: Early Accept
 
-  2023:
-    - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
-      authors: "<strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey"
-      conference: "IEEE WoWMoM 2023, Published."
-      pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10195292"
-      page: "https://nisarnabeel.github.io/gesture_recognition_mmWave_Wi-Fi"
-      image: "./assets/beamsnrpic.png"
+  # - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
+  #   authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+  #   conference_short: CVPR
+  #   conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
+  #   pdf: https://arxiv.org/pdf/2002.10211.pdf
+  #   code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
+  #   page: https://class-il.mpi-inf.mpg.de/mnemonics/
+  #   bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+  #   notes: Oral Presentation
+  #   image: ./assets/img/teaser_example.png
 
-    - title: "Multi-modal pose estimation in XR applications leveraging integrated sensing and communication"
-      authors: "<strong>Nabeel Nisar Bhat</strong>, Javad Sameri, Jakob Struye, Maria Torres Vega, Rafael Berkvens, Jeroen Famaey"
-      conference: "ACM MobiCom Workshop, 2023, Published."
-      pdf: "https://dl.acm.org/doi/10.1145/3615452.3617944"
-      page: "https://nisarnabeel.github.io/multi-modal_pose_estimation"
-      image: "./assets/Picture17.jpg"
+  - title: "Investigating Inconsistencies in PRNU based camera identification"
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Tiziano Bianchi"
+    conference: "IEEE ICIP (oral) 2022, Published."
+    pdf: "https://ieeexplore.ieee.org/document/9897923"
+    #code: "https://github.com/fdenoodt/Smooth-InfoMax"
+    notes: "Based on master thesis"
+    image: "./assets/baadgood2.jpg"
+    page: "https://nisarnabeel.github.io/camera_identification/"
 
-  2024:
-    - title: "CSI4Free: GAN-Augmented mmWave CSI for Improved Pose Classification"
-      authors: "<strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey"
-      conference: "IEEE JC&S 2024"
-      pdf: "https://arxiv.org/abs/2406.18684"
-      page: "https://nisarnabeel.github.io/csi4free"
-      image: "./assets/generate_new.jpg"
+  - title: "Gesture recognition with mmWave Wi-Fi Access Points: Lessons Learned"
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeroen Famaey"
+    conference: "IEEE WoWMoM 2023, Published."
+    pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10195292"
+    #code: "https://github.com/fdenoodt/Smooth-InfoMax/tree/RadioIdentificatio"
+    page: "https://nisarnabeel.github.io/gesture_recognition_mmWave_Wi-Fi"
+    image: "./assets/beamsnrpic.png"
 
-    - title: "Toward Interactive Multi-User Extended Reality using Millimeter-Wave Networking"
-      authors: "Jakob Struye, Sam Van Damme, <strong>Nabeel Nisar Bhat</strong>, Arno Troch, Barend van Liempd, Hany Assasa, Filip Lemic, Jeroen Famaey, Maria Torres Vega"
-      conference: "IEEE Communications Magazine 2024"
-      pdf: "https://arxiv.org/html/2501.08100v1"
-      image: "./assets/covrage_page-0001.jpg"
+  - title: "Multi-modal pose estimation in XR applications leveraging integrated sensing and communication"
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Javad Sameri, Jakob Struye, Maria Torres Vega, Rafael Berkvens, Jeoren Famaey"
+    conference: "ACM MobiCom Workshop, 2023, Published."
+    pdf: "https://dl.acm.org/doi/10.1145/3615452.3617944"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+    page: "https://nisarnabeel.github.io/multi-modal_pose_estimation"
+    image: "./assets/Picture17.jpg"
 
-  2025:
-    - title: "6G AI-Driven Air Interface—Hexa-X-II View"
-      authors: "Hamed Farhadi, Bitan Banerjee, Rafael Berkvens, <strong>Nabeel Nisar Bhat </strong> et al."
-      conference: "IEEE Communications Magazine 2025"
-      pdf: "https://ieeexplore.ieee.org/abstract/document/11098641"
-      image: "./assets/picture_paper.png"
+  - title: "CSI4Free: GAN-Augmented mmWave CSI for Improved Pose Classification"
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Rafael Berkvens, Jeoren Famaey"
+    conference: "IEEE JC&S 2024"
+    pdf: "https://arxiv.org/abs/2406.18684"
+    #code: https://github.com/nisarnabeel/Dataset-GAN-Augmented-mmWave-CSI-for-improved-pose-classification"
+    #notes: "Published as a master student"
+    page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/generate_new.jpg"
 
-    - title: "Cross-layer Integrated Sensing and Communication: A Joint Industrial and Academic Perspective"
-      authors: "Henk Wymeersch, Nuutti Tervo, Stefan Wanstedt, Sharief Saleh, ..., <strong>Nabeel Nisar Bhat</strong>, et al."
-      conference: "IEEE Open Journal of Communications Society 2025"
-      pdf: "https://arxiv.org/pdf/2505.10933"
-      image: "./assets/picture_pose.png"
+  - title: "Toward Interactive Multi-User Extended Reality using Millimeter-Wave Networking"
+    authors: "Jakob Struye, Sam Van Damme, <strong>Nabeel Nisar Bhat</strong>, Arno Troch, Barend van Liempd, Hany Assasa, Filip Lemic, Jeoren Famaey, Maria Torres Vega"
+    conference: "IEEE Communications Magazine 2024"
+    pdf: "https://arxiv.org/html/2501.08100v1"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+    # page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/covrage_page-0001.jpg"
 
-  2026:
-    - title: "mmGAN: Semi-Supervised GAN for Improved Gesture Recognition in mmWave ISAC Systems"
-      authors: "<strong>Nabeel Nisar Bhat</strong>, Siddhartha Kumar, Mohammad Hossein Moghaddam, Jakob Struye, Jesus Omar Lacruz, Jacopo Pegoraro, Joerg Widmer, Rafael Berkvens, Jeroen Famaey"
-      conference: "IEEE Open Journal of Communications Society 2026"
-      pdf: "https://ieeexplore.ieee.org/document/11317966"
-      image: "./assets/Screenshot.jpg"
+  - title: "6G AI-Driven Air Interface—Hexa-X-II View"
+    authors: "Hamed Farhadi, Bitan Banerjee, Rafael Berkvens, <strong>Nabeel Nisar Bhat </strong> et al."
+    conference: "IEEE Communications Magazine 2025"
+    pdf: "https://ieeexplore.ieee.org/abstract/document/11098641"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+    # page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/picture_paper.png"
 
-    - title: "Millimeter-Wave Gesture Recognition in ISAC: Does Reducing Sensing Airtime Hamper Accuracy?"
-      authors: "Jakob Struye, <strong>Nabeel Nisar Bhat</strong>, Siddhartha Kumar, Mohammad Hossein Moghaddam, Jeroen Famaey"
-      conference: "IEEE Consumer Communications & Networking Conference 2026"
-      pdf: "https://arxiv.org/abs/2601.10733"
-      image: "./assets/Screenshotjakob.png"
+  - title: "Cross-layer Integrated Sensing and Communication: A Joint Industrial and Academic Perspective"
+    authors: "Henk Wymeersch, Nuutti Tervo, Stefan Wanstedt, Sharief Saleh, ..., <strong>Nabeel Nisar Bhat</strong>, et al."
+    conference: "IEEE Open Journal of Communications Society 2025"
+    pdf: "https://arxiv.org/pdf/2505.10933"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+    # page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/picture_pose.png"
+
+  - title: "mmGAN: Semi-Supervised GAN for Improved Gesture Recognition in mmWave ISAC Systems"
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Siddhartha Kumar, Mohammad Hossein Moghaddam, Jakob Struye, Jesus Omar Lacruz, Jacopo Pegoraro, Joerg Widmer, Rafael Berkvens, Jeroen Famaey"
+    conference: "IEEE Open Journal of Communications Society 2026"
+    pdf: "https://ieeexplore.ieee.org/document/11317966"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+    #page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/Screenshot.jpg"
+
+  - title: "Millimeter-Wave Gesture Recognition in ISAC: Does Reducing Sensing Airtime Hamper Accuracy?"
+    authors: "Jakob Struye, <strong>Nabeel Nisar Bhat</strong>, Siddhartha Kumar, Mohammad Hossein Moghaddam, Jeroen Famaey"
+    conference: "IEEE Consumer Communications & Networking Conference 2026"
+    pdf: "https://arxiv.org/abs/2601.10733"
+    #code: "https://github.com/WardGauderis/Hyper-Q"
+    #notes: "Published as a master student"
+    #page: "https://nisarnabeel.github.io/csi4free"
+    image: "./assets/Screenshotjakob.png"
