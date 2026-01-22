@@ -70,3 +70,10 @@ main:
     conference: "IEEE Consumer Communications & Networking Conference 2026"
     pdf: "https://arxiv.org/abs/2601.10733"
     image: "./assets/Screenshotjakob.png"
+
+  - title: "Beyond Sub-6 GHz: Leveraging mmWave Wi-Fi for Gait-Based Person Identification?"
+    year: 2026
+    authors: "<strong>Nabeel Nisar Bhat</strong>, Maksim Karnaukh, Jakob Struye, Rafael Berkvens, Jeroen Famaey"
+    conference: "IEEE Consumer Communications & Networking Conference 2026"
+    pdf: "https://arxiv.org/abs/2510.08160"
+    image: "./assets/Screenshotnabeel.png"
