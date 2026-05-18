@@ -82,8 +82,8 @@ main:
     year: 2026
     authors: "<strong>Nabeel Nisar Bhat</strong>, Maksim Karnaukh, Stein Vandenbroeke, Wouter Lemoine, Jakob Struye, Siddhartha Kumar, Mohammad Hossein Moghaddam, Jesus Omar Lacruz, Joerg Widmer, Rafael Berkvens, Jeroen Famaey"
     conference: "IEEE Access 2026"
-    image: "./assets/mmhsense.png"
     pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11511681"
+    image: "./assets/mmhsense.png"
 
 
 
