@@ -77,3 +77,13 @@ main:
     conference: "IEEE Consumer Communications & Networking Conference 2026"
     pdf: "https://arxiv.org/abs/2510.08160"
     image: "./assets/Screenshotnabeel.png"
+
+  - title: "mmHSense: Multi-Modal and Distributed mmWave ISAC Datasets for Human Sensing"
+    year: 2026
+    authors: "Nabeel Nisar Bhat, Maksim Karnaukh, Stein Vandenbroeke, Wouter Lemoine, Jakob Struye, Siddhartha Kumar, Mohammad Hossein Moghaddam, Jesus Omar Lacruz, Joerg Widmer, Rafael Berkvens, Jeroen Famaey"
+    journal: "IEEE Access"
+    image: "./assets/mmhsense.png"
+
+
+
+
