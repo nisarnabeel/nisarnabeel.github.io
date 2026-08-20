@@ -45,6 +45,11 @@
   .topbar {
     border-bottom: 1px solid var(--border);
     padding: 0.9rem 0;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    z-index: 50;
   }
   .topbar .wrap { display: flex; align-items: center; justify-content: space-between; }
   .brand { font-weight: 700; font-size: 0.95rem; color: var(--ink); text-decoration: none; }
@@ -56,6 +61,40 @@
     margin-left: 1.4rem;
   }
   .topbar nav a:hover { color: var(--accent-dark); }
+  .surprise-btn {
+    margin-left: 1.4rem;
+    background: var(--accent-tint);
+    border: 1px solid #cde0d3;
+    color: var(--accent-dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .surprise-btn:hover { background: #dcedE1; }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 1.4rem;
+    right: 1.4rem;
+    background: var(--accent-dark);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+    z-index: 60;
+  }
+  .back-to-top.show { display: flex; }
+  .back-to-top:hover { background: var(--accent); }
 
   /* ---------- Hero ---------- */
   header.hero { padding: 3rem 0 2.5rem; border-bottom: 1px solid var(--border); }
@@ -214,6 +253,17 @@
   .filter-bar input { flex: 1 1 220px; }
   .filter-bar input:focus, .filter-bar select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
   .result-count { color: var(--muted); font-size: 0.85rem; margin: 0 0 0.8rem; }
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0.5rem 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .slider-row label { flex: 0 0 130px; }
+  .slider-row input[type="range"] { flex: 1; accent-color: var(--accent-dark); }
+  .slider-row span { font-weight: 600; color: var(--ink); }
 
   .card-grid {
     display: grid;
@@ -333,6 +383,74 @@
   .chat-form button:disabled { opacity: 0.6; cursor: default; }
   .chat-note { font-size: 0.78rem; color: var(--muted); padding: 0.5rem 1.1rem 0; margin: 0; }
 
+  /* ---------- Restaurant detail modal ---------- */
+  .r-card, .swipe-card-inner { cursor: pointer; }
+  .r-card:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+
+  .modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(20,20,20,0.5);
+    z-index: 100;
+    padding: 1.5rem;
+    overflow-y: auto;
+  }
+  .modal-backdrop.open { display: flex; align-items: flex-start; justify-content: center; }
+  .modal {
+    position: relative;
+    background: var(--bg);
+    border-radius: 12px;
+    max-width: 560px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 1.8rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .modal-close {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--muted);
+  }
+  .modal-close:hover { color: var(--ink); }
+  .modal-name { font-size: 1.35rem; font-weight: 700; margin: 0 0 0.3rem; padding-right: 2rem; }
+  .modal-rating { color: var(--accent-dark); font-weight: 600; font-size: 1rem; }
+  .modal-meta { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; line-height: 1.6; }
+  .modal-tags { margin-top: 0.6rem; }
+  .modal-maps-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #fff;
+    background: var(--accent-dark);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+  }
+  .modal-maps-link:hover { background: var(--accent); }
+  .modal-reviews-title { font-size: 1rem; font-weight: 700; margin: 1.6rem 0 0.7rem; border-top: 1px solid var(--border); padding-top: 1.2rem; }
+  .review {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 0.95rem;
+    margin-bottom: 0.65rem;
+    font-size: 0.88rem;
+  }
+  .review .review-head { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 0.3rem; }
+  .review .review-stars { color: var(--gold, #a97633); }
+  .review .review-text { color: var(--muted); line-height: 1.55; }
+  .no-reviews { color: var(--muted); font-size: 0.9rem; }
+
   @media (max-width: 720px) {
     .hero-grid { grid-template-columns: 1fr; }
     .hero-photo { aspect-ratio: 16 / 10; }
@@ -353,6 +471,7 @@
       <a href="#browse">Browse</a>
       <a href="#swipe">Swipe</a>
       <a href="#ask">Ask AI</a>
+      <button id="surpriseBtn" class="surprise-btn" type="button">🎲 Surprise Me</button>
     </nav>
   </div>
 </div>
@@ -424,12 +543,14 @@
   <div class="filter-bar">
     <input type="text" id="searchInput" placeholder="Search name, dish, cuisine…" autocomplete="off">
     <select id="neighborhoodSelect"><option value="">All neighborhoods</option></select>
-    <select id="ratingSelect">
-      <option value="0">Any rating</option>
-      <option value="4.9">4.9★ and up</option>
-      <option value="4.7">4.7★ and up</option>
-      <option value="4.5">4.5★ and up</option>
-    </select>
+  </div>
+  <div class="slider-row">
+    <label for="ratingSlider">Min rating: <span id="ratingSliderVal">Any</span></label>
+    <input type="range" id="ratingSlider" min="0" max="5" step="0.1" value="0">
+  </div>
+  <div class="slider-row">
+    <label for="reviewsSlider">Min reviews: <span id="reviewsSliderVal">Any</span></label>
+    <input type="range" id="reviewsSlider" min="0" max="500" step="10" value="0">
   </div>
   <p class="result-count" id="resultCount"></p>
   <div class="card-grid" id="cardGrid"></div>
@@ -474,6 +595,15 @@
 
 </main>
 
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modalClose" type="button" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
 <footer>
   <div class="wrap">
     <p>Part of <a href="/">nabeelnisar.com</a>. Data sourced from Google Places; updated periodically. Restaurant details can change — always confirm hours before visiting. <a href="/privacy-policy/">Privacy Policy</a></p>
@@ -487,15 +617,27 @@
 const CHAT_WORKER_URL = "https://srinagar-chat.nisarnabeel9.workers.dev";
 
 let ALL = [];
+let REVIEWS = {};
 let visibleCount = 24;
 const PAGE_SIZE = 24;
 
-fetch('data/restaurants.json')
-  .then(r => r.json())
-  .then(data => {
-    ALL = data;
+// ===== Back to top =====
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTopBtn.classList.toggle('show', window.scrollY > 700);
+});
+backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+Promise.all([
+  fetch('data/restaurants.json').then(r => r.json()),
+  fetch('data/reviews.json').then(r => r.json()).catch(() => ({})),
+])
+  .then(([restaurants, reviews]) => {
+    ALL = restaurants;
+    REVIEWS = reviews;
     initBrowse();
     initSwipe();
+    initModal();
   })
   .catch(() => {
     document.getElementById('resultCount').textContent = "Couldn't load restaurant data right now.";
@@ -513,8 +655,27 @@ function initBrowse() {
 
   document.getElementById('searchInput').addEventListener('input', () => { visibleCount = PAGE_SIZE; renderBrowse(); });
   sel.addEventListener('change', () => { visibleCount = PAGE_SIZE; renderBrowse(); });
-  document.getElementById('ratingSelect').addEventListener('change', () => { visibleCount = PAGE_SIZE; renderBrowse(); });
+
+  const ratingSlider = document.getElementById('ratingSlider');
+  const ratingVal = document.getElementById('ratingSliderVal');
+  ratingSlider.addEventListener('input', () => {
+    ratingVal.textContent = ratingSlider.value == 0 ? 'Any' : `${parseFloat(ratingSlider.value).toFixed(1)}★`;
+    visibleCount = PAGE_SIZE; renderBrowse();
+  });
+
+  const reviewsSlider = document.getElementById('reviewsSlider');
+  const reviewsVal = document.getElementById('reviewsSliderVal');
+  reviewsSlider.addEventListener('input', () => {
+    reviewsVal.textContent = reviewsSlider.value == 0 ? 'Any' : `${reviewsSlider.value}+`;
+    visibleCount = PAGE_SIZE; renderBrowse();
+  });
+
   document.getElementById('loadMoreBtn').addEventListener('click', () => { visibleCount += PAGE_SIZE; renderBrowse(); });
+  document.getElementById('surpriseBtn').addEventListener('click', () => {
+    const pool = ALL.filter(r => r.rating >= 4.5);
+    const pick = pool[Math.floor(Math.random() * pool.length)];
+    if (pick) openModal(pick.id);
+  });
 
   renderBrowse();
 }
@@ -522,10 +683,12 @@ function initBrowse() {
 function filteredList() {
   const q = document.getElementById('searchInput').value.trim().toLowerCase();
   const nbhd = document.getElementById('neighborhoodSelect').value;
-  const minRating = parseFloat(document.getElementById('ratingSelect').value) || 0;
+  const minRating = parseFloat(document.getElementById('ratingSlider').value) || 0;
+  const minReviews = parseInt(document.getElementById('reviewsSlider').value) || 0;
 
   return ALL.filter(r => {
     if (r.rating < minRating) return false;
+    if (r.reviews < minReviews) return false;
     if (nbhd && r.neighborhood !== nbhd) return false;
     if (q) {
       const hay = [r.name, r.knownFor, r.delicacy, r.neighborhood].filter(Boolean).join(' ').toLowerCase();
@@ -538,7 +701,7 @@ function filteredList() {
 function restaurantCardHTML(r) {
   const tags = [r.knownFor, r.delicacy].filter(Boolean);
   return `
-    <div class="r-card">
+    <div class="r-card" data-id="${escapeHTML(r.id)}">
       <div class="r-name">${escapeHTML(r.name)}</div>
       <div class="r-rating">${r.rating}★ (${r.reviews.toLocaleString()})</div>
       <div class="r-meta">${escapeHTML(r.neighborhood)}${r.phone ? ' · ' + escapeHTML(r.phone) : ''}</div>
@@ -599,6 +762,7 @@ function showSwipeCard() {
     return;
   }
   const r = swipeDeck[swipeIdx];
+  el.dataset.id = r.id;
   const tags = [r.knownFor, r.delicacy].filter(Boolean);
   el.innerHTML = `
     <div class="r-name">${escapeHTML(r.name)}</div>
@@ -612,6 +776,60 @@ function renderLiked() {
   const box = document.getElementById('likedList');
   if (liked.length === 0) { box.textContent = ''; return; }
   box.innerHTML = `<b>Your picks (${liked.length}):</b> ` + liked.map(l => escapeHTML(l.name)).join(', ');
+}
+
+// ===== Restaurant detail modal =====
+function initModal() {
+  document.getElementById('cardGrid').addEventListener('click', (e) => {
+    const card = e.target.closest('.r-card');
+    if (card) openModal(card.dataset.id);
+  });
+  document.getElementById('swipeCardInner').addEventListener('click', (e) => {
+    const id = e.currentTarget.dataset.id;
+    if (id) openModal(id);
+  });
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalBackdrop').addEventListener('click', (e) => {
+    if (e.target.id === 'modalBackdrop') closeModal();
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+}
+
+function openModal(id) {
+  const r = ALL.find(x => x.id === id);
+  if (!r) return;
+  const tags = [r.knownFor, r.delicacy].filter(Boolean);
+  const revs = REVIEWS[id] || [];
+  const mapsUrl = `https://www.google.com/maps/place/?q=place_id:${encodeURIComponent(id)}`;
+
+  const reviewsHTML = revs.length
+    ? revs.map(rv => `
+        <div class="review">
+          <div class="review-head">
+            <span>${escapeHTML(rv.author)}</span>
+            <span class="review-stars">${'★'.repeat(rv.rating || 0)}</span>
+          </div>
+          <div class="review-text">${escapeHTML(rv.text)}</div>
+        </div>`).join('')
+    : `<p class="no-reviews">No review text available for this listing yet.</p>`;
+
+  document.getElementById('modalBody').innerHTML = `
+    <div class="modal-name">${escapeHTML(r.name)}</div>
+    <div class="modal-rating">${r.rating}★ (${r.reviews.toLocaleString()} reviews)</div>
+    <div class="modal-meta">
+      ${escapeHTML(r.neighborhood)}${r.address ? ' · ' + escapeHTML(r.address) : ''}
+      ${r.phone ? '<br>' + escapeHTML(r.phone) : ''}
+    </div>
+    <div class="modal-tags">${tags.map(t => `<span class="r-tag">${escapeHTML(t)}</span>`).join('')}</div>
+    <a class="modal-maps-link" href="${mapsUrl}" target="_blank" rel="noopener">View on Google Maps →</a>
+    <div class="modal-reviews-title">Top reviews</div>
+    ${reviewsHTML}
+  `;
+  document.getElementById('modalBackdrop').classList.add('open');
+}
+
+function closeModal() {
+  document.getElementById('modalBackdrop').classList.remove('open');
 }
 
 // ===== Ask AI (chat) =====
@@ -637,11 +855,18 @@ function buildContext(candidates) {
   }).join('\n');
 }
 
+function renderInlineMarkdown(text) {
+  let safe = escapeHTML(text);
+  safe = safe.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  safe = safe.replace(/\n/g, '<br>');
+  return safe;
+}
+
 function addChatMsg(role, text) {
   const log = document.getElementById('chatLog');
   const div = document.createElement('div');
   div.className = `chat-msg ${role}`;
-  div.textContent = text;
+  div.innerHTML = renderInlineMarkdown(text);
   log.appendChild(div);
   log.scrollTop = log.scrollHeight;
 }
