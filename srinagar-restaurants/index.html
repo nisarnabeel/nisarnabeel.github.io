@@ -350,8 +350,9 @@
   <div class="wrap">
     <a class="brand" href="/srinagar-restaurants/">Srinagar<span>Eats</span></a>
     <nav>
-      <a href="https://srinagarrestaurantfinder.streamlit.app/" target="_blank" rel="noopener">AI Finder</a>
-      <a href="/">nabeelnisar.com</a>
+      <a href="#browse">Browse</a>
+      <a href="#swipe">Swipe</a>
+      <a href="#ask">Ask AI</a>
     </nav>
   </div>
 </div>
@@ -376,6 +377,19 @@
 </header>
 
 <main class="wrap">
+
+  <h2 id="ask">Ask About Srinagar Restaurants</h2>
+  <p class="sub">Ask in plain language — answers are grounded only in real Google Places data, nothing invented.</p>
+  <div class="chat-box">
+    <div class="chat-log" id="chatLog">
+      <div class="chat-msg assistant">Ask me something like "quiet place near Dal Lake for kahwa" or "best wazwan spot in Rajbagh."</div>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Ask a question…" autocomplete="off">
+      <button type="submit">Ask</button>
+    </form>
+    <p class="chat-note" id="chatNote"></p>
+  </div>
 
   <!-- Ad slot: leaderboard, after the fold -->
   <div class="ad-slot">
@@ -432,19 +446,6 @@
       <button id="likeBtn" class="swipe-btn like" type="button">♥ Like</button>
     </div>
     <div class="liked-list" id="likedList"></div>
-  </div>
-
-  <h2 id="ask">Ask About Srinagar Restaurants</h2>
-  <p class="sub">Ask in plain language — answers are grounded only in the real data above, nothing invented.</p>
-  <div class="chat-box">
-    <div class="chat-log" id="chatLog">
-      <div class="chat-msg assistant">Ask me something like "quiet place near Dal Lake for kahwa" or "best wazwan spot in Rajbagh."</div>
-    </div>
-    <form class="chat-form" id="chatForm">
-      <input type="text" id="chatInput" placeholder="Ask a question…" autocomplete="off">
-      <button type="submit">Ask</button>
-    </form>
-    <p class="chat-note" id="chatNote"></p>
   </div>
 
   <h2>Kashmiri Dishes Worth Seeking Out</h2>
