@@ -78,6 +78,30 @@
     margin-left: 1.4rem;
   }
   .topbar nav a:hover { color: var(--accent-dark); }
+
+  .conditions-bar { background: var(--surface-2); border-bottom: 1px solid var(--border); }
+  .conditions-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.5rem;
+    padding: 0.6rem 0;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .conditions-item { display: inline-flex; align-items: center; }
+  .conditions-link { color: var(--accent-dark); text-decoration: none; font-weight: 600; }
+  .conditions-link:hover { text-decoration: underline; }
+  .conditions-item strong { color: var(--ink); font-weight: 700; }
+
+  .weather-pick-box {
+    background: var(--accent-tint);
+    border: 1px solid #d6e5da;
+    border-radius: 12px;
+    padding: 1.1rem 1.3rem;
+    margin: 1.6rem 0;
+  }
+  .weather-pick-box .wp-title { font-weight: 700; color: var(--accent-dark); margin-bottom: 0.7rem; font-size: 0.95rem; }
+  .weather-pick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.7rem; }
   .surprise-btn {
     margin-left: 1.4rem;
     background: var(--accent-tint);
@@ -562,7 +586,16 @@
   </div>
 </header>
 
+<div class="conditions-bar" id="conditionsBar">
+  <div class="wrap conditions-inner">
+    <span id="weatherLine" class="conditions-item">Loading current Srinagar weather…</span>
+    <a href="https://ffs.india-water.gov.in/" target="_blank" rel="noopener" class="conditions-item conditions-link">🌊 Live Jhelum flood levels (official CWC)</a>
+  </div>
+</div>
+
 <main class="wrap">
+
+  <div id="weatherPickWrap"></div>
 
   <h2 id="ask" class="ai-heading"><span class="sparkle sparkle-lg">✦</span> Ask About Srinagar Restaurants</h2>
   <p class="sub">Ask in plain language — answers are grounded only in real Google Places data, nothing invented.</p>
@@ -706,10 +739,73 @@ Promise.all([
     initBrowse();
     initSwipe();
     initModal();
+    initWeather();
   })
   .catch(() => {
     document.getElementById('resultCount').textContent = "Couldn't load restaurant data right now.";
   });
+
+// ===== Weather =====
+const WEATHER_LABELS = {
+  0: "clear sky", 1: "mostly clear", 2: "partly cloudy", 3: "overcast",
+  45: "foggy", 48: "foggy", 51: "light drizzle", 53: "drizzle", 55: "dense drizzle",
+  61: "light rain", 63: "rain", 65: "heavy rain", 71: "light snow", 73: "snow",
+  75: "heavy snow", 77: "snow grains", 80: "rain showers", 81: "rain showers",
+  82: "violent rain showers", 85: "snow showers", 86: "heavy snow showers",
+  95: "thunderstorm", 96: "thunderstorm with hail", 99: "thunderstorm with hail",
+};
+
+function initWeather() {
+  fetch("https://api.open-meteo.com/v1/forecast?latitude=34.0837&longitude=74.7973&current=temperature_2m,precipitation,weather_code&timezone=Asia/Kolkata")
+    .then(r => r.json())
+    .then(data => {
+      const cur = data.current;
+      if (!cur) throw new Error("no data");
+      const temp = cur.temperature_2m;
+      const precip = cur.precipitation || 0;
+      const label = WEATHER_LABELS[cur.weather_code] || "";
+      document.getElementById('weatherLine').innerHTML =
+        `Right now in Srinagar: <strong>${temp}°C</strong>${label ? ', ' + label : ''}${precip > 0 ? ' · raining' : ''}`;
+      renderWeatherPick(temp, precip > 0);
+    })
+    .catch(() => {
+      document.getElementById('weatherLine').textContent = "Live weather unavailable right now.";
+    });
+}
+
+function isWarmComfortSpot(r) {
+  const hay = [r.knownFor, r.delicacy, r.amenities].filter(Boolean).join(' ').toLowerCase();
+  return hay.includes('servescoffee') || /tea|kahwa|soup|cafe|coffee/.test(hay);
+}
+function isCoolTreatSpot(r) {
+  const hay = [r.knownFor, r.delicacy, r.amenities].filter(Boolean).join(' ').toLowerCase();
+  return hay.includes('servesdessert') || /bakery|dessert|ice cream|kulfi|fudge|sweet/.test(hay);
+}
+
+function renderWeatherPick(temp, isWet) {
+  if (temp == null) return;
+  let pool, reason;
+  if (isWet || temp < 15) {
+    pool = ALL.filter(isWarmComfortSpot);
+    reason = "it's cold/wet — warm comfort food";
+  } else if (temp > 25) {
+    pool = ALL.filter(isCoolTreatSpot);
+    reason = "it's warm — something cool";
+  } else {
+    return;
+  }
+  if (!pool.length) return;
+  pool = pool.sort((a, b) => b.rating - a.rating).slice(0, 3);
+  document.getElementById('weatherPickWrap').innerHTML = `
+    <div class="weather-pick-box">
+      <div class="wp-title">Since ${reason} — real picks for it</div>
+      <div class="weather-pick-grid">${pool.map(restaurantCardHTML).join('')}</div>
+    </div>`;
+  document.querySelector('.weather-pick-grid').addEventListener('click', (e) => {
+    const card = e.target.closest('.r-card');
+    if (card) openModal(card.dataset.id);
+  });
+}
 
 // ===== Browse & Filter =====
 function initBrowse() {
