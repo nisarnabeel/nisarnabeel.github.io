@@ -79,19 +79,19 @@
   }
   .topbar nav a:hover { color: var(--accent-dark); }
 
-  .conditions-bar { background: var(--surface-2); border-bottom: 1px solid var(--border); }
+  .conditions-bar { background: var(--accent-tint); border-bottom: 1px solid #d6e5da; }
   .conditions-inner {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 1.5rem;
-    padding: 0.6rem 0;
-    font-size: 0.85rem;
-    color: var(--muted);
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.7rem 0;
+    font-size: 0.95rem;
+    color: var(--accent-dark);
   }
+  .weather-icon { font-size: 1.5rem; line-height: 1; }
   .conditions-item { display: inline-flex; align-items: center; }
-  .conditions-link { color: var(--accent-dark); text-decoration: none; font-weight: 600; }
-  .conditions-link:hover { text-decoration: underline; }
   .conditions-item strong { color: var(--ink); font-weight: 700; }
+  .conditions-item .rn-label { text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.05em; font-weight: 700; color: var(--accent); margin-right: 0.5rem; }
 
   .weather-pick-box {
     background: var(--accent-tint);
@@ -588,8 +588,8 @@
 
 <div class="conditions-bar" id="conditionsBar">
   <div class="wrap conditions-inner">
+    <span id="weatherIcon" class="weather-icon">⛅</span>
     <span id="weatherLine" class="conditions-item">Loading current Srinagar weather…</span>
-    <a href="https://ffs.india-water.gov.in/" target="_blank" rel="noopener" class="conditions-item conditions-link">🌊 Live Jhelum flood levels (official CWC)</a>
   </div>
 </div>
 
@@ -754,6 +754,14 @@ const WEATHER_LABELS = {
   82: "violent rain showers", 85: "snow showers", 86: "heavy snow showers",
   95: "thunderstorm", 96: "thunderstorm with hail", 99: "thunderstorm with hail",
 };
+const WEATHER_ICONS = {
+  0: "☀️", 1: "🌤️", 2: "⛅", 3: "☁️",
+  45: "🌫️", 48: "🌫️", 51: "🌦️", 53: "🌦️", 55: "🌧️",
+  61: "🌧️", 63: "🌧️", 65: "🌧️", 71: "🌨️", 73: "🌨️",
+  75: "❄️", 77: "🌨️", 80: "🌦️", 81: "🌧️",
+  82: "⛈️", 85: "🌨️", 86: "❄️",
+  95: "⛈️", 96: "⛈️", 99: "⛈️",
+};
 
 function initWeather() {
   fetch("https://api.open-meteo.com/v1/forecast?latitude=34.0837&longitude=74.7973&current=temperature_2m,precipitation,weather_code&timezone=Asia/Kolkata")
@@ -764,8 +772,9 @@ function initWeather() {
       const temp = cur.temperature_2m;
       const precip = cur.precipitation || 0;
       const label = WEATHER_LABELS[cur.weather_code] || "";
+      document.getElementById('weatherIcon').textContent = WEATHER_ICONS[cur.weather_code] || "⛅";
       document.getElementById('weatherLine').innerHTML =
-        `Right now in Srinagar: <strong>${temp}°C</strong>${label ? ', ' + label : ''}${precip > 0 ? ' · raining' : ''}`;
+        `<span class="rn-label">Right now</span><strong>${temp}°C</strong>${label ? ' · ' + label : ''}${precip > 0 ? ' · raining' : ''} in Srinagar`;
       renderWeatherPick(temp, precip > 0);
     })
     .catch(() => {
