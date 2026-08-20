@@ -35,9 +35,15 @@ auto_dark_mode: true
 # You can use this option to choose between Serif or Sans Serif fonts.
 font: "Sans Serif" # or "Sans Serif"
 
-# Google Analytics ID
-# Please remove this if you don't use Google Analytics
-# google_analytics: UA-111540567-4
+# Google Analytics (GA4) — create a property at analytics.google.com, paste
+# the Measurement ID below (format: G-XXXXXXXXXX). The old UA snippet this
+# used to point at (UA-111540567-4) is dead — Google shut off Universal
+# Analytics in mid-2023 — so this now drives a real GA4 gtag.js tag instead.
+# ga4_id: G-XXXXXXXXXX
+
+# Google AdSense site verification — after applying at adsense.google.com,
+# paste the "ca-pub-..." value it gives you (without quotes) below.
+# adsense_verification: ca-pub-XXXXXXXXXXXXXXXX
 
 # Use this project as a remote theme for GitHub Pages
 # See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
