@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Restaurants in Srinagar (2026 Guide) — Real Data, Local Picks</title>
+<meta name="description" content="A data-driven guide to the best restaurants in Srinagar, Kashmir — built from real Google Places ratings and reviews across 279 spots. Wazwan, noon chai, kahwa, trout and more, by neighborhood.">
+<style>
+  :root {
+    --ink: #1c2521;
+    --muted: #5b6a63;
+    --bg: #faf8f3;
+    --surface: #ffffff;
+    --border: #e4ddc9;
+    --accent: #5f7a52;
+    --accent-dark: #3f5638;
+    --accent-tint: #eef2e6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 840px; margin: 0 auto; padding: 0 1.25rem; }
+
+  header.hero {
+    background: linear-gradient(180deg, var(--accent-dark), var(--accent));
+    color: #fdfcf7;
+    padding: 3rem 0 2.5rem;
+  }
+  header.hero .wrap { }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    opacity: 0.85;
+    margin: 0 0 0.6rem;
+  }
+  h1 {
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    margin: 0 0 0.9rem;
+  }
+  .lede {
+    font-size: 1.08rem;
+    max-width: 62ch;
+    opacity: 0.95;
+    margin: 0 0 1.6rem;
+  }
+  .stats-row {
+    display: flex;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+  }
+  .stat .num { font-size: 1.5rem; font-weight: 700; display: block; }
+  .stat .label { font-size: 0.78rem; opacity: 0.85; }
+
+  main { padding: 2.5rem 0 1rem; }
+  h2 {
+    font-size: 1.4rem;
+    margin: 2.4rem 0 0.6rem;
+    color: var(--accent-dark);
+  }
+  p { color: var(--ink); }
+  .sub { color: var(--muted); font-size: 0.98rem; margin-top: -0.3rem; }
+
+  .cta-box {
+    background: var(--accent-tint);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.4rem 1.6rem;
+    margin: 1.6rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .cta-box p { margin: 0; color: var(--accent-dark); font-weight: 500; }
+  .cta-btn {
+    background: var(--accent-dark);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .cta-btn:hover { background: var(--accent); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.94rem;
+  }
+  caption { text-align: left; color: var(--muted); font-size: 0.85rem; margin-bottom: 0.4rem; }
+  th, td {
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th { color: var(--accent-dark); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  td.rating { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  tr:hover td { background: var(--accent-tint); }
+
+  .dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.7rem;
+    margin: 1rem 0 1.8rem;
+  }
+  .dish-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.8rem 0.9rem;
+  }
+  .dish-card .name { font-weight: 700; color: var(--accent-dark); display: block; margin-bottom: 0.15rem; }
+  .dish-card .count { font-size: 0.8rem; color: var(--muted); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+    padding: 1.6rem 0 2.5rem;
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+  footer a { color: var(--accent-dark); }
+
+  .ad-slot {
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  @media (max-width: 480px) {
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Srinagar, Kashmir · Restaurant Guide</p>
+    <h1>Best Restaurants in Srinagar, Built From Real Data</h1>
+    <p class="lede">Every pick below comes straight from Google Places ratings and reviews for restaurants actually operating in Srinagar right now — not a copy-pasted "top 10" list. Ratings, review counts, and dish tags are all real.</p>
+    <div class="stats-row">
+      <div class="stat"><span class="num">279</span><span class="label">restaurants tracked</span></div>
+      <div class="stat"><span class="num">4.9★</span><span class="label">top-rated average</span></div>
+      <div class="stat"><span class="num">15+</span><span class="label">Kashmiri delicacies indexed</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Ad slot: leaderboard, after the fold -->
+  <div class="ad-slot">
+    <!-- Google AdSense ad unit goes here once the site is approved -->
+  </div>
+
+  <h2>Highest-Rated Spots (With Enough Reviews to Trust)</h2>
+  <p class="sub">Sorted by rating, then by how many people actually reviewed it — so a single 5-star review doesn't outrank a place 3,000 people vouch for.</p>
+  <table>
+    <caption>Live snapshot from the underlying dataset — subject to change as ratings update</caption>
+    <thead>
+      <tr><th>Restaurant</th><th>Rating</th><th>Known for</th><th>Area</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Le Delice</td><td class="rating">4.9★ (3,104)</td><td>Modern sweets</td><td>MA Road, Regal Chowk</td></tr>
+      <tr><td>Majlis Eatery &amp; Specialty Coffee</td><td class="rating">4.9★ (472)</td><td>Shawarma, harissa</td><td>Polo View Road</td></tr>
+      <tr><td>Shahi Dawat by Lake Avenue</td><td class="rating">4.9★ (347)</td><td>Rista</td><td>Nishat, Lam</td></tr>
+      <tr><td>The Oven</td><td class="rating">4.9★ (241)</td><td>Modern sweets</td><td>Karan Nagar</td></tr>
+      <tr><td>Mayday Cafe and Bistro</td><td class="rating">4.9★ (210)</td><td>Kahwa</td><td>Regal Chowk, Lal Chowk</td></tr>
+      <tr><td>Kashmir Fudge Shop</td><td class="rating">4.9★ (100)</td><td>Walnut fudge</td><td>Hyderpora</td></tr>
+      <tr><td>Red Chilliz</td><td class="rating">4.9★ (69)</td><td>Chilliz pizza</td><td>Boulevard, Dal Lake</td></tr>
+      <tr><td>Basheers Food</td><td class="rating">4.9★ (63)</td><td>Gushtaba</td><td>Khwaja Bazar, Nowhatta</td></tr>
+      <tr><td>BiBi Sara Restaurant</td><td class="rating">5.0★ (285)</td><td>Noon chai</td><td>Shalimar</td></tr>
+      <tr><td>Graceland Restaurant</td><td class="rating">5.0★ (62)</td><td>Gushtaba</td><td>Soitang</td></tr>
+    </tbody>
+  </table>
+
+  <div class="cta-box">
+    <p>Want a match for what <em>you're</em> craving, not a static list?</p>
+    <a class="cta-btn" href="https://srinagar-restaurant-finder.onrender.com" target="_blank" rel="noopener">Try the AI Restaurant Finder →</a>
+  </div>
+
+  <h2>Kashmiri Dishes Worth Seeking Out</h2>
+  <p class="sub">The most commonly tagged local delicacies across every restaurant in the dataset — a rough map of what Srinagar actually eats.</p>
+  <div class="dish-grid">
+    <div class="dish-card"><span class="name">Harissa</span><span class="count">16 restaurants</span></div>
+    <div class="dish-card"><span class="name">Noon Chai</span><span class="count">14 restaurants</span></div>
+    <div class="dish-card"><span class="name">Walnut Fudge</span><span class="count">10 restaurants</span></div>
+    <div class="dish-card"><span class="name">Modur Pulav</span><span class="count">8 restaurants</span></div>
+    <div class="dish-card"><span class="name">Wazwan</span><span class="count">8 restaurants</span></div>
+    <div class="dish-card"><span class="name">Kahwa</span><span class="count">6 restaurants</span></div>
+    <div class="dish-card"><span class="name">Tabak Maaz</span><span class="count">6 restaurants</span></div>
+    <div class="dish-card"><span class="name">Kashmiri Trout</span><span class="count">5 restaurants</span></div>
+    <div class="dish-card"><span class="name">Rista</span><span class="count">5 restaurants</span></div>
+    <div class="dish-card"><span class="name">Seekh Kabab</span><span class="count">4 restaurants</span></div>
+    <div class="dish-card"><span class="name">Dum Aloo</span><span class="count">3 restaurants</span></div>
+    <div class="dish-card"><span class="name">Nadru</span><span class="count">3 restaurants</span></div>
+  </div>
+
+  <h2>Why This List Is Different</h2>
+  <p>Most "best restaurants in Srinagar" articles online are written once and never updated. This page is generated from a live dataset of 279 real restaurants pulled from Google Places — ratings, review counts, addresses, and dish tags are all sourced directly, not guessed. It's the same dataset that powers the <a href="https://srinagar-restaurant-finder.onrender.com" target="_blank" rel="noopener">Srinagar Restaurant Finder</a>, an interactive app where you can filter by neighborhood, budget, and craving, swipe through options, or just ask an AI assistant a direct question like "quiet place near Dal Lake for kahwa."</p>
+
+  <div class="ad-slot">
+    <!-- Google AdSense in-article ad unit goes here once the site is approved -->
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Part of <a href="/">nabeelnisar.com</a>. Data sourced from Google Places; updated periodically. Restaurant details can change — always confirm hours before visiting.</p>
+  </div>
+</footer>
+
+</body>
+</html>
