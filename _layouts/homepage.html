@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    {% if site.adsense_client %}
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}"
+         crossorigin="anonymous"></script>
+    {% endif %}
     {% if site.ga4_id %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_id }}"></script>

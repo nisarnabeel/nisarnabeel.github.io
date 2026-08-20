@@ -41,9 +41,8 @@ font: "Sans Serif" # or "Sans Serif"
 # Analytics in mid-2023 — so this now drives a real GA4 gtag.js tag instead.
 ga4_id: G-LHT0KRBB3D
 
-# Google AdSense site verification — after applying at adsense.google.com,
-# paste the "ca-pub-..." value it gives you (without quotes) below.
-# adsense_verification: ca-pub-XXXXXXXXXXXXXXXX
+# Google AdSense — publisher ID from the verification code snippet.
+adsense_client: ca-pub-9979640875578596
 
 # Use this project as a remote theme for GitHub Pages
 # See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
