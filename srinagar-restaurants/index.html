@@ -517,6 +517,7 @@
   .modal-rating { color: var(--accent-dark); font-weight: 600; font-size: 1rem; }
   .modal-meta { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; line-height: 1.6; }
   .modal-tags { margin-top: 0.6rem; }
+  .modal-description { font-size: 0.92rem; color: var(--ink); line-height: 1.6; margin: 0.9rem 0 0; }
   .modal-maps-link {
     display: inline-block;
     margin-top: 1rem;
@@ -1011,6 +1012,7 @@ function openModal(id) {
       ${r.phone ? '<br>' + escapeHTML(r.phone) : ''}
     </div>
     <div class="modal-tags">${tags.map(t => `<span class="r-tag">${escapeHTML(t)}</span>`).join('')}</div>
+    ${r.description ? `<p class="modal-description">${escapeHTML(r.description)}</p>` : ''}
     <a class="modal-maps-link" href="${mapsUrl}" target="_blank" rel="noopener">View on Google Maps →</a>
     <div class="modal-reviews-title">Top reviews</div>
     ${reviewsHTML}
