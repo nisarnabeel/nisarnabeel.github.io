@@ -18,246 +18,226 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9979640875578596"
      crossorigin="anonymous"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
   :root {
-    --ink: #1a1f1c;
-    --muted: #5c6a63;
-    --bg: #f7f5ef;
-    --surface: #ffffff;
-    --border: #e3ddca;
+    --ink: #1c1c1c;
+    --muted: #666666;
+    --bg: #ffffff;
+    --surface-2: #fafafa;
+    --border: #e5e5e5;
     --accent: #2f6b4f;
-    --accent-dark: #16362a;
-    --accent-tint: #eaf2ec;
-    --gold: #b8863f;
-    --gold-tint: #f7eedd;
-    --display: "Fraunces", Georgia, "Times New Roman", serif;
-    --body-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --accent-dark: #204b38;
+    --accent-tint: #eef5f0;
+    --gold: #a97633;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: var(--body-font);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
   }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; }
+  a { color: var(--accent-dark); }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    border-bottom: 1px solid var(--border);
+    padding: 0.9rem 0;
+  }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-weight: 700; font-size: 0.95rem; color: var(--ink); text-decoration: none; }
+  .brand span { color: var(--accent); }
+  .topbar nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.88rem;
+    margin-left: 1.4rem;
+  }
+  .topbar nav a:hover { color: var(--accent-dark); }
 
   /* ---------- Hero ---------- */
-  header.hero {
-    position: relative;
-    background: var(--accent-dark);
-    color: #fbf9f2;
-    padding: 4rem 0 3.2rem;
-    overflow: hidden;
+  header.hero { padding: 3rem 0 2.5rem; border-bottom: 1px solid var(--border); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    align-items: center;
   }
-  header.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.14;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cpath d='M110 24c-34 0-40 26-40 46 0 26 18 34 18 54 0 16-12 22-12 40 0 18 16 32 34 32s34-14 34-32c0-18-12-24-12-40 0-20 18-28 18-54 0-20-6-46-40-46z' fill='none' stroke='%23fbf9f2' stroke-width='1.4'/%3E%3C/svg%3E");
-    background-size: 220px 220px;
-    pointer-events: none;
-  }
-  header.hero .wrap { position: relative; z-index: 1; }
   .eyebrow {
-    font-family: var(--body-font);
     text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 0.76rem;
-    font-weight: 600;
-    color: var(--gold);
-    margin: 0 0 1rem;
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 0.7rem;
   }
   h1 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: clamp(2.1rem, 4.6vw, 3.1rem);
-    line-height: 1.14;
+    font-size: clamp(1.9rem, 3.6vw, 2.5rem);
+    line-height: 1.22;
     letter-spacing: -0.01em;
-    margin: 0 0 1.1rem;
-    color: #ffffff;
+    margin: 0 0 1rem;
+    color: var(--ink);
   }
   .lede {
-    font-size: 1.1rem;
-    max-width: 58ch;
-    color: #d9e3dc;
-    margin: 0 0 2.2rem;
+    font-size: 1.06rem;
+    color: var(--muted);
+    max-width: 52ch;
+    margin: 0 0 1.8rem;
   }
-  .stats-row {
-    display: flex;
-    gap: 2.4rem;
-    flex-wrap: wrap;
-    padding-top: 1.6rem;
-    border-top: 1px solid rgba(251,249,242,0.18);
+  .stats-row { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .stat .num { font-size: 1.55rem; font-weight: 700; display: block; color: var(--ink); }
+  .stat .label { font-size: 0.76rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+
+  .hero-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
   }
-  .stat .num {
-    font-family: var(--display);
-    font-size: 1.75rem;
-    font-weight: 600;
-    display: block;
-    color: #ffffff;
-  }
-  .stat .label {
-    font-size: 0.78rem;
-    color: #b9c7bd;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  .hero-photo-wrap { position: relative; }
+  .photo-credit {
+    position: absolute;
+    bottom: 0.6rem;
+    right: 0.6rem;
+    background: rgba(28,28,28,0.55);
+    color: #fff;
+    font-size: 0.68rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
   }
 
   /* ---------- Main content ---------- */
-  main { padding: 3rem 0 1rem; }
+  main { padding: 2.8rem 0 1rem; }
   h2 {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 1.65rem;
-    letter-spacing: -0.005em;
-    margin: 3.2rem 0 0.5rem;
-    color: var(--accent-dark);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 3rem 0 0.5rem;
+    color: var(--ink);
   }
   p { color: var(--ink); }
-  .sub { color: var(--muted); font-size: 1rem; margin: 0 0 1.4rem; max-width: 62ch; }
+  .sub { color: var(--muted); font-size: 0.98rem; margin: 0 0 1.2rem; max-width: 62ch; }
 
   .cta-box {
-    background: var(--accent-tint);
-    border: 1px solid #d6e5da;
-    border-radius: 14px;
-    padding: 1.7rem 1.9rem;
-    margin: 2rem 0 2.6rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.3rem 1.5rem;
+    margin: 1.6rem 0 2.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.2rem;
+    gap: 1rem;
     flex-wrap: wrap;
   }
-  .cta-box p {
-    margin: 0;
-    color: var(--accent-dark);
-    font-family: var(--display);
-    font-size: 1.15rem;
-    font-weight: 500;
-  }
+  .cta-box p { margin: 0; color: var(--ink); font-weight: 500; }
   .cta-btn {
     background: var(--accent-dark);
     color: #fff;
     text-decoration: none;
-    padding: 0.75rem 1.4rem;
-    border-radius: 8px;
+    padding: 0.65rem 1.25rem;
+    border-radius: 7px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     white-space: nowrap;
-    transition: background 0.15s ease, transform 0.15s ease;
   }
-  .cta-btn:hover { background: var(--accent); transform: translateY(-1px); }
+  .cta-btn:hover { background: var(--accent); }
 
   .table-scroll {
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
-    margin: 1.2rem 0 0.6rem;
+    margin: 1rem 0 0.6rem;
   }
   caption {
     caption-side: top;
     text-align: left;
     color: var(--muted);
-    font-size: 0.84rem;
-    padding: 0.9rem 1.1rem 0;
-    background: var(--surface);
+    font-size: 0.82rem;
+    padding: 0.8rem 1rem 0;
   }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95rem;
-    background: var(--surface);
-  }
-  th, td {
-    text-align: left;
-    padding: 0.85rem 1.1rem;
-    border-bottom: 1px solid var(--border);
-    vertical-align: top;
-  }
+  table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+  th, td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
   th {
     color: var(--muted);
     font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    background: #fbfaf5;
+    letter-spacing: 0.05em;
+    background: var(--surface-2);
   }
   tbody tr:last-child td { border-bottom: none; }
-  td.rating { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--gold); font-weight: 600; }
-  tbody tr:hover td { background: var(--accent-tint); }
+  td.rating { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--accent-dark); font-weight: 600; }
+  tbody tr:hover td { background: var(--surface-2); }
   td:first-child { font-weight: 600; }
 
   .dish-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 0.85rem;
-    margin: 1.4rem 0 1.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.7rem;
+    margin: 1.2rem 0 1.8rem;
   }
   .dish-card {
-    background: var(--surface);
+    background: var(--bg);
     border: 1px solid var(--border);
-    border-left: 3px solid var(--gold);
-    border-radius: 10px;
-    padding: 0.95rem 1.05rem;
-    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    border-radius: 8px;
+    padding: 0.8rem 0.9rem;
   }
-  .dish-card:hover { box-shadow: 0 4px 14px rgba(22,54,42,0.08); transform: translateY(-1px); }
-  .dish-card .name {
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 1.02rem;
-    color: var(--accent-dark);
-    display: block;
-    margin-bottom: 0.2rem;
-  }
-  .dish-card .count { font-size: 0.8rem; color: var(--muted); }
+  .dish-card .name { font-weight: 700; color: var(--ink); display: block; margin-bottom: 0.15rem; font-size: 0.96rem; }
+  .dish-card .count { font-size: 0.79rem; color: var(--muted); }
 
-  main > p {
-    font-size: 1.03rem;
-    max-width: 68ch;
-  }
+  main > p { max-width: 68ch; }
 
   footer {
     border-top: 1px solid var(--border);
-    margin-top: 3.5rem;
-    padding: 1.8rem 0 3rem;
+    margin-top: 3rem;
+    padding: 1.6rem 0 2.5rem;
     color: var(--muted);
-    font-size: 0.88rem;
-  }
-  footer a { color: var(--accent-dark); }
-
-  .ad-slot {
-    margin: 2.4rem 0;
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.78rem;
+    font-size: 0.86rem;
   }
 
+  .ad-slot { margin: 2rem 0; text-align: center; color: var(--muted); font-size: 0.78rem; }
+
+  @media (max-width: 720px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-photo { aspect-ratio: 16 / 10; }
+  }
   @media (max-width: 480px) {
     .table-scroll { overflow-x: auto; }
     table { min-width: 560px; }
+    .topbar nav a { margin-left: 0.9rem; }
   }
 </style>
 </head>
 <body>
 
-<header class="hero">
+<div class="topbar">
   <div class="wrap">
-    <p class="eyebrow">Srinagar, Kashmir · Restaurant Guide</p>
-    <h1>Best Restaurants in Srinagar, Built From Real Data</h1>
-    <p class="lede">Every pick below comes straight from Google Places ratings and reviews for restaurants actually operating in Srinagar right now — not a copy-pasted "top 10" list. Ratings, review counts, and dish tags are all real.</p>
-    <div class="stats-row">
-      <div class="stat"><span class="num">279</span><span class="label">Restaurants Tracked</span></div>
-      <div class="stat"><span class="num">4.9★</span><span class="label">Top-Rated Average</span></div>
-      <div class="stat"><span class="num">15+</span><span class="label">Kashmiri Delicacies Indexed</span></div>
+    <a class="brand" href="/srinagar-restaurants/">Srinagar<span>Eats</span></a>
+    <nav>
+      <a href="https://srinagarrestaurantfinder.streamlit.app/" target="_blank" rel="noopener">AI Finder</a>
+      <a href="/">nabeelnisar.com</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Srinagar, Kashmir · Restaurant Guide</p>
+      <h1>Best Restaurants in Srinagar, Built From Real Data</h1>
+      <p class="lede">Every pick below comes straight from Google Places ratings and reviews for restaurants actually operating in Srinagar right now — not a copy-pasted "top 10" list. Ratings, review counts, and dish tags are all real.</p>
+      <div class="stats-row">
+        <div class="stat"><span class="num">279</span><span class="label">Restaurants Tracked</span></div>
+        <div class="stat"><span class="num">4.9★</span><span class="label">Top-Rated Average</span></div>
+        <div class="stat"><span class="num">15+</span><span class="label">Delicacies Indexed</span></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="images/wazwan.jpg" alt="Traditional Kashmiri Wazwan platter shared at a family meal in Srinagar" loading="eager">
+      <span class="photo-credit">Wazwan · CC0, Wikimedia Commons</span>
     </div>
   </div>
 </header>
