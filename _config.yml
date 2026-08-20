@@ -39,7 +39,7 @@ font: "Sans Serif" # or "Sans Serif"
 # the Measurement ID below (format: G-XXXXXXXXXX). The old UA snippet this
 # used to point at (UA-111540567-4) is dead — Google shut off Universal
 # Analytics in mid-2023 — so this now drives a real GA4 gtag.js tag instead.
-# ga4_id: G-XXXXXXXXXX
+ga4_id: G-LHT0KRBB3D
 
 # Google AdSense site verification — after applying at adsense.google.com,
 # paste the "ca-pub-..." value it gives you (without quotes) below.
