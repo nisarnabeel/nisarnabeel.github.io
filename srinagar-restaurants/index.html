@@ -274,8 +274,23 @@
   .r-card {
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 1rem 1.1rem;
     background: var(--bg);
+    overflow: hidden;
+  }
+  .r-card-body { padding: 0.9rem 1.05rem 1rem; }
+  .r-photo {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    background: var(--surface-2);
+  }
+  .r-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--border);
   }
   .r-card .r-name { font-weight: 700; font-size: 0.98rem; margin: 0 0 0.25rem; }
   .r-card .r-rating { color: var(--accent-dark); font-weight: 600; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
@@ -315,11 +330,11 @@
     border: 1px solid var(--border);
     border-radius: 12px;
     background: var(--surface-2);
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
+    overflow: hidden;
   }
   .swipe-card-inner { width: 100%; }
+  .swipe-card-inner .r-card-body { padding: 1.3rem 1.4rem; }
+  .swipe-card-inner .r-photo { height: 180px; }
   .swipe-card-inner .r-name { font-weight: 700; font-size: 1.15rem; margin: 0 0 0.4rem; }
   .swipe-card-inner .r-rating { color: var(--accent-dark); font-weight: 600; }
   .swipe-card-inner .r-meta { color: var(--muted); font-size: 0.88rem; margin-top: 0.5rem; line-height: 1.5; }
@@ -422,6 +437,7 @@
     color: var(--muted);
   }
   .modal-close:hover { color: var(--ink); }
+  .modal-photo { width: 100%; max-height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; display: block; }
   .modal-name { font-size: 1.35rem; font-weight: 700; margin: 0 0 0.3rem; padding-right: 2rem; }
   .modal-rating { color: var(--accent-dark); font-weight: 600; font-size: 1rem; }
   .modal-meta { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; line-height: 1.6; }
@@ -700,12 +716,18 @@ function filteredList() {
 
 function restaurantCardHTML(r) {
   const tags = [r.knownFor, r.delicacy].filter(Boolean);
+  const photoHTML = r.photo
+    ? `<img class="r-photo" src="images/restaurants/${encodeURIComponent(r.id)}.jpg" alt="${escapeHTML(r.name)}" loading="lazy">`
+    : `<div class="r-photo r-photo-placeholder">🍽️</div>`;
   return `
     <div class="r-card" data-id="${escapeHTML(r.id)}">
-      <div class="r-name">${escapeHTML(r.name)}</div>
-      <div class="r-rating">${r.rating}★ (${r.reviews.toLocaleString()})</div>
-      <div class="r-meta">${escapeHTML(r.neighborhood)}${r.phone ? ' · ' + escapeHTML(r.phone) : ''}</div>
-      ${tags.map(t => `<span class="r-tag">${escapeHTML(t)}</span>`).join('')}
+      ${photoHTML}
+      <div class="r-card-body">
+        <div class="r-name">${escapeHTML(r.name)}</div>
+        <div class="r-rating">${r.rating}★ (${r.reviews.toLocaleString()})</div>
+        <div class="r-meta">${escapeHTML(r.neighborhood)}${r.phone ? ' · ' + escapeHTML(r.phone) : ''}</div>
+        ${tags.map(t => `<span class="r-tag">${escapeHTML(t)}</span>`).join('')}
+      </div>
     </div>`;
 }
 
@@ -756,7 +778,7 @@ function nextSwipe() { swipeIdx++; showSwipeCard(); }
 function showSwipeCard() {
   const el = document.getElementById('swipeCardInner');
   if (swipeIdx >= swipeDeck.length) {
-    el.innerHTML = `<div class="r-name">You've been through them all!</div><div class="r-meta">Refresh the page for a new shuffled batch.</div>`;
+    el.innerHTML = `<div class="r-card-body"><div class="r-name">You've been through them all!</div><div class="r-meta">Refresh the page for a new shuffled batch.</div></div>`;
     document.getElementById('likeBtn').disabled = true;
     document.getElementById('skipBtn').disabled = true;
     return;
@@ -764,11 +786,17 @@ function showSwipeCard() {
   const r = swipeDeck[swipeIdx];
   el.dataset.id = r.id;
   const tags = [r.knownFor, r.delicacy].filter(Boolean);
+  const photoHTML = r.photo
+    ? `<img class="r-photo" src="images/restaurants/${encodeURIComponent(r.id)}.jpg" alt="${escapeHTML(r.name)}" loading="lazy">`
+    : `<div class="r-photo r-photo-placeholder">🍽️</div>`;
   el.innerHTML = `
-    <div class="r-name">${escapeHTML(r.name)}</div>
-    <div class="r-rating">${r.rating}★ (${r.reviews.toLocaleString()})</div>
-    <div class="r-meta">${escapeHTML(r.neighborhood)}</div>
-    ${tags.map(t => `<span class="r-tag">${escapeHTML(t)}</span>`).join('')}
+    ${photoHTML}
+    <div class="r-card-body">
+      <div class="r-name">${escapeHTML(r.name)}</div>
+      <div class="r-rating">${r.rating}★ (${r.reviews.toLocaleString()})</div>
+      <div class="r-meta">${escapeHTML(r.neighborhood)}</div>
+      ${tags.map(t => `<span class="r-tag">${escapeHTML(t)}</span>`).join('')}
+    </div>
   `;
 }
 
@@ -813,7 +841,12 @@ function openModal(id) {
         </div>`).join('')
     : `<p class="no-reviews">No review text available for this listing yet.</p>`;
 
+  const modalPhotoHTML = r.photo
+    ? `<img class="modal-photo" src="images/restaurants/${encodeURIComponent(r.id)}.jpg" alt="${escapeHTML(r.name)}">`
+    : '';
+
   document.getElementById('modalBody').innerHTML = `
+    ${modalPhotoHTML}
     <div class="modal-name">${escapeHTML(r.name)}</div>
     <div class="modal-rating">${r.rating}★ (${r.reviews.toLocaleString()} reviews)</div>
     <div class="modal-meta">
