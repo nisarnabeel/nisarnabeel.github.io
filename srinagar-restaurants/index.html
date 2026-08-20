@@ -200,6 +200,139 @@
 
   .ad-slot { margin: 2rem 0; text-align: center; color: var(--muted); font-size: 0.78rem; }
 
+  /* ---------- Filter bar + card grid ---------- */
+  .filter-bar { display: flex; gap: 0.6rem; flex-wrap: wrap; margin: 1rem 0 0.8rem; }
+  .filter-bar input, .filter-bar select {
+    font: inherit;
+    font-size: 0.92rem;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .filter-bar input { flex: 1 1 220px; }
+  .filter-bar input:focus, .filter-bar select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .result-count { color: var(--muted); font-size: 0.85rem; margin: 0 0 0.8rem; }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .r-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    background: var(--bg);
+  }
+  .r-card .r-name { font-weight: 700; font-size: 0.98rem; margin: 0 0 0.25rem; }
+  .r-card .r-rating { color: var(--accent-dark); font-weight: 600; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+  .r-card .r-meta { color: var(--muted); font-size: 0.82rem; margin-top: 0.35rem; line-height: 1.5; }
+  .r-tag {
+    display: inline-block;
+    background: var(--accent-tint);
+    color: var(--accent-dark);
+    font-size: 0.74rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+    margin: 0.4rem 0.3rem 0 0;
+  }
+  .load-more-btn {
+    display: block;
+    margin: 0.4rem auto 2rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    padding: 0.6rem 1.4rem;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .load-more-btn:hover { background: var(--accent-tint); }
+  .load-more-btn:disabled { opacity: 0.5; cursor: default; }
+
+  /* ---------- Swipe ---------- */
+  .swipe-wrap { display: flex; flex-direction: column; align-items: center; margin: 1rem 0 2rem; }
+  .swipe-card {
+    width: 100%;
+    max-width: 380px;
+    min-height: 200px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface-2);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .swipe-card-inner { width: 100%; }
+  .swipe-card-inner .r-name { font-weight: 700; font-size: 1.15rem; margin: 0 0 0.4rem; }
+  .swipe-card-inner .r-rating { color: var(--accent-dark); font-weight: 600; }
+  .swipe-card-inner .r-meta { color: var(--muted); font-size: 0.88rem; margin-top: 0.5rem; line-height: 1.5; }
+  .swipe-actions { display: flex; gap: 0.8rem; margin-top: 1rem; }
+  .swipe-btn {
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    cursor: pointer;
+  }
+  .swipe-btn.like { color: #b3261e; border-color: #f0c9c5; }
+  .swipe-btn.like:hover { background: #fdf1f0; }
+  .swipe-btn.skip { color: var(--muted); }
+  .swipe-btn.skip:hover { background: var(--surface-2); }
+  .liked-list { margin-top: 1.2rem; font-size: 0.86rem; color: var(--muted); text-align: center; max-width: 380px; }
+  .liked-list b { color: var(--ink); }
+
+  /* ---------- Chat ---------- */
+  .chat-box {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin: 1rem 0 2rem;
+    overflow: hidden;
+  }
+  .chat-log {
+    max-height: 340px;
+    overflow-y: auto;
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background: var(--surface-2);
+  }
+  .chat-msg { font-size: 0.92rem; line-height: 1.55; max-width: 88%; padding: 0.6rem 0.85rem; border-radius: 10px; }
+  .chat-msg.assistant { background: var(--bg); border: 1px solid var(--border); align-self: flex-start; }
+  .chat-msg.user { background: var(--accent-dark); color: #fff; align-self: flex-end; }
+  .chat-form { display: flex; border-top: 1px solid var(--border); }
+  .chat-form input {
+    flex: 1;
+    border: none;
+    padding: 0.8rem 1rem;
+    font: inherit;
+    font-size: 0.93rem;
+    color: var(--ink);
+  }
+  .chat-form input:focus { outline: none; background: var(--surface-2); }
+  .chat-form button {
+    border: none;
+    background: var(--accent-dark);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    padding: 0 1.4rem;
+    cursor: pointer;
+  }
+  .chat-form button:hover { background: var(--accent); }
+  .chat-form button:disabled { opacity: 0.6; cursor: default; }
+  .chat-note { font-size: 0.78rem; color: var(--muted); padding: 0.5rem 1.1rem 0; margin: 0; }
+
   @media (max-width: 720px) {
     .hero-grid { grid-template-columns: 1fr; }
     .hero-photo { aspect-ratio: 16 / 10; }
@@ -272,9 +405,46 @@
     </table>
   </div>
 
-  <div class="cta-box">
-    <p>Want a match for what <em>you're</em> craving, not a static list?</p>
-    <a class="cta-btn" href="https://srinagarrestaurantfinder.streamlit.app/" target="_blank" rel="noopener">Try the AI Restaurant Finder →</a>
+  <h2 id="browse">Browse All 277 Restaurants</h2>
+  <p class="sub">Search, filter by neighborhood, and set a minimum rating — updates instantly, no page reload.</p>
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search name, dish, cuisine…" autocomplete="off">
+    <select id="neighborhoodSelect"><option value="">All neighborhoods</option></select>
+    <select id="ratingSelect">
+      <option value="0">Any rating</option>
+      <option value="4.9">4.9★ and up</option>
+      <option value="4.7">4.7★ and up</option>
+      <option value="4.5">4.5★ and up</option>
+    </select>
+  </div>
+  <p class="result-count" id="resultCount"></p>
+  <div class="card-grid" id="cardGrid"></div>
+  <button class="load-more-btn" id="loadMoreBtn" type="button">Show more</button>
+
+  <h2 id="swipe">Swipe to Discover</h2>
+  <p class="sub">Can't decide? Swipe through random picks — like the ones that sound good, skip the rest.</p>
+  <div class="swipe-wrap">
+    <div class="swipe-card" id="swipeCard">
+      <div class="swipe-card-inner" id="swipeCardInner"></div>
+    </div>
+    <div class="swipe-actions">
+      <button id="skipBtn" class="swipe-btn skip" type="button">✕ Skip</button>
+      <button id="likeBtn" class="swipe-btn like" type="button">♥ Like</button>
+    </div>
+    <div class="liked-list" id="likedList"></div>
+  </div>
+
+  <h2 id="ask">Ask About Srinagar Restaurants</h2>
+  <p class="sub">Ask in plain language — answers are grounded only in the real data above, nothing invented.</p>
+  <div class="chat-box">
+    <div class="chat-log" id="chatLog">
+      <div class="chat-msg assistant">Ask me something like "quiet place near Dal Lake for kahwa" or "best wazwan spot in Rajbagh."</div>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Ask a question…" autocomplete="off">
+      <button type="submit">Ask</button>
+    </form>
+    <p class="chat-note" id="chatNote"></p>
   </div>
 
   <h2>Kashmiri Dishes Worth Seeking Out</h2>
@@ -295,7 +465,7 @@
   </div>
 
   <h2>Why This List Is Different</h2>
-  <p>Most "best restaurants in Srinagar" articles online are written once and never updated. This page is generated from a live dataset of 279 real restaurants pulled from Google Places — ratings, review counts, addresses, and dish tags are all sourced directly, not guessed. It's the same dataset that powers the <a href="https://srinagarrestaurantfinder.streamlit.app/" target="_blank" rel="noopener">Srinagar Restaurant Finder</a>, an interactive app where you can filter by neighborhood, budget, and craving, swipe through options, or just ask an AI assistant a direct question like "quiet place near Dal Lake for kahwa."</p>
+  <p>Most "best restaurants in Srinagar" articles online are written once and never updated. This page is generated from a live dataset of 277 real restaurants pulled from Google Places — ratings, review counts, addresses, and dish tags are all sourced directly, not guessed. Browse, filter, swipe, and ask the AI assistant right here on the page — no separate app required. Prefer a native-feel version? The same dataset also powers the standalone <a href="https://srinagarrestaurantfinder.streamlit.app/" target="_blank" rel="noopener">Srinagar Restaurant Finder</a> app.</p>
 
   <div class="ad-slot">
     <!-- Google AdSense in-article ad unit goes here once the site is approved -->
@@ -308,6 +478,216 @@
     <p>Part of <a href="/">nabeelnisar.com</a>. Data sourced from Google Places; updated periodically. Restaurant details can change — always confirm hours before visiting. <a href="/privacy-policy/">Privacy Policy</a></p>
   </div>
 </footer>
+
+<script>
+// ===== Config =====
+// Once you deploy the Cloudflare Worker (see /srinagar-restaurants/worker/chat-worker.js),
+// paste its URL here to activate the AI chat. Until then, chat shows a friendly notice.
+const CHAT_WORKER_URL = ""; // e.g. "https://srinagar-chat.YOURNAME.workers.dev"
+
+let ALL = [];
+let visibleCount = 24;
+const PAGE_SIZE = 24;
+
+fetch('data/restaurants.json')
+  .then(r => r.json())
+  .then(data => {
+    ALL = data;
+    initBrowse();
+    initSwipe();
+  })
+  .catch(() => {
+    document.getElementById('resultCount').textContent = "Couldn't load restaurant data right now.";
+  });
+
+// ===== Browse & Filter =====
+function initBrowse() {
+  const neighborhoods = [...new Set(ALL.map(r => r.neighborhood))].sort();
+  const sel = document.getElementById('neighborhoodSelect');
+  for (const n of neighborhoods) {
+    const opt = document.createElement('option');
+    opt.value = n; opt.textContent = n;
+    sel.appendChild(opt);
+  }
+
+  document.getElementById('searchInput').addEventListener('input', () => { visibleCount = PAGE_SIZE; renderBrowse(); });
+  sel.addEventListener('change', () => { visibleCount = PAGE_SIZE; renderBrowse(); });
+  document.getElementById('ratingSelect').addEventListener('change', () => { visibleCount = PAGE_SIZE; renderBrowse(); });
+  document.getElementById('loadMoreBtn').addEventListener('click', () => { visibleCount += PAGE_SIZE; renderBrowse(); });
+
+  renderBrowse();
+}
+
+function filteredList() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const nbhd = document.getElementById('neighborhoodSelect').value;
+  const minRating = parseFloat(document.getElementById('ratingSelect').value) || 0;
+
+  return ALL.filter(r => {
+    if (r.rating < minRating) return false;
+    if (nbhd && r.neighborhood !== nbhd) return false;
+    if (q) {
+      const hay = [r.name, r.knownFor, r.delicacy, r.neighborhood].filter(Boolean).join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  }).sort((a, b) => b.rating - a.rating || b.reviews - a.reviews);
+}
+
+function restaurantCardHTML(r) {
+  const tags = [r.knownFor, r.delicacy].filter(Boolean);
+  return `
+    <div class="r-card">
+      <div class="r-name">${escapeHTML(r.name)}</div>
+      <div class="r-rating">${r.rating}★ (${r.reviews.toLocaleString()})</div>
+      <div class="r-meta">${escapeHTML(r.neighborhood)}${r.phone ? ' · ' + escapeHTML(r.phone) : ''}</div>
+      ${tags.map(t => `<span class="r-tag">${escapeHTML(t)}</span>`).join('')}
+    </div>`;
+}
+
+function renderBrowse() {
+  const list = filteredList();
+  const shown = list.slice(0, visibleCount);
+  document.getElementById('cardGrid').innerHTML = shown.map(restaurantCardHTML).join('');
+  document.getElementById('resultCount').textContent = `${list.length} restaurant${list.length === 1 ? '' : 's'} match`;
+  const btn = document.getElementById('loadMoreBtn');
+  if (visibleCount >= list.length) {
+    btn.textContent = list.length === 0 ? 'No matches' : 'That\'s everything';
+    btn.disabled = true;
+  } else {
+    btn.textContent = `Show more (${list.length - visibleCount} left)`;
+    btn.disabled = false;
+  }
+}
+
+function escapeHTML(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ===== Swipe =====
+let swipeDeck = [];
+let swipeIdx = 0;
+let liked = JSON.parse(localStorage.getItem('srinagarLikes') || '[]');
+
+function initSwipe() {
+  swipeDeck = ALL.filter(r => r.rating >= 4.5).sort(() => Math.random() - 0.5).slice(0, 60);
+  swipeIdx = 0;
+  showSwipeCard();
+  renderLiked();
+
+  document.getElementById('likeBtn').addEventListener('click', () => {
+    const r = swipeDeck[swipeIdx];
+    if (r && !liked.find(x => x.id === r.id)) {
+      liked.push({ id: r.id, name: r.name, neighborhood: r.neighborhood });
+      localStorage.setItem('srinagarLikes', JSON.stringify(liked));
+      renderLiked();
+    }
+    nextSwipe();
+  });
+  document.getElementById('skipBtn').addEventListener('click', nextSwipe);
+}
+
+function nextSwipe() { swipeIdx++; showSwipeCard(); }
+
+function showSwipeCard() {
+  const el = document.getElementById('swipeCardInner');
+  if (swipeIdx >= swipeDeck.length) {
+    el.innerHTML = `<div class="r-name">You've been through them all!</div><div class="r-meta">Refresh the page for a new shuffled batch.</div>`;
+    document.getElementById('likeBtn').disabled = true;
+    document.getElementById('skipBtn').disabled = true;
+    return;
+  }
+  const r = swipeDeck[swipeIdx];
+  const tags = [r.knownFor, r.delicacy].filter(Boolean);
+  el.innerHTML = `
+    <div class="r-name">${escapeHTML(r.name)}</div>
+    <div class="r-rating">${r.rating}★ (${r.reviews.toLocaleString()})</div>
+    <div class="r-meta">${escapeHTML(r.neighborhood)}</div>
+    ${tags.map(t => `<span class="r-tag">${escapeHTML(t)}</span>`).join('')}
+  `;
+}
+
+function renderLiked() {
+  const box = document.getElementById('likedList');
+  if (liked.length === 0) { box.textContent = ''; return; }
+  box.innerHTML = `<b>Your picks (${liked.length}):</b> ` + liked.map(l => escapeHTML(l.name)).join(', ');
+}
+
+// ===== Ask AI (chat) =====
+const chatHistory = [];
+
+function retrieveCandidates(query, k = 6) {
+  const terms = query.toLowerCase().match(/[a-z0-9']+/g)?.filter(t => t.length > 2) || [];
+  if (terms.length === 0) return [];
+  const scored = ALL.map(r => {
+    const hay = [r.name, r.knownFor, r.delicacy, r.neighborhood, r.amenities].filter(Boolean).join(' ').toLowerCase();
+    const score = terms.reduce((s, t) => s + (hay.includes(t) ? 1 : 0), 0);
+    return { r, score };
+  }).filter(x => x.score > 0);
+  scored.sort((a, b) => b.score - a.score || b.r.rating - a.r.rating);
+  return scored.slice(0, k).map(x => x.r);
+}
+
+function buildContext(candidates) {
+  if (candidates.length === 0) return "(no matching restaurants found in the dataset)";
+  return candidates.map(r => {
+    const tags = [r.knownFor, r.delicacy].filter(Boolean).join(', ') || 'none';
+    return `- ${r.name} | ${r.rating}★ (${r.reviews} reviews) | ${r.neighborhood} | Tags: ${tags} | Amenities: ${r.amenities || 'none'} | Address: ${r.address}`;
+  }).join('\n');
+}
+
+function addChatMsg(role, text) {
+  const log = document.getElementById('chatLog');
+  const div = document.createElement('div');
+  div.className = `chat-msg ${role}`;
+  div.textContent = text;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+
+document.getElementById('chatForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const input = document.getElementById('chatInput');
+  const query = input.value.trim();
+  if (!query) return;
+
+  if (!CHAT_WORKER_URL) {
+    document.getElementById('chatNote').textContent = "AI chat isn't connected yet — the site owner needs to deploy the chat backend.";
+    return;
+  }
+
+  addChatMsg('user', query);
+  input.value = '';
+  const btn = e.target.querySelector('button');
+  btn.disabled = true;
+  addChatMsg('assistant', '…thinking…');
+  const log = document.getElementById('chatLog');
+
+  try {
+    const candidates = retrieveCandidates(query);
+    const context = buildContext(candidates);
+    const res = await fetch(CHAT_WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query, context, history: chatHistory.slice(-4) }),
+    });
+    const data = await res.json();
+    log.lastChild.remove();
+    const reply = data.reply || "Sorry, I couldn't get an answer just now.";
+    addChatMsg('assistant', reply);
+    chatHistory.push({ role: 'user', content: query }, { role: 'assistant', content: reply });
+  } catch (err) {
+    log.lastChild.remove();
+    addChatMsg('assistant', "Something went wrong reaching the AI. Try again in a moment.");
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+if (!CHAT_WORKER_URL) {
+  document.getElementById('chatNote').textContent = "AI chat isn't connected yet — the site owner needs to deploy the chat backend.";
+}
+</script>
 
 </body>
 </html>
