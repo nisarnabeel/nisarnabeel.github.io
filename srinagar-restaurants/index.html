@@ -398,6 +398,38 @@
   .chat-form button:disabled { opacity: 0.6; cursor: default; }
   .chat-note { font-size: 0.78rem; color: var(--muted); padding: 0.5rem 1.1rem 0; margin: 0; }
 
+  /* ---------- AI sparkle accent ---------- */
+  .sparkle {
+    display: inline-block;
+    background: linear-gradient(120deg, #4285F4, #A142F4 45%, #F44290 75%, #FBBC05);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: sparkle-shimmer 3s ease-in-out infinite, sparkle-pulse 2.2s ease-in-out infinite;
+  }
+  .sparkle-lg { font-size: 1.1em; margin-right: 0.05em; }
+  .ask-ai-link { display: inline-flex; align-items: center; gap: 0.3rem; }
+  .ai-heading { display: flex; align-items: center; gap: 0.3rem; }
+  @keyframes sparkle-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes sparkle-pulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.18) rotate(8deg); }
+  }
+  .chat-box {
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(120deg, #4285F4, #A142F4 45%, #F44290 75%, #FBBC05) border-box;
+    border: 1.5px solid transparent;
+  }
+  .chat-box .chat-log { background: var(--surface-2); }
+  @media (prefers-reduced-motion: reduce) {
+    .sparkle { animation: none; }
+  }
+
   /* ---------- Restaurant detail modal ---------- */
   .r-card, .swipe-card-inner { cursor: pointer; }
   .r-card:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
@@ -486,7 +518,7 @@
     <nav>
       <a href="#browse">Browse</a>
       <a href="#swipe">Swipe</a>
-      <a href="#ask">Ask AI</a>
+      <a href="#ask" class="ask-ai-link"><span class="sparkle">✦</span> Ask AI</a>
       <button id="surpriseBtn" class="surprise-btn" type="button">🎲 Surprise Me</button>
     </nav>
   </div>
@@ -513,7 +545,7 @@
 
 <main class="wrap">
 
-  <h2 id="ask">Ask About Srinagar Restaurants</h2>
+  <h2 id="ask" class="ai-heading"><span class="sparkle sparkle-lg">✦</span> Ask About Srinagar Restaurants</h2>
   <p class="sub">Ask in plain language — answers are grounded only in real Google Places data, nothing invented.</p>
   <div class="chat-box">
     <div class="chat-log" id="chatLog">
