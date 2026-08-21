@@ -88,6 +88,25 @@
   .verdict-badge { display: inline-block; background: var(--accent-tint); color: var(--accent-dark); font-weight: 700; font-size: 0.75rem; padding: 0.15rem 0.55rem; border-radius: 20px; margin-bottom: 0.6rem; }
   .airline-card h3 { margin: 0.1rem 0 0.4rem; font-size: 1.15rem; }
 
+  .stat-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem 1.6rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin: 0.7rem 0 1rem;
+  }
+  .stat-strip .stat-item { min-width: 90px; }
+  .stat-strip .stat-label { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); margin-bottom: 0.15rem; }
+  .stat-strip .stat-value { font-size: 0.92rem; font-weight: 700; color: var(--ink); }
+
+  .route-diagram { border: 1px solid var(--border); border-radius: 12px; padding: 1.3rem 1.2rem 1rem; margin: 2rem 0; background: var(--bg); }
+  .route-diagram h4 { margin: 0 0 0.3rem; font-size: 1rem; }
+  .route-diagram .sub { margin: 0 0 0.8rem; }
+  .route-diagram svg { width: 100%; height: auto; display: block; }
+
   .callout { background: var(--accent-tint); border-left: 3px solid var(--accent); border-radius: 6px; padding: 1rem 1.2rem; margin: 1.8rem 0; font-size: 0.94rem; }
   .callout strong { color: var(--accent-dark); }
 
@@ -141,10 +160,17 @@
     <div class="airline-card-body">
       <span class="verdict-badge">Usually cheapest</span>
       <h3>IndiGo</h3>
-      <p>IndiGo has been aggressively expanding into long-haul Europe routes, and pricing is usually the most competitive of the group. Realistically, expect one-way fares in the ₹25,000-35,000 range on Amsterdam-Mumbai for most booking windows, occasional flash sales can dip lower, but that's the usual price you should plan around, not the number you'll actually find most of the time. Amsterdam to Mumbai runs as flight 6E22 (6E021 on the return), worth knowing since IndiGo's Amsterdam service connects to Mumbai, not Delhi, so factor in a domestic leg if Delhi or further north is your actual destination.</p>
-      <p>As of this week, that route is genuinely flying a real widebody: a Boeing 787-9 Dreamliner, wet-leased from Norse Atlantic Airways, running daily with a consistent 9-10 hour block time (verified against live flight history, not schedule data). It's flown under Norse Atlantic's own operational control too, ATC tracks it under the callsign NBT22, not an IndiGo callsign. Live routing shows it heading south from Amsterdam over Central Europe, then down through the Eastern Mediterranean and along the Red Sea and Gulf corridor into Mumbai, rather than a shorter, more direct line, consistent with the wider airspace restrictions across the Middle East and South Asia that have been reshaping long-haul routing generally.</p>
-      <p>That said, this arrangement has a shelf life. IndiGo confirmed in August 2026 that it's winding the Norse Atlantic 787 lease down more broadly, and its Delhi-London Heathrow 787 service specifically pauses from 25 October 2026, with widebody service not fully returning until IndiGo's own Airbus A350s arrive in 2027. In the interim, expect some Europe routes to shift toward the Airbus A321XLR, a narrowbody built for long, thin long-haul routes, so double-check the aircraft type for your specific dates before booking.</p>
-      <p>Two things to budget for if you fly IndiGo internationally: meals are typically included on long-haul international fares, but comfort extras like a blanket, pillow, and eye shade are a separate paid add-on you pre-book through "Manage My Booking," not something handed out for free the way it is on legacy carriers.</p>
+      <div class="stat-strip">
+        <div class="stat-item"><span class="stat-label">Flight</span><span class="stat-value">6E22 / 6E021</span></div>
+        <div class="stat-item"><span class="stat-label">Route</span><span class="stat-value">AMS → BOM</span></div>
+        <div class="stat-item"><span class="stat-label">Departs</span><span class="stat-value">14:00 CEST</span></div>
+        <div class="stat-item"><span class="stat-label">Arrives</span><span class="stat-value">02:05 IST +1</span></div>
+        <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">~9h 5m</span></div>
+        <div class="stat-item"><span class="stat-label">Aircraft</span><span class="stat-value">787-9 (currently)</span></div>
+        <div class="stat-item"><span class="stat-label">Typical fare</span><span class="stat-value">₹25,000-35,000</span></div>
+      </div>
+      <p>IndiGo connects Amsterdam to Mumbai, not Delhi, so factor in a domestic leg if Delhi or further north is your real destination. As of now, that route is genuinely flying a widebody: a Boeing 787-9 wet-leased from Norse Atlantic Airways, tracked under Norse Atlantic's own ATC callsign (NBT22), not IndiGo's. But that arrangement has a shelf life, IndiGo confirmed in August 2026 it's winding the lease down, with its Delhi-London 787 service pausing from 25 October 2026 and widebody service not fully returning until its own A350s arrive in 2027. Some Europe routes may shift to the narrowbody A321XLR in the meantime, so check the aircraft type for your specific dates.</p>
+      <p>Budget for one more thing: meals are typically included, but a blanket, pillow, and eye shade are a separate paid add-on you pre-book, not handed out free like on the legacy carriers below.</p>
     </div>
   </div>
 
@@ -154,9 +180,52 @@
     <div class="airline-card-body">
       <span class="verdict-badge">Direct, but inconsistent</span>
       <h3>Air India</h3>
-      <p>Air India runs true direct flights, Amsterdam to Delhi is flight AI156 (AI155 on the return), operated on a Boeing 787-8 Dreamliner. That directness is the real appeal: no layover, no connection risk. Like IndiGo's Mumbai route, the actual flight path runs south from Amsterdam over Central Europe, down through the Eastern Mediterranean and Egypt, then along the Red Sea and Gulf corridor past Riyadh and Dubai before turning north into Delhi via Ahmedabad, rather than a shorter line over Iran and Pakistan. That detour has a real cost in time: current scheduled block time is about 10 hours 5 minutes, noticeably longer than the roughly 8-8.5 hours a direct Amsterdam-Delhi routing would normally take at this distance, so budget for that when you're comparing "nonstop" against a one-stop option on paper.</p>
-      <p>The catch, and this shows up repeatedly in independent reviews, not just word of mouth, is aircraft condition varies a lot depending on which specific 787 you get. Multiple Tripadvisor reviews of Air India's Amsterdam-Delhi route describe broken or barely-functional entertainment screens and worn interiors on the older jets in the fleet. Air India's newer 787-9s reportedly have a genuinely upgraded system with sharp 4K screens, but you don't get to choose which aircraft shows up for your flight. If in-flight entertainment actually working matters to you, treat it as a coin flip on this specific route rather than a guarantee.</p>
+      <div class="stat-strip">
+        <div class="stat-item"><span class="stat-label">Flight</span><span class="stat-value">AI156 / AI155</span></div>
+        <div class="stat-item"><span class="stat-label">Route</span><span class="stat-value">AMS → DEL</span></div>
+        <div class="stat-item"><span class="stat-label">Departs</span><span class="stat-value">20:40 CEST</span></div>
+        <div class="stat-item"><span class="stat-label">Arrives</span><span class="stat-value">09:45 IST</span></div>
+        <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">~10h 5m</span></div>
+        <div class="stat-item"><span class="stat-label">Aircraft</span><span class="stat-value">787-8</span></div>
+      </div>
+      <p>Air India runs a true direct flight, no layover, no connection risk. The tradeoff for that directness shows up in the block time: ~10h 5m is noticeably longer than the roughly 8-8.5 hours a direct Amsterdam-Delhi routing would normally take at this distance (see the route diagram below for why).</p>
+      <p>The real catch is consistency, not the route. Multiple Tripadvisor reviews of this exact route describe broken or barely-functional entertainment screens and worn interiors on the older 787-8s in the fleet, while the newer 787-9s reportedly have sharp 4K screens. You don't get to pick which aircraft shows up, so treat working entertainment as a coin flip, not a guarantee.</p>
     </div>
+  </div>
+
+  <div class="route-diagram">
+    <h4>Why the "direct" flight still takes 9-10 hours</h4>
+    <p class="sub">Both IndiGo's Mumbai flight and Air India's Delhi flight fly the same real corridor, verified against live flight tracking, not a straight line over Iran and Pakistan, but a longer detour south through Egypt and the Gulf.</p>
+    <svg viewBox="0 0 820 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flight path diagram from Amsterdam south through Vienna, Cairo, Riyadh, and Dubai, branching to Mumbai and Delhi">
+      <path d="M 60,50 C 150,80 190,90 230,105 C 300,130 340,150 380,175 C 440,200 480,205 520,200 C 570,193 610,190 650,192" fill="none" stroke="#2f6b4f" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 650,192 C 690,193 720,205 748,222" fill="none" stroke="#2f6b4f" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 650,192 C 685,175 715,150 748,120" fill="none" stroke="#2f6b4f" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
+      <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">
+        <circle cx="60" cy="50" r="5" fill="#204b38"/>
+        <text x="60" y="34" font-size="13" font-weight="700" fill="#1c1c1c" text-anchor="middle">Amsterdam</text>
+
+        <circle cx="230" cy="105" r="4" fill="#666"/>
+        <text x="230" y="123" font-size="11" fill="#666" text-anchor="middle">Vienna</text>
+
+        <circle cx="380" cy="175" r="4" fill="#666"/>
+        <text x="380" y="193" font-size="11" fill="#666" text-anchor="middle">Cairo</text>
+
+        <circle cx="520" cy="200" r="4" fill="#666"/>
+        <text x="520" y="218" font-size="11" fill="#666" text-anchor="middle">Riyadh</text>
+
+        <circle cx="650" cy="192" r="4" fill="#666"/>
+        <text x="650" y="177" font-size="11" fill="#666" text-anchor="middle">Dubai</text>
+
+        <circle cx="748" cy="222" r="5" fill="#204b38"/>
+        <text x="748" y="240" font-size="13" font-weight="700" fill="#1c1c1c" text-anchor="middle">Mumbai</text>
+        <text x="748" y="255" font-size="9" fill="#2f6b4f" text-anchor="middle">IndiGo 6E22</text>
+
+        <circle cx="748" cy="120" r="5" fill="#204b38"/>
+        <text x="748" y="105" font-size="13" font-weight="700" fill="#1c1c1c" text-anchor="middle">Delhi</text>
+        <text x="748" y="90" font-size="9" fill="#2f6b4f" text-anchor="middle">Air India AI156</text>
+      </g>
+    </svg>
+    <p class="sub" style="margin-top:0.6rem;">The dotted line (Dubai to Delhi) is Air India's final leg; the solid line is the shared corridor and IndiGo's route into Mumbai. Both avoid a shorter path directly over Iran and Pakistan.</p>
   </div>
 
   <div class="airline-card" id="lufthansa">
@@ -165,18 +234,38 @@
     <div class="airline-card-body">
       <span class="verdict-badge">Most reliable, most expensive</span>
       <h3>Lufthansa</h3>
-      <p>Lufthansa flies from Frankfurt and Munich to Delhi, Mumbai, Bengaluru, and Chennai, the widest India network of any European carrier, typically with a short connection through its home hub rather than a long layover. Frankfurt to Delhi runs as flight LH760 (LH761 on the return). It's consistently the most expensive of the group, but the tradeoff is real: newer aircraft on the India routes, a more predictable service standard, and none of the "which specific plane will I get" uncertainty that comes with Air India. If your dates are flexible, Lufthansa fares are usually cheapest booked 2-4 months out.</p>
+      <div class="stat-strip">
+        <div class="stat-item"><span class="stat-label">Flight</span><span class="stat-value">LH760 / LH761</span></div>
+        <div class="stat-item"><span class="stat-label">Route</span><span class="stat-value">FRA → DEL</span></div>
+        <div class="stat-item"><span class="stat-label">Departs</span><span class="stat-value">13:20 CEST</span></div>
+        <div class="stat-item"><span class="stat-label">Arrives</span><span class="stat-value">00:25 IST</span></div>
+        <div class="stat-item"><span class="stat-label">Duration</span><span class="stat-value">~8h 5m</span></div>
+        <div class="stat-item"><span class="stat-label">Aircraft</span><span class="stat-value">787-9</span></div>
+      </div>
+      <p>Lufthansa also flies Munich to Delhi, Mumbai, Bengaluru, and Chennai, the widest India network of any European carrier, usually with a short connection through its home hub rather than a long layover. It's consistently the most expensive of the group, but the tradeoff is real: a notably shorter block time than Air India on a comparable route, a more predictable service standard, and none of the "which specific plane will I get" uncertainty. If your dates are flexible, fares are usually cheapest booked 2-4 months out.</p>
     </div>
   </div>
 
   <h2 id="klm-airfrance">KLM and Air France</h2>
-  <p>KLM flies Amsterdam to Delhi as flight KL871 (KL872 on the return), plus Mumbai and Bengaluru, and Air France flies Paris to the same three cities, Paris to Delhi runs as AF226 (Air France rotates a few flight numbers on this route, including AF214 and AF284 depending on the day). Both are Air India's actual codeshare/alliance partners on parts of this corridor. Neither is usually the cheapest option, but both sit in a reasonable middle ground: better aircraft consistency than Air India, without quite Lufthansa's price premium. If you're flying from Amsterdam specifically and want a one-stop option instead of IndiGo or Air India's direct flight, KLM is the natural comparison to check.</p>
+  <div class="stat-strip">
+    <div class="stat-item"><span class="stat-label">KLM flight</span><span class="stat-value">KL871 / KL872</span></div>
+    <div class="stat-item"><span class="stat-label">Route</span><span class="stat-value">AMS → DEL</span></div>
+    <div class="stat-item"><span class="stat-label">Departs</span><span class="stat-value">14:25 CEST</span></div>
+    <div class="stat-item"><span class="stat-label">Arrives</span><span class="stat-value">01:55 IST +1</span></div>
+    <div class="stat-item"><span class="stat-label">Aircraft</span><span class="stat-value">787-10</span></div>
+    <div class="stat-item"><span class="stat-label">Air France flight</span><span class="stat-value">AF226 (varies)</span></div>
+    <div class="stat-item"><span class="stat-label">Route</span><span class="stat-value">CDG → DEL</span></div>
+  </div>
+  <p>KLM also serves Mumbai and Bengaluru from Amsterdam, and Air France flies Paris to the same three cities, both are Air India's actual codeshare/alliance partners on parts of this corridor. Neither is usually the cheapest option, but both sit in a reasonable middle ground: better aircraft consistency than Air India, without quite Lufthansa's price premium. If you're flying from Amsterdam specifically and want a one-stop option instead of IndiGo or Air India's direct flight, KLM is the natural comparison to check.</p>
 
   <div class="callout">
     <strong>On timing:</strong> January, February, and early November are consistently the cheapest windows to fly this route, with European winter fares running roughly 35-45% lower than peak summer (June-August). If your travel dates are flexible at all, that matters more than which airline you pick.
   </div>
 
   <h2 id="verdict">The Honest Verdict</h2>
+  <div class="callout">
+    <strong>My top pick, based on actually flying this route:</strong> IndiGo. It's not just the cheapest, it currently gives you a real widebody Dreamliner for a narrowbody-ish price, and in my experience that combination is hard to beat on value right now. Just go in knowing about the paid blanket and that the aircraft situation could change.
+  </div>
   <ul class="plain">
     <li><strong>Cheapest option:</strong> IndiGo. Amsterdam-Mumbai is still flying a real Boeing 787-9 widebody as of now, that's confirmed on current flight history, not a narrowbody. The A321XLR shift is coming, but the exact timing on this specific route isn't confirmed yet, so don't assume you'll get a narrowbody. What you should assume: no free blanket or pillow, those are a paid add-on you pre-book separately, unlike the legacy carriers below.</li>
     <li><strong>Want the shortest routing (direct, no layover) and can tolerate some unpredictability:</strong> Air India. Real chance of a tired cabin and a dead entertainment screen, balanced against saving a connection.</li>
