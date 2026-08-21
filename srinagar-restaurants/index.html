@@ -991,6 +991,11 @@ function escapeHTML(s) {
   return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
 
+function maskAuthor(name) {
+  const s = String(name || '').trim();
+  return s ? s.slice(0, 3) + '***' : 'Anonymous';
+}
+
 // ===== Swipe =====
 let swipeDeck = [];
 let swipeIdx = 0;
@@ -1075,7 +1080,7 @@ function openModal(id) {
     ? revs.map(rv => `
         <div class="review">
           <div class="review-head">
-            <span>${escapeHTML(rv.author)}</span>
+            <span>${escapeHTML(maskAuthor(rv.author))}</span>
             <span class="review-stars">${'★'.repeat(rv.rating || 0)}</span>
           </div>
           <div class="review-text">${escapeHTML(rv.text)}</div>
