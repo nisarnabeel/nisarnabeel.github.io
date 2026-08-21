@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    {% if site.adsense_client %}
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}"
-         crossorigin="anonymous"></script>
-    {% endif %}
     {% if site.ga4_id %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_id }}"></script>
@@ -27,10 +23,6 @@
     {% if site.canonical %}
     <link rel="canonical" href="{{ site.canonical }}"/>
     {% endif %}
-    {% if site.adsense_verification %}
-    <meta name="google-adsense-account" content="{{ site.adsense_verification }}">
-    {% endif %}
-
     <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
     <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
     <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
