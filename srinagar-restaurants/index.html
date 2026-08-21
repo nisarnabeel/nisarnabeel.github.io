@@ -347,7 +347,26 @@
   .leaflet-popup-content strong { display: block; margin-bottom: 0.2rem; }
   .popup-link { display: inline-block; margin-top: 0.4rem; font-size: 0.82rem; font-weight: 600; }
 
-  .hotel-search-wrap { position: relative; max-width: 420px; margin: 1rem 0 0.5rem; }
+  .hotel-tool-box {
+    background: var(--accent-tint);
+    border: 1px solid #d6e5da;
+    border-radius: 16px;
+    padding: 1.8rem 1.8rem 1.6rem;
+    margin: 2.2rem 0;
+  }
+  .hotel-tool-box h2 { margin-top: 0; font-size: 1.5rem; }
+  .hotel-tool-box .sub { font-size: 1rem; max-width: 60ch; }
+  .hotel-search-wrap { position: relative; max-width: 480px; margin: 1.2rem 0 0.5rem; }
+  .hotel-search-wrap input#hotelSearchInput {
+    width: 100%;
+    font-size: 1.05rem;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .hotel-search-wrap input#hotelSearchInput:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
   .hotel-suggestions {
     position: absolute;
     top: 100%;
@@ -764,14 +783,16 @@
   <p class="sub">All restaurants plotted by real location, from OpenStreetMap. Click a marker for details.</p>
   <div id="restaurantMap" class="map-container"></div>
 
-  <h2 id="near-hotel">Restaurants Near Your Hotel</h2>
-  <p class="sub">Staying on a houseboat or at a hotel in Srinagar? Find real, top-rated restaurants closest to it.</p>
-  <div class="hotel-search-wrap">
-    <input type="text" id="hotelSearchInput" placeholder="Search your hotel or houseboat…" autocomplete="off">
-    <div class="hotel-suggestions" id="hotelSuggestions"></div>
+  <div class="hotel-tool-box">
+    <h2 id="near-hotel">🏨 Restaurants Near Your Hotel</h2>
+    <p class="sub">Staying on a houseboat or at a hotel in Srinagar? Find real, top-rated restaurants closest to it.</p>
+    <div class="hotel-search-wrap">
+      <input type="text" id="hotelSearchInput" placeholder="Search your hotel or houseboat…" autocomplete="off">
+      <div class="hotel-suggestions" id="hotelSuggestions"></div>
+    </div>
+    <p class="selected-hotel-note" id="selectedHotelNote"></p>
+    <div class="card-grid" id="nearHotelResults"></div>
   </div>
-  <p class="selected-hotel-note" id="selectedHotelNote"></p>
-  <div class="card-grid" id="nearHotelResults"></div>
 
   <h2 id="swipe">Swipe to Discover</h2>
   <p class="sub">Can't decide? Swipe through random picks. Like the ones that sound good, skip the rest.</p>
