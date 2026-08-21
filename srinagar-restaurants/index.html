@@ -268,6 +268,26 @@
   .dish-card .name { font-weight: 700; color: var(--ink); display: block; margin-bottom: 0.15rem; font-size: 0.96rem; }
   .dish-card .count { font-size: 0.79rem; color: var(--muted); }
 
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 0.9rem;
+    margin: 1.2rem 0 1.8rem;
+  }
+  .guide-card {
+    display: block;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    text-decoration: none;
+    transition: border-color 0.15s;
+  }
+  .guide-card:hover { border-color: var(--accent); }
+  .guide-card .eyebrow2 { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; font-weight: 700; color: var(--accent); margin: 0 0 0.4rem; }
+  .guide-card h3 { margin: 0 0 0.4rem; font-size: 1rem; color: var(--ink); }
+  .guide-card p { margin: 0; font-size: 0.87rem; color: var(--muted); }
+
   main > p { max-width: 68ch; }
 
   footer {
@@ -592,6 +612,7 @@
     <nav>
       <a href="#browse">Browse</a>
       <a href="#swipe">Swipe</a>
+      <a href="#guides">Guides</a>
       <a href="/srinagar-restaurants/insights/">Insights</a>
       <a href="#ask" class="ask-ai-link"><span class="sparkle">✦</span> Ask AI</a>
       <button id="surpriseBtn" class="surprise-btn" type="button">🎲 Surprise Me</button>
@@ -606,7 +627,7 @@
       <h1>Best Restaurants in Srinagar, Built From Real Data</h1>
       <p class="lede">Every pick below comes straight from Google Places ratings and reviews for restaurants actually operating in Srinagar right now — not a copy-pasted "top 10" list. Ratings, review counts, and dish tags are all real.</p>
       <div class="stats-row">
-        <div class="stat"><span class="num">279</span><span class="label">Restaurants Tracked</span></div>
+        <div class="stat"><span class="num">287</span><span class="label">Restaurants Tracked</span></div>
         <div class="stat"><span class="num">4.9★</span><span class="label">Top-Rated Average</span></div>
         <div class="stat"><span class="num">15+</span><span class="label">Delicacies Indexed</span></div>
       </div>
@@ -701,6 +722,21 @@
     <div class="liked-list" id="likedList"></div>
   </div>
 
+  <h2 id="guides">Guides &amp; Deep Dives</h2>
+  <p class="sub">Longer reads for specific cravings, going deeper than the browse list below.</p>
+  <div class="guide-grid">
+    <a class="guide-card" href="/srinagar-restaurants/where-to-get-real-wazwan/">
+      <p class="eyebrow2">Guide</p>
+      <h3>Where to Get Real Wazwan in Srinagar</h3>
+      <p>Ahdoos, Salam E Wazwan, JJ Foods, and Kareema — ranked by real ratings, with video walkthroughs.</p>
+    </a>
+    <a class="guide-card" href="/srinagar-restaurants/insights/">
+      <p class="eyebrow2">Data Report</p>
+      <h3>What 1,362 Reviews Reveal About Eating Out in Srinagar</h3>
+      <p>Praise and complaint themes, neighborhood breakdowns, and how top spots differ from average ones.</p>
+    </a>
+  </div>
+
   <h2>Kashmiri Dishes Worth Seeking Out</h2>
   <p class="sub">The most commonly tagged local delicacies across every restaurant in the dataset — a rough map of what Srinagar actually eats.</p>
   <div class="dish-grid">
@@ -719,7 +755,7 @@
   </div>
 
   <h2>Why This List Is Different</h2>
-  <p>Most "best restaurants in Srinagar" articles online are written once and never updated. This page is generated from a live dataset of 277 real restaurants pulled from Google Places — ratings, review counts, addresses, and dish tags are all sourced directly, not guessed. Browse, filter, swipe, and ask the AI assistant right here on the page. Curious what patterns show up across all those reviews? Read <a href="/srinagar-restaurants/insights/">what 1,362 real reviews reveal about eating out in Srinagar →</a>. Looking specifically for Wazwan? See <a href="/srinagar-restaurants/where-to-get-real-wazwan/">where to get real Wazwan in Srinagar →</a></p>
+  <p>Most "best restaurants in Srinagar" articles online are written once and never updated. This page is generated from a live dataset of 287 real restaurants pulled from Google Places — ratings, review counts, addresses, and dish tags are all sourced directly, not guessed. Browse, filter, swipe, and ask the AI assistant right here on the page.</p>
 
   <div class="ad-slot">
     <!-- Google AdSense in-article ad unit goes here once the site is approved -->
