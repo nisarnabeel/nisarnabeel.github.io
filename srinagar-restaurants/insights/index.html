@@ -161,6 +161,36 @@
 
   .ad-slot { margin: 2rem 0; text-align: center; color: var(--muted); font-size: 0.78rem; }
 
+  .feedback-box { border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.3rem; margin: 1rem 0 2rem; background: var(--surface-2); }
+  .feedback-box form { display: flex; flex-direction: column; gap: 0.7rem; }
+  .feedback-box textarea {
+    font: inherit;
+    font-size: 0.92rem;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    resize: vertical;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  .feedback-box textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .feedback-box button {
+    align-self: flex-start;
+    background: var(--accent-dark);
+    color: #fff;
+    border: none;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .feedback-box button:hover { background: var(--accent); }
+  .feedback-box button:disabled { opacity: 0.6; cursor: default; }
+  .feedback-note { font-size: 0.85rem; color: var(--muted); margin: 0.6rem 0 0; }
+  .feedback-note.success { color: var(--accent-dark); font-weight: 600; }
+
   footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.6rem 0 2.5rem; color: var(--muted); font-size: 0.86rem; }
 </style>
 </head>
@@ -326,6 +356,16 @@
     <!-- Google AdSense in-article ad unit goes here once the site is approved -->
   </div>
 
+  <h2>Does This Match Your Experience?</h2>
+  <p class="sub">You've eaten in Srinagar — do these patterns ring true, or does something here miss the mark? Let us know.</p>
+  <div class="feedback-box">
+    <form id="feedbackForm">
+      <textarea id="feedbackText" placeholder="Tell us what you think — agree, disagree, or something we got wrong…" rows="3" maxlength="2000"></textarea>
+      <button type="submit">Share your experience</button>
+    </form>
+    <p class="feedback-note" id="feedbackNote"></p>
+  </div>
+
   <div class="method-note">
     <strong>Methodology:</strong> All findings above are synthesized by an AI model (Gemini) from real Google Places review text for restaurants in the underlying dataset — the same 277 restaurants covered by the <a href="/srinagar-restaurants/">Srinagar restaurant guide</a>. The model was instructed to draw only from the actual review text provided, not to invent examples. Praise and complaint themes are based on random samples of 120 reviews each (positive: 4–5★, critical: 1–3★); neighborhood summaries are based on that area's own real reviews. This reflects patterns in the review text, not a scientific survey.
   </div>
@@ -337,6 +377,39 @@
     <p>Part of the <a href="/srinagar-restaurants/">Srinagar Restaurant Guide</a>, itself part of <a href="/">nabeelnisar.com</a>. <a href="/privacy-policy/">Privacy Policy</a></p>
   </div>
 </footer>
+
+<script>
+const CHAT_WORKER_URL = "https://srinagar-chat.nisarnabeel9.workers.dev";
+
+document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const textEl = document.getElementById('feedbackText');
+  const note = document.getElementById('feedbackNote');
+  const btn = e.target.querySelector('button');
+  const text = textEl.value.trim();
+  if (!text) return;
+
+  btn.disabled = true;
+  note.className = 'feedback-note';
+  note.textContent = 'Sending…';
+  try {
+    const res = await fetch(CHAT_WORKER_URL + '/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, source: 'insights' }),
+    });
+    if (!res.ok) throw new Error('failed');
+    note.className = 'feedback-note success';
+    note.textContent = 'Thanks — appreciate you sharing that!';
+    textEl.value = '';
+  } catch {
+    note.className = 'feedback-note';
+    note.textContent = "Couldn't send right now — try again in a moment.";
+  } finally {
+    btn.disabled = false;
+  }
+});
+</script>
 
 </body>
 </html>

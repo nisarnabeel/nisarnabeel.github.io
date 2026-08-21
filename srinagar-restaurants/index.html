@@ -441,6 +441,36 @@
   .chat-form button:disabled { opacity: 0.6; cursor: default; }
   .chat-note { font-size: 0.78rem; color: var(--muted); padding: 0.5rem 1.1rem 0; margin: 0; }
 
+  .feedback-box { border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1.3rem; margin: 1rem 0 2.5rem; background: var(--surface-2); }
+  .feedback-box form { display: flex; flex-direction: column; gap: 0.7rem; }
+  .feedback-box textarea {
+    font: inherit;
+    font-size: 0.92rem;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    resize: vertical;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  .feedback-box textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .feedback-box button {
+    align-self: flex-start;
+    background: var(--accent-dark);
+    color: #fff;
+    border: none;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .feedback-box button:hover { background: var(--accent); }
+  .feedback-box button:disabled { opacity: 0.6; cursor: default; }
+  .feedback-note { font-size: 0.85rem; color: var(--muted); margin: 0.6rem 0 0; }
+  .feedback-note.success { color: var(--accent-dark); font-weight: 600; }
+
   /* ---------- AI sparkle accent ---------- */
   .sparkle {
     display: inline-block;
@@ -695,6 +725,16 @@
     <!-- Google AdSense in-article ad unit goes here once the site is approved -->
   </div>
 
+  <h2>Your Feedback</h2>
+  <p class="sub">Spotted something wrong, or have an idea to make this better? Tell us.</p>
+  <div class="feedback-box">
+    <form id="feedbackForm">
+      <textarea id="feedbackText" placeholder="Your feedback…" rows="3" maxlength="2000"></textarea>
+      <button type="submit">Send feedback</button>
+    </form>
+    <p class="feedback-note" id="feedbackNote"></p>
+  </div>
+
 </main>
 
 <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
@@ -709,7 +749,6 @@
 <footer>
   <div class="wrap">
     <p>Part of <a href="/">nabeelnisar.com</a>. Data sourced from Google Places; updated periodically. Restaurant details can change — always confirm hours before visiting. <a href="/privacy-policy/">Privacy Policy</a></p>
-    <p>Planning a visit near the river? Check <a href="https://ffs.india-water.gov.in/" target="_blank" rel="noopener">live Jhelum flood levels</a> (Central Water Commission, official government flood forecast — Ram Munshi Bagh gauge covers Srinagar).</p>
   </div>
 </footer>
 
@@ -1106,6 +1145,41 @@ document.getElementById('chatForm').addEventListener('submit', async (e) => {
 if (!CHAT_WORKER_URL) {
   document.getElementById('chatNote').textContent = "AI chat isn't connected yet — the site owner needs to deploy the chat backend.";
 }
+
+// ===== Feedback =====
+document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const textEl = document.getElementById('feedbackText');
+  const note = document.getElementById('feedbackNote');
+  const btn = e.target.querySelector('button');
+  const text = textEl.value.trim();
+  if (!text) return;
+
+  if (!CHAT_WORKER_URL) {
+    note.textContent = "Feedback isn't connected yet.";
+    return;
+  }
+
+  btn.disabled = true;
+  note.className = 'feedback-note';
+  note.textContent = 'Sending…';
+  try {
+    const res = await fetch(CHAT_WORKER_URL + '/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, source: 'guide' }),
+    });
+    if (!res.ok) throw new Error('failed');
+    note.className = 'feedback-note success';
+    note.textContent = 'Thanks — got it!';
+    textEl.value = '';
+  } catch {
+    note.className = 'feedback-note';
+    note.textContent = "Couldn't send right now — try again in a moment.";
+  } finally {
+    btn.disabled = false;
+  }
+});
 </script>
 
 </body>

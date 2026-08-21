@@ -1,13 +1,19 @@
 // Cloudflare Worker — backend for the "Ask About Srinagar Restaurants" chat
-// on nabeelnisar.com/srinagar-restaurants/. Holds the Groq API key server-side
-// so it never reaches the browser.
+// AND the feedback form on nabeelnisar.com/srinagar-restaurants/. Holds the
+// Groq API key server-side so it never reaches the browser, and stores
+// feedback submissions in Cloudflare KV.
 //
 // DEPLOY:
 //   1. workers.cloudflare.com -> Create -> "Create Worker" -> paste this file in.
 //   2. Settings -> Variables -> add secret GROQ_API_KEY (your Groq key).
 //   3. Settings -> Variables -> add ALLOWED_ORIGIN = https://nabeelnisar.com
-//   4. Deploy. Copy the *.workers.dev URL it gives you.
-//   5. Paste that URL into CHAT_WORKER_URL in srinagar-restaurants/index.html.
+//   4. Settings -> Bindings -> add a KV Namespace binding named FEEDBACK_KV
+//      (create a new namespace if you don't have one yet, e.g. "srinagar-feedback").
+//   5. Deploy. Copy the *.workers.dev URL it gives you.
+//   6. Paste that URL into CHAT_WORKER_URL in srinagar-restaurants/index.html.
+//
+// To read submitted feedback: Cloudflare dashboard -> Workers & Pages -> KV ->
+// open the srinagar-feedback namespace -> browse keys. No custom admin UI needed.
 //
 // This intentionally caps context size and chat history on every request —
 // the original Streamlit chatbot hit Groq's 8000 TPM rate limit because it
@@ -48,6 +54,8 @@ export default {
       });
     }
 
+    const url = new URL(request.url);
+
     let body;
     try {
       body = await request.json();
@@ -56,6 +64,10 @@ export default {
         status: 400,
         headers: { ...headers, "Content-Type": "application/json" },
       });
+    }
+
+    if (url.pathname === "/feedback") {
+      return handleFeedback(body, env, headers);
     }
 
     const query = (body.query || "").toString().slice(0, 500);
@@ -112,3 +124,28 @@ export default {
     }
   },
 };
+
+async function handleFeedback(body, env, headers) {
+  const text = (body.text || "").toString().trim().slice(0, 2000);
+  const source = (body.source || "guide").toString().slice(0, 50);
+
+  if (!text) {
+    return new Response(JSON.stringify({ error: "Empty feedback" }), {
+      status: 400,
+      headers: { ...headers, "Content-Type": "application/json" },
+    });
+  }
+  if (!env.FEEDBACK_KV) {
+    return new Response(JSON.stringify({ error: "Feedback storage not configured" }), {
+      status: 500,
+      headers: { ...headers, "Content-Type": "application/json" },
+    });
+  }
+
+  const key = `${new Date().toISOString()}-${Math.random().toString(36).slice(2, 8)}`;
+  await env.FEEDBACK_KV.put(key, JSON.stringify({ text, source, timestamp: new Date().toISOString() }));
+
+  return new Response(JSON.stringify({ ok: true }), {
+    headers: { ...headers, "Content-Type": "application/json" },
+  });
+}
