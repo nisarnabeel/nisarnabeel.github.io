@@ -1180,7 +1180,9 @@ function filteredList() {
     if (nbhd && r.neighborhood !== nbhd) return false;
     if (q) {
       const hay = stripApostrophes([r.name, r.knownFor, r.delicacy, r.neighborhood, r.cuisine].filter(Boolean).join(' ').toLowerCase());
-      if (!hay.includes(q)) return false;
+      const matchesDirect = hay.includes(q);
+      const matchesSquished = hay.replace(/\s+/g, '').includes(q.replace(/\s+/g, ''));
+      if (!matchesDirect && !matchesSquished) return false;
     }
     return true;
   }).sort((a, b) => b.rating - a.rating || b.reviews - a.reviews);
@@ -1515,7 +1517,8 @@ function retrieveCandidates(query, k = 8) {
   if (terms.length === 0) return [];
   const scored = ALL.map(r => {
     const hay = stripApostrophes([r.name, r.knownFor, r.delicacy, r.neighborhood, r.amenities, r.cuisine].filter(Boolean).join(' ').toLowerCase());
-    const score = terms.reduce((s, t) => s + (hay.includes(t) ? 1 : 0), 0);
+    const haySquished = hay.replace(/\s+/g, '');
+    const score = terms.reduce((s, t) => s + ((hay.includes(t) || haySquished.includes(t)) ? 1 : 0), 0);
     return { r, score };
   }).filter(x => x.score > 0);
   scored.sort((a, b) => b.score - a.score || confidenceScore(b.r) - confidenceScore(a.r));
