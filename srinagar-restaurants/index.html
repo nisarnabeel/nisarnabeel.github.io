@@ -907,7 +907,7 @@ function filteredList() {
     if (r.reviews < minReviews) return false;
     if (nbhd && r.neighborhood !== nbhd) return false;
     if (q) {
-      const hay = [r.name, r.knownFor, r.delicacy, r.neighborhood].filter(Boolean).join(' ').toLowerCase();
+      const hay = [r.name, r.knownFor, r.delicacy, r.neighborhood, r.cuisine].filter(Boolean).join(' ').toLowerCase();
       if (!hay.includes(q)) return false;
     }
     return true;
@@ -1073,7 +1073,7 @@ function retrieveCandidates(query, k = 6) {
   const terms = query.toLowerCase().match(/[a-z0-9']+/g)?.filter(t => t.length > 2) || [];
   if (terms.length === 0) return [];
   const scored = ALL.map(r => {
-    const hay = [r.name, r.knownFor, r.delicacy, r.neighborhood, r.amenities].filter(Boolean).join(' ').toLowerCase();
+    const hay = [r.name, r.knownFor, r.delicacy, r.neighborhood, r.amenities, r.cuisine].filter(Boolean).join(' ').toLowerCase();
     const score = terms.reduce((s, t) => s + (hay.includes(t) ? 1 : 0), 0);
     return { r, score };
   }).filter(x => x.score > 0);
@@ -1085,7 +1085,7 @@ function buildContext(candidates) {
   if (candidates.length === 0) return "(no matching restaurants found in the dataset)";
   return candidates.map(r => {
     const tags = [r.knownFor, r.delicacy].filter(Boolean).join(', ') || 'none';
-    return `- ${r.name} | ${r.rating}★ (${r.reviews} reviews) | ${r.neighborhood} | Tags: ${tags} | Amenities: ${r.amenities || 'none'} | Address: ${r.address}`;
+    return `- ${r.name} | ${r.rating}★ (${r.reviews} reviews) | ${r.neighborhood} | Cuisine: ${r.cuisine || 'unspecified'} | Tags: ${tags} | Amenities: ${r.amenities || 'none'} | Address: ${r.address}`;
   }).join('\n');
 }
 
