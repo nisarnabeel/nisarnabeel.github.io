@@ -102,6 +102,28 @@
     font-size: 0.98rem;
   }
 
+  .chart-box {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.3rem 1.5rem 1rem;
+    margin: 1.2rem 0 2rem;
+    background: var(--bg);
+  }
+  .chart-title { font-weight: 700; font-size: 0.92rem; margin-bottom: 1rem; }
+  .bar-row { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.65rem; }
+  .bar-label { width: 110px; flex-shrink: 0; font-size: 0.84rem; color: var(--ink); }
+  .bar-track { flex: 1; background: var(--surface-2); border-radius: 5px; height: 20px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 5px; background: var(--accent); transition: width 0.6s ease; }
+  .bar-fill.red { background: var(--red); }
+  .bar-fill.gold { background: var(--gold); }
+  .bar-value { width: 46px; text-align: right; flex-shrink: 0; font-size: 0.84rem; font-weight: 700; }
+  .split-bar { display: flex; height: 34px; border-radius: 8px; overflow: hidden; margin-bottom: 0.6rem; }
+  .split-seg { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.82rem; font-weight: 700; }
+  .split-legend { display: flex; gap: 1.4rem; font-size: 0.82rem; color: var(--muted); }
+  .split-legend span::before { content: "●"; margin-right: 0.35rem; }
+  .split-legend .l-pos::before { color: var(--accent); }
+  .split-legend .l-neg::before { color: var(--red); }
+
   .method-note {
     background: var(--surface-2);
     border: 1px solid var(--border);
@@ -169,6 +191,18 @@
 
 <main class="wrap">
 
+  <div class="chart-box">
+    <div class="chart-title">Reviews Analyzed: Positive vs. Critical</div>
+    <div class="split-bar">
+      <div class="split-seg" style="width:75.8%; background:var(--accent);">1,033 positive (4–5★)</div>
+      <div class="split-seg" style="width:24.2%; background:var(--red);">329 critical</div>
+    </div>
+    <div class="split-legend">
+      <span class="l-pos">75.8% rated 4–5★</span>
+      <span class="l-neg">24.2% rated 1–3★</span>
+    </div>
+  </div>
+
   <div class="ad-slot">
     <!-- Google AdSense ad unit goes here once the site is approved -->
   </div>
@@ -221,6 +255,16 @@
     <p>Guests mention non-functional air conditioning in summer heat, no heating in winter, and power outages that left them eating in the dark without backup generators.</p>
   </div>
 
+  <h2>How Ratings Are Actually Distributed</h2>
+  <p class="sub">Across all 277 restaurants in the dataset — most cluster in the "good, not exceptional" range.</p>
+  <div class="chart-box">
+    <div class="bar-row"><span class="bar-label">5.0★</span><div class="bar-track"><div class="bar-fill" style="width:11.3%"></div></div><span class="bar-value">13</span></div>
+    <div class="bar-row"><span class="bar-label">4.8–4.9★</span><div class="bar-track"><div class="bar-fill" style="width:28.7%"></div></div><span class="bar-value">33</span></div>
+    <div class="bar-row"><span class="bar-label">4.5–4.7★</span><div class="bar-track"><div class="bar-fill" style="width:55.7%"></div></div><span class="bar-value">64</span></div>
+    <div class="bar-row"><span class="bar-label">4.0–4.4★</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-value">115</span></div>
+    <div class="bar-row"><span class="bar-label">Below 4.0★</span><div class="bar-track"><div class="bar-fill" style="width:45.2%"></div></div><span class="bar-value">52</span></div>
+  </div>
+
   <h2>What Actually Separates Top-Rated Places</h2>
   <p class="sub">Comparing real reviews from restaurants rated 4.8★+ against those rated below 4.6★ (both with 15+ reviews).</p>
   <div class="highlight-box">
@@ -265,6 +309,17 @@
       <div class="nb-count">10 restaurants</div>
       <p>Near Dal Lake, ranging from fast-food chains and cozy cafes serving pasta and coffee to local spots specializing in grilled trout.</p>
     </div>
+  </div>
+
+  <h2>Most Commonly Tagged Delicacies</h2>
+  <p class="sub">How many restaurants in the dataset are specifically tagged for each dish.</p>
+  <div class="chart-box">
+    <div class="bar-row"><span class="bar-label">Harissa</span><div class="bar-track"><div class="bar-fill gold" style="width:100%"></div></div><span class="bar-value">16</span></div>
+    <div class="bar-row"><span class="bar-label">Noon Chai</span><div class="bar-track"><div class="bar-fill gold" style="width:87.5%"></div></div><span class="bar-value">14</span></div>
+    <div class="bar-row"><span class="bar-label">Walnut Fudge</span><div class="bar-track"><div class="bar-fill gold" style="width:62.5%"></div></div><span class="bar-value">10</span></div>
+    <div class="bar-row"><span class="bar-label">Modur Pulav</span><div class="bar-track"><div class="bar-fill gold" style="width:50%"></div></div><span class="bar-value">8</span></div>
+    <div class="bar-row"><span class="bar-label">Wazwan</span><div class="bar-track"><div class="bar-fill gold" style="width:50%"></div></div><span class="bar-value">8</span></div>
+    <div class="bar-row"><span class="bar-label">Kahwa</span><div class="bar-track"><div class="bar-fill gold" style="width:37.5%"></div></div><span class="bar-value">6</span></div>
   </div>
 
   <div class="ad-slot">
