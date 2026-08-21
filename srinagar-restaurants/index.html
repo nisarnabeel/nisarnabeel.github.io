@@ -175,6 +175,45 @@
     max-width: 52ch;
     margin: 0 0 1.8rem;
   }
+  .hero-search { margin: 0 0 1.6rem; }
+  .hero-search-label { display: block; font-weight: 700; font-size: 1.1rem; color: var(--ink); margin-bottom: 0.6rem; }
+  .hero-search-row {
+    display: flex;
+    gap: 0.6rem;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    border-radius: 12px;
+    padding: 0.4rem 0.4rem 0.4rem 1rem;
+    box-shadow: 0 2px 10px rgba(47, 107, 79, 0.08);
+  }
+  .hero-search-row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font: inherit;
+    font-size: 1rem;
+    color: var(--ink);
+    background: transparent;
+    min-width: 0;
+  }
+  .hero-search-row button {
+    flex-shrink: 0;
+    background: var(--accent-dark);
+    color: #fff;
+    border: none;
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .hero-search-row button:hover { background: var(--accent); }
+  @media (max-width: 480px) {
+    .hero-search-row { flex-direction: column; align-items: stretch; padding: 0.8rem; }
+    .hero-search-row input { padding: 0.5rem 0.2rem; }
+  }
   .stats-row { display: flex; gap: 2rem; flex-wrap: wrap; }
   .stat .num { font-size: 1.55rem; font-weight: 700; display: block; color: var(--ink); }
   .stat .label { font-size: 0.76rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
@@ -741,7 +780,14 @@
     <div>
       <p class="eyebrow">Srinagar, Kashmir · Restaurant Guide</p>
       <h1>Best Restaurants in Srinagar, Built From Real Data</h1>
-      <p class="lede">Every pick below comes straight from Google Places ratings and reviews for restaurants actually operating in Srinagar right now, not a copy-pasted "top 10" list. Ratings, review counts, and dish tags are all real.</p>
+      <p class="lede">Every pick below comes straight from Google Places ratings and reviews for restaurants actually operating in Srinagar right now. Ratings, review counts, and dish tags are all real, not guessed or recycled from an old article.</p>
+      <form class="hero-search" id="heroSearchForm">
+        <label for="heroSearchInput" class="hero-search-label">What are you looking for?</label>
+        <div class="hero-search-row">
+          <input type="text" id="heroSearchInput" placeholder="e.g. quiet place for kahwa near Dal Lake" autocomplete="off">
+          <button type="submit">Ask Srinagar AI</button>
+        </div>
+      </form>
       <div class="stats-row">
         <div class="stat"><span class="num">268</span><span class="label">Restaurants Tracked</span></div>
         <div class="stat"><span class="num">4.9★</span><span class="label">Top-Rated Average</span></div>
@@ -1470,6 +1516,17 @@ function addChatMsg(role, text) {
   log.appendChild(div);
   log.scrollTop = log.scrollHeight;
 }
+
+document.getElementById('heroSearchForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const heroInput = document.getElementById('heroSearchInput');
+  const query = heroInput.value.trim();
+  if (!query) return;
+  document.getElementById('chatInput').value = query;
+  document.getElementById('ask').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.getElementById('chatForm').requestSubmit();
+  heroInput.value = '';
+});
 
 document.getElementById('chatForm').addEventListener('submit', async (e) => {
   e.preventDefault();
