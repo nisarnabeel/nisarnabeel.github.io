@@ -79,6 +79,9 @@ export default {
     if (url.pathname === "/feedback") {
       return handleFeedback(body, env, headers);
     }
+    if (url.pathname === "/tip") {
+      return handleTip(body, env, headers);
+    }
 
     const query = (body.query || "").toString().slice(0, 500);
     const context = (body.context || "").toString().slice(0, 3000);
@@ -154,6 +157,44 @@ async function handleFeedback(body, env, headers) {
 
   const key = `${new Date().toISOString()}-${Math.random().toString(36).slice(2, 8)}`;
   await env.FEEDBACK_KV.put(key, JSON.stringify({ text, source, timestamp: new Date().toISOString() }));
+
+  return new Response(JSON.stringify({ ok: true }), {
+    headers: { ...headers, "Content-Type": "application/json" },
+  });
+}
+
+async function handleTip(body, env, headers) {
+  // Honeypot: real visitors never fill this hidden field. If it's populated,
+  // pretend success but don't write anything, so bots don't learn they were caught.
+  if ((body.website || "").toString().trim()) {
+    return new Response(JSON.stringify({ ok: true }), {
+      headers: { ...headers, "Content-Type": "application/json" },
+    });
+  }
+
+  const restaurantName = (body.restaurantName || "").toString().trim().slice(0, 100);
+  const tip = (body.tip || "").toString().trim().slice(0, 500);
+  const submitterName = (body.submitterName || "").toString().trim().slice(0, 50) || "Anonymous";
+
+  if (!restaurantName || !tip) {
+    return new Response(JSON.stringify({ error: "Missing restaurant name or tip" }), {
+      status: 400,
+      headers: { ...headers, "Content-Type": "application/json" },
+    });
+  }
+  if (!env.FEEDBACK_KV) {
+    return new Response(JSON.stringify({ error: "Feedback storage not configured" }), {
+      status: 500,
+      headers: { ...headers, "Content-Type": "application/json" },
+    });
+  }
+
+  // "tip-" prefix so these are easy to spot separately from general feedback
+  // when browsing the KV namespace in the Cloudflare dashboard.
+  const key = `tip-${new Date().toISOString()}-${Math.random().toString(36).slice(2, 8)}`;
+  await env.FEEDBACK_KV.put(key, JSON.stringify({
+    restaurantName, tip, submitterName, timestamp: new Date().toISOString(),
+  }));
 
   return new Response(JSON.stringify({ ok: true }), {
     headers: { ...headers, "Content-Type": "application/json" },

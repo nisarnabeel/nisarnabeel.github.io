@@ -556,6 +556,52 @@
   .feedback-note { font-size: 0.85rem; color: var(--muted); margin: 0.6rem 0 0; }
   .feedback-note.success { color: var(--accent-dark); font-weight: 600; }
 
+  /* ---------- Community tips ---------- */
+  .tips-box {
+    background: var(--accent-tint);
+    border: 1px solid #d6e5da;
+    border-radius: 16px;
+    padding: 1.8rem 1.8rem 1.6rem;
+    margin: 2.2rem 0;
+  }
+  .tips-box h2 { margin-top: 0; font-size: 1.5rem; }
+  .tips-box .sub { font-size: 1rem; max-width: 60ch; }
+  .tip-form { position: relative; display: flex; flex-direction: column; gap: 0.7rem; max-width: 480px; margin: 1.2rem 0 1.6rem; }
+  .tip-form input[type="text"], .tip-form textarea {
+    font: inherit;
+    font-size: 0.92rem;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    resize: vertical;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  .tip-form input[type="text"]:focus, .tip-form textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .tip-form .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .tip-form button {
+    align-self: flex-start;
+    background: var(--accent-dark);
+    color: #fff;
+    border: none;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.3rem;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .tip-form button:hover { background: var(--accent); }
+  .tip-form button:disabled { opacity: 0.6; cursor: default; }
+  .tip-note { font-size: 0.85rem; color: var(--muted); margin: 0.6rem 0 0; }
+  .tip-note.success { color: var(--accent-dark); font-weight: 600; }
+  .tip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.8rem; }
+  .tip-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 0.9rem 1rem; }
+  .tip-card .tip-restaurant { font-weight: 700; font-size: 0.92rem; margin-bottom: 0.3rem; }
+  .tip-card .tip-text { font-size: 0.88rem; color: #333; margin-bottom: 0.4rem; }
+  .tip-card .tip-by { font-size: 0.78rem; color: var(--muted); }
+  .tip-empty { color: var(--muted); font-size: 0.9rem; }
+
   /* ---------- AI sparkle accent ---------- */
   .sparkle {
     display: inline-block;
@@ -851,6 +897,20 @@
     <!-- Google AdSense in-article ad unit goes here once the site is approved -->
   </div>
 
+  <div class="tips-box">
+    <h2 id="tips">💎 Hidden Gem Tips from Real Visitors</h2>
+    <p class="sub">Know a place that deserves more attention? Share it. Every tip below is a real submission, reviewed before it's posted, not AI-generated or pulled from an API.</p>
+    <form class="tip-form" id="tipForm">
+      <input type="text" id="tipRestaurant" placeholder="Restaurant or place name" maxlength="100" required>
+      <textarea id="tipText" placeholder="What makes it worth knowing about?" rows="3" maxlength="500" required></textarea>
+      <input type="text" id="tipName" placeholder="Your name (optional)" maxlength="50">
+      <input type="text" id="tipWebsite" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+      <button type="submit">Share this tip</button>
+    </form>
+    <p class="tip-note" id="tipNote"></p>
+    <div class="tip-grid" id="tipGrid"></div>
+  </div>
+
   <h2>Your Feedback</h2>
   <p class="sub">Spotted something wrong, or have an idea to make this better? Tell us.</p>
   <div class="feedback-box">
@@ -891,6 +951,7 @@ const CHAT_WORKER_URL = "https://srinagar-chat.nisarnabeel9.workers.dev";
 let ALL = [];
 let REVIEWS = {};
 let HOTELS = [];
+let COMMUNITY_TIPS = [];
 let visibleCount = 24;
 const PAGE_SIZE = 24;
 
@@ -905,17 +966,20 @@ Promise.all([
   fetch('data/restaurants.json').then(r => r.json()),
   fetch('data/reviews.json').then(r => r.json()).catch(() => ({})),
   fetch('data/hotels.json').then(r => r.json()).catch(() => []),
+  fetch('data/community-tips.json').then(r => r.json()).catch(() => []),
 ])
-  .then(([restaurants, reviews, hotels]) => {
+  .then(([restaurants, reviews, hotels, tips]) => {
     ALL = restaurants;
     REVIEWS = reviews;
     HOTELS = hotels;
+    COMMUNITY_TIPS = tips;
     initBrowse();
     initSwipe();
     initModal();
     initWeather();
     initMap();
     initHotelSearch();
+    initTips();
   })
   .catch(() => {
     document.getElementById('resultCount').textContent = "Couldn't load restaurant data right now.";
@@ -1153,6 +1217,72 @@ function initHotelSearch() {
     note.textContent = `Closest real, top-rated restaurants to ${hotel.name}:`;
     results.innerHTML = nearby.map(x => restaurantCardHTML(x.r)).join('');
   }
+}
+
+function renderTips() {
+  const grid = document.getElementById('tipGrid');
+  if (!COMMUNITY_TIPS.length) {
+    grid.innerHTML = `<p class="tip-empty">Be the first to share a hidden gem — nothing posted yet.</p>`;
+    return;
+  }
+  grid.innerHTML = COMMUNITY_TIPS.map(t => `
+    <div class="tip-card">
+      <div class="tip-restaurant">${escapeHTML(t.restaurantName)}</div>
+      <div class="tip-text">${escapeHTML(t.tip)}</div>
+      <div class="tip-by">— ${escapeHTML(t.submitterName || 'Anonymous')}</div>
+    </div>`).join('');
+}
+
+function initTips() {
+  renderTips();
+
+  const form = document.getElementById('tipForm');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const restaurantEl = document.getElementById('tipRestaurant');
+    const tipEl = document.getElementById('tipText');
+    const nameEl = document.getElementById('tipName');
+    const websiteEl = document.getElementById('tipWebsite');
+    const note = document.getElementById('tipNote');
+    const btn = form.querySelector('button');
+
+    const restaurantName = restaurantEl.value.trim();
+    const tip = tipEl.value.trim();
+    if (!restaurantName || !tip) return;
+
+    if (!CHAT_WORKER_URL) {
+      note.textContent = "Tip submission isn't connected yet.";
+      return;
+    }
+
+    btn.disabled = true;
+    note.className = 'tip-note';
+    note.textContent = 'Sending…';
+    try {
+      const res = await fetch(CHAT_WORKER_URL + '/tip', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          restaurantName,
+          tip,
+          submitterName: nameEl.value.trim(),
+          website: websiteEl.value,
+        }),
+      });
+      if (!res.ok) throw new Error('failed');
+      note.className = 'tip-note success';
+      note.textContent = 'Thanks! Your tip will appear here once reviewed.';
+      restaurantEl.value = '';
+      tipEl.value = '';
+      nameEl.value = '';
+    } catch {
+      note.className = 'tip-note';
+      note.textContent = "Couldn't send right now, try again in a moment.";
+    } finally {
+      btn.disabled = false;
+    }
+  });
 }
 
 function renderBrowse() {
