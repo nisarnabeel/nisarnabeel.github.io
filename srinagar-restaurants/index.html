@@ -69,13 +69,22 @@
     z-index: 50;
   }
   .topbar .wrap { display: flex; align-items: center; justify-content: space-between; }
-  .brand { font-weight: 700; font-size: 0.95rem; color: var(--ink); text-decoration: none; }
+  .brand { font-weight: 700; font-size: 0.95rem; color: var(--ink); text-decoration: none; flex-shrink: 0; }
   .brand span { color: var(--accent); }
+  .topbar nav {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .topbar nav::-webkit-scrollbar { display: none; }
   .topbar nav a {
     color: var(--muted);
     text-decoration: none;
     font-size: 0.88rem;
     margin-left: 1.4rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .topbar nav a:hover { color: var(--accent-dark); }
 
@@ -651,6 +660,7 @@
     <a class="brand" href="/srinagar-restaurants/">Srinagar<span>Eats</span></a>
     <nav>
       <a href="#browse">Browse</a>
+      <a href="#map">Map</a>
       <a href="#swipe">Swipe</a>
       <a href="#guides">Guides</a>
       <a href="/srinagar-restaurants/insights/">Insights</a>
@@ -668,7 +678,7 @@
       <h1>Best Restaurants in Srinagar, Built From Real Data</h1>
       <p class="lede">Every pick below comes straight from Google Places ratings and reviews for restaurants actually operating in Srinagar right now, not a copy-pasted "top 10" list. Ratings, review counts, and dish tags are all real.</p>
       <div class="stats-row">
-        <div class="stat"><span class="num">286</span><span class="label">Restaurants Tracked</span></div>
+        <div class="stat"><span class="num">268</span><span class="label">Restaurants Tracked</span></div>
         <div class="stat"><span class="num">4.9★</span><span class="label">Top-Rated Average</span></div>
         <div class="stat"><span class="num">15+</span><span class="label">Delicacies Indexed</span></div>
       </div>
@@ -732,7 +742,7 @@
     </table>
   </div>
 
-  <h2 id="browse">Browse All 277 Restaurants</h2>
+  <h2 id="browse">Browse All 268 Restaurants</h2>
   <p class="sub">Search, filter by neighborhood, and set a minimum rating. Updates instantly, no page reload.</p>
   <div class="filter-bar">
     <input type="text" id="searchInput" placeholder="Search name, dish, cuisine…" autocomplete="off">
@@ -814,7 +824,7 @@
   </div>
 
   <h2>Why This List Is Different</h2>
-  <p>Most "best restaurants in Srinagar" articles online are written once and never updated. This page is generated from a live dataset of 287 real restaurants pulled from Google Places: ratings, review counts, addresses, and dish tags are all sourced directly, not guessed. Browse, filter, swipe, and ask the AI assistant right here on the page.</p>
+  <p>Most "best restaurants in Srinagar" articles online are written once and never updated. This page is generated from a live dataset of 268 real restaurants pulled from Google Places: ratings, review counts, addresses, and dish tags are all sourced directly, not guessed. Browse, filter, swipe, and ask the AI assistant right here on the page.</p>
 
   <div class="ad-slot">
     <!-- Google AdSense in-article ad unit goes here once the site is approved -->

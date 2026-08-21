@@ -525,27 +525,6 @@
     }
   },
   {
-    "id": "ChIJ4f1kgtmP4TgR0X6zjnYgh7o",
-    "name": "Radisson Collection Hotel & Spa, Riverfront Srinagar",
-    "rating": 4.8,
-    "reviews": 1244,
-    "neighborhood": "Rajbagh",
-    "knownFor": null,
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "near Silk Factory Road, Jehlum Bund, Rajbagh, Srinagar, 190008",
-    "phone": "0194 231 0111",
-    "lat": 34.069002499999996,
-    "lng": 74.815798,
-    "photo": true,
-    "description": "Located in Rajbagh along the riverfront, Radisson Collection Hotel & Spa, Riverfront Srinagar holds a 4.8-star rating from over 1,200 reviews. Many visitors enjoy the property for event hosting, praising its superb ambience, hospitality, and wide buffet spreads. However, some guests report inconsistent service, noting issues with room cleanliness, cold food, and logistical disruptions during large group or wedding bookings.",
-    "cuisine": "hotel, lodging",
-    "nearestLandmark": {
-      "name": "Lal Chowk",
-      "km": 0.5
-    }
-  },
-  {
     "id": "ChIJGRbv4CCP4TgRllg_HXnC95U",
     "name": "Wah Kabab",
     "rating": 4.8,
@@ -669,27 +648,6 @@
     "nearestLandmark": {
       "name": "Naseem Bagh",
       "km": 2.5
-    }
-  },
-  {
-    "id": "ChIJdXvwXoOF4TgRRSVMVxGMFb8",
-    "name": "Shikara ride with Bismillah Khan",
-    "rating": 4.8,
-    "reviews": 68,
-    "neighborhood": "Rainawari",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": null,
-    "address": "Meena bazar dal lake, Karapura Pain, Karapura, Rainawari, Srinagar, 190003",
-    "phone": "070517 27723",
-    "lat": 34.0892731,
-    "lng": 74.8331759,
-    "photo": true,
-    "description": "Based in Rainawari, Shikara ride with Bismillah Khan offers popular Dal Lake boat tours praised for their peaceful atmosphere, friendly staff, and authentic local ambiance. Visitors appreciate the memorable experiences, which can include floating market shopping as well as assistance with hotel and houseboat arrangements. Booking directly with the operator helps travelers avoid middleman fees and secure lower prices.",
-    "cuisine": "tour agency, travel agency, service",
-    "nearestLandmark": {
-      "name": "Dal Lake",
-      "km": 0.9
     }
   },
   {
@@ -879,27 +837,6 @@
     "nearestLandmark": {
       "name": "Lal Chowk",
       "km": 0.7
-    }
-  },
-  {
-    "id": "ChIJMUJycQCH4TgR7_TWFKf70BU",
-    "name": "Shikara Ride Dal lake",
-    "rating": 4.8,
-    "reviews": 16,
-    "neighborhood": "Other",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": null,
-    "address": "4VGH+739, Srinagar, 191121",
-    "phone": null,
-    "lat": 34.1256704,
-    "lng": 74.8777478,
-    "photo": true,
-    "description": "Shikara Ride Dal lake offers a serene boat experience over the calm waters of Srinagar, with both daytime and highly recommended night options available. Visitors can sip local kawa while taking in the views of the surrounding mountains, or take photos wearing traditional Kashmiri dress. Rides can be boarded near gate number one, though reviewers advise negotiating per-person rates and paying photographers only after receiving your pictures.",
-    "cuisine": "travel agency, service",
-    "nearestLandmark": {
-      "name": "Nishat Bagh",
-      "km": 0.4
     }
   },
   {
@@ -1764,27 +1701,6 @@
     }
   },
   {
-    "id": "ChIJc3k9iWGP4TgR7w8QZZjNAto",
-    "name": "Shikara",
-    "rating": 4.6,
-    "reviews": 43,
-    "neighborhood": "Rainawari",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": null,
-    "address": "Boulevard Rd, Karapura, Rainawari, Srinagar, 190001",
-    "phone": null,
-    "lat": 34.0895522,
-    "lng": 74.84514089999999,
-    "photo": true,
-    "description": "Located in the Rainawari area, Shikara holds a 4.6 rating for its popular wooden boat rides and stays on the water. Visitors particularly enjoy taking in the night beauty of Dal Lake and recommend bargaining to secure a good rate for the ride. It is widely described by reviewers as an enjoyable, must-visit experience when traveling through Srinagar.",
-    "cuisine": "ferry terminal, transit station, transportation service",
-    "nearestLandmark": {
-      "name": "Dal Lake",
-      "km": 0.6
-    }
-  },
-  {
     "id": "ChIJz9USUpOP4TgRNKGD8esXlJU",
     "name": "Let's Taste Wazwan",
     "rating": 4.6,
@@ -1890,48 +1806,6 @@
     }
   },
   {
-    "id": "ChIJaYZy3pOP4TgRl5SOY2zhmQw",
-    "name": "Taj Dal View, Srinagar",
-    "rating": 4.5,
-    "reviews": 4938,
-    "neighborhood": "Brein",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Kralsangri, Brein, Srinagar, 191121",
-    "phone": "0194 246 1111",
-    "lat": 34.102565999999996,
-    "lng": 74.88144199999999,
-    "photo": true,
-    "description": "Located on a hill in Brein, Taj Dal View in Srinagar offers breathtaking panoramic views of Dal Lake, particularly during sunrise and sunset. The restaurant serves authentic Kashmiri cuisine, with guests highlighting options like mutton rogan josh, saffron-infused curries, and delicate desserts. Diners frequently enjoy a peaceful ambiance paired with attentive service in a scenic setting positioned between the hills and the lake.",
-    "cuisine": "hotel, resort hotel, extended stay hotel, lodging",
-    "nearestLandmark": {
-      "name": "Indira Gandhi Memorial Tulip Garden",
-      "km": 0.7
-    }
-  },
-  {
-    "id": "ChIJO2trb9KP4TgR-XXD40qDm1w",
-    "name": "Dal gate",
-    "rating": 4.5,
-    "reviews": 4839,
-    "neighborhood": "Rainawari",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "3RJH+79F, Dalgate Bridge, Karapura, Rainawari, Srinagar, 190001",
-    "phone": null,
-    "lat": 34.080683799999996,
-    "lng": 74.8284223,
-    "photo": true,
-    "description": "Located in the Rainawari neighborhood, Dal gate serves as a vibrant and scenic entry point to Dal Lake with a 4.5 rating from over 4,800 reviews. Visitors frequently highlight the peaceful Shikara rides, surrounding mountain views, and traditional houseboats, though some note concerns regarding local waste pollution. Those preferring to explore on foot can also take an approximately 12 to 13-kilometer walk around the lake.",
-    "cuisine": "tourist attraction",
-    "nearestLandmark": {
-      "name": "Shankaracharya Temple",
-      "km": 1.4
-    }
-  },
-  {
     "id": "ChIJLVfadHmP4TgRccUNTH9pZng",
     "name": "Shamyana Lodge & Restaurant",
     "rating": 4.5,
@@ -2016,27 +1890,6 @@
     }
   },
   {
-    "id": "ChIJEaT31qWF4TgRPoRBblD8C_U",
-    "name": "WelcomHeritage Gurkha Houseboats",
-    "rating": 4.5,
-    "reviews": 421,
-    "neighborhood": "Nagin Bagh",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Lake, opp. Nageen Club, Nagin Bagh, Srinagar, 190006",
-    "phone": "094190 15111",
-    "lat": 34.1231919,
-    "lng": 74.8359982,
-    "photo": true,
-    "description": "Located in Nagin Bagh, WelcomHeritage Gurkha Houseboats provides a peaceful lakeside stay surrounded by floating gardens and local birdlife. Guests can expect comfortable, spotless rooms featuring authentic Kashmiri furniture alongside attentive staff service and excellent meals. Waking up to beautiful lake views and genuine hospitality contributes to its strong 4.5-star rating among visitors.",
-    "cuisine": "hotel, shopping mall, lodging, service",
-    "nearestLandmark": {
-      "name": "Dargah Hazratbal",
-      "km": 0.9
-    }
-  },
-  {
     "id": "ChIJs_fv5J6F4TgRvgY0oVckRpE",
     "name": "Cafe Central Perk Srinagar",
     "rating": 4.5,
@@ -2076,27 +1929,6 @@
     "nearestLandmark": {
       "name": "Lal Chowk",
       "km": 3.0
-    }
-  },
-  {
-    "id": "ChIJfxdneV-P4TgRO311Oqh2s6E",
-    "name": "Sukoon Houseboat",
-    "rating": 4.5,
-    "reviews": 278,
-    "neighborhood": "Rainawari",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Kabootar Khana, Dal Lake, near Rani Mahal, Karapura, Rainawari, Srinagar, 190001",
-    "phone": "0194 250 0450",
-    "lat": 34.0926828,
-    "lng": 74.8540414,
-    "photo": true,
-    "description": "Located on Dal Lake in Rainawari, Sukoon Houseboat offers a tranquil stay with views of floating gardens and snow-capped mountains. The property features clean, beautifully restored rooms situated away from the city hustle for a genuinely peaceful experience. Guests frequently praise the friendly staff, including team members like Bilal and Rashid, for their attentive housekeeping, warm service, and good food.",
-    "cuisine": "hotel, lodging",
-    "nearestLandmark": {
-      "name": "Dal Lake",
-      "km": 1.2
     }
   },
   {
@@ -2457,27 +2289,6 @@
     }
   },
   {
-    "id": "ChIJH9hjiLyP4TgRDwadbS7IcQk",
-    "name": "The Vintage Srinagar at Dal Lake",
-    "rating": 4.4,
-    "reviews": 1430,
-    "neighborhood": "Durgjan",
-    "knownFor": "Taj Vivanta",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Boulevard Rd, Durgjan, Srinagar, 190001",
-    "phone": "1800 889 9567",
-    "lat": 34.0817225,
-    "lng": 74.83201369999999,
-    "photo": true,
-    "description": "Situated in Durgjan directly in front of Dal Lake, The Vintage Srinagar at Dal Lake offers cozy, clean accommodations alongside a warm and relaxing atmosphere. Guests consistently highlight the exceptional hospitality and outstanding food, with special praise given to the fresh dishes prepared by Chef Shyam Singh Negi. Its scenic location and quality dining make it a highly regarded destination for visitors to Srinagar.",
-    "cuisine": "hotel, lodging",
-    "nearestLandmark": {
-      "name": "Shankaracharya Temple",
-      "km": 1.1
-    }
-  },
-  {
     "id": "ChIJZTbydtaP4TgRWeHxo3x2DFg",
     "name": "Little Persia",
     "rating": 4.4,
@@ -2793,27 +2604,6 @@
     }
   },
   {
-    "id": "ChIJ5TzuLgCH4TgR4zZb2YpR8kY",
-    "name": "shikara Ride",
-    "rating": 4.4,
-    "reviews": 32,
-    "neighborhood": "Nishat",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "4V9J+W2W, Nishat, Srinagar, 191121",
-    "phone": null,
-    "lat": 34.1198732,
-    "lng": 74.880084,
-    "photo": true,
-    "description": "Located in Nishat, shikara Ride provides boat trips on the expansive lake, where visitors frequently recommend trying kahwa and browsing goods from floating vendors selling condiments and jewelry. Dusk is noted as the best time for a visit, though trips take place even in the cold late November weather when ice begins to form. Holding a 4.4 rating, guests generally enjoy the lake experience but strongly advise confirming ride durations and total costs in advance to avoid unexpected charges.",
-    "cuisine": "tourist attraction",
-    "nearestLandmark": {
-      "name": "Nishat Bagh",
-      "km": 0.6
-    }
-  },
-  {
     "id": "ChIJ17m_n2GH4TgRdDf4O6bkKPY",
     "name": "KAWA RESTAURANT",
     "rating": 4.4,
@@ -2874,27 +2664,6 @@
     "nearestLandmark": {
       "name": "Jhelum River",
       "km": 0.5
-    }
-  },
-  {
-    "id": "ChIJ0YbWagSG4TgRiHmOC_HuSh4",
-    "name": "Vivanta Dal View",
-    "rating": 4.4,
-    "reviews": 14,
-    "neighborhood": "Brein",
-    "knownFor": "Taj Vivanta",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "4V3J+2HG, near Kralsangri, Brein, Srinagar, 191121",
-    "phone": null,
-    "lat": 34.102565999999996,
-    "lng": 74.88143800000002,
-    "photo": true,
-    "description": "Located in Brein, Vivanta Dal View offers a peaceful atmosphere with breathtaking views of Dal Lake. Holding a 4.4-star rating, the property receives praise for its polite staff, luxurious rooms, and top-notch service. While guest opinions on the food are mixed, the venue's scenic location and hospitality stand out to visitors.",
-    "cuisine": "hotel, lodging",
-    "nearestLandmark": {
-      "name": "Indira Gandhi Memorial Tulip Garden",
-      "km": 0.7
     }
   },
   {
@@ -3231,48 +3000,6 @@
     "nearestLandmark": {
       "name": "Lal Chowk",
       "km": 4.2
-    }
-  },
-  {
-    "id": "ChIJ2QvuyJ6P4TgRBnQ6HHqULOA",
-    "name": "Shikara Ghat No. 12",
-    "rating": 4.3,
-    "reviews": 161,
-    "neighborhood": "Rainawari",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": null,
-    "address": "Dal lake, 13, Boulevard Rd, near ghat no .12, Karapura, Rainawari, Srinagar, 190001",
-    "phone": null,
-    "lat": 34.087396399999996,
-    "lng": 74.8409466,
-    "photo": true,
-    "description": "Located in Rainawari, Shikara Ghat No. 12 is a popular starting point for boat rides across Dal Lake, surrounded by scenic water views and houseboats. Visitors often combine their ride with an evening walk along the lakeside to explore nearby shops and sparkling scenery. While many enjoy the mesmerizing experience, some reviewers advise being mindful of floating vendors who frequently pitch products during the tour.",
-    "cuisine": "service",
-    "nearestLandmark": {
-      "name": "Dal Lake",
-      "km": 0.7
-    }
-  },
-  {
-    "id": "ChIJo8P0pH6P4TgRRdVfn_bViOw",
-    "name": "New Bul Bul Houseboat Dal Lake",
-    "rating": 4.3,
-    "reviews": 154,
-    "neighborhood": "Dal Lake",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Shikara Ghat #7, Boulevard Rd, Karapura, Dal Lake, Srinagar, 190001",
-    "phone": "099062 52580",
-    "lat": 34.0853008,
-    "lng": 74.8325935,
-    "photo": true,
-    "description": "Located on Dal Lake with scenic views of the surrounding snow-laden mountains, New Bul Bul Houseboat provides a peaceful stay centered around the warm hospitality of its owner, Shabir Bhai. Guests are guided on the best local places to visit around Srinagar while enjoying tasty homemade breakfasts, dinners, tea, and traditional kahwa. The scenic setting and welcoming environment make it a memorable getaway for both couples and families.",
-    "cuisine": "guest house, private guest room, bed and breakfast, hotel, lodging, service",
-    "nearestLandmark": {
-      "name": "Dal Lake",
-      "km": 1.2
     }
   },
   {
@@ -3780,27 +3507,6 @@
     }
   },
   {
-    "id": "ChIJFyaqBJ-P4TgREEPTdCGfKsY",
-    "name": "Dallake Shikara ride Ghat no 03 by Houseboat New Manila",
-    "rating": 4.2,
-    "reviews": 56,
-    "neighborhood": "Durgjan",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Boulevard Rd, Karapura, Durgjan, Srinagar, 190001",
-    "phone": null,
-    "lat": 34.0820283,
-    "lng": 74.8321955,
-    "photo": true,
-    "description": "Located in Durgjan, Dallake Shikara ride Ghat no 03 by Houseboat New Manila offers scenic boat rides across Dal Lake set against the Zabarwan mountains. Visitors appreciate the beautiful morning views and helpful service, though some note that persistent floating merchants can occasionally block the scenery. Reviewers generally recommend opting for a basic 45-minute ride, which provides plenty of time to enjoy the surroundings without paying for extra add-on tours.",
-    "cuisine": "water park, marina, amusement park, sports club, association or organization",
-    "nearestLandmark": {
-      "name": "Shankaracharya Temple",
-      "km": 1.1
-    }
-  },
-  {
     "id": "ChIJ7Z8daX-P4TgRu-K7Ie_-tYg",
     "name": "YALLA! - Shawarma & Grill",
     "rating": 4.2,
@@ -3900,27 +3606,6 @@
     "photo": true,
     "description": "Located in Regal Chowk, Ahdoos Restaurant carries a 100-year legacy as a well-known Srinagar spot for authentic Kashmiri dishes like wazwan, dum aloo, and saffron kehwa. Most diners praise the hot, flavor-rich meals and courteous service, though the dining room can occasionally feel overcrowded and touristy. Overall, it offers a classic culinary experience that remains a prominent stop for trying traditional regional cuisine.",
     "cuisine": "north indian restaurant, indian restaurant",
-    "nearestLandmark": {
-      "name": "Lal Chowk",
-      "km": 0.8
-    }
-  },
-  {
-    "id": "ChIJhfuCzZuP4TgRka59sw_rWEY",
-    "name": "Ahdoos Hotel",
-    "rating": 4.1,
-    "reviews": 2154,
-    "neighborhood": "Munshi Bagh",
-    "knownFor": null,
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Residency Road, Regal Chowk, Munshi Bagh, Srinagar, 190001",
-    "phone": "0194 247 2593",
-    "lat": 34.0723718,
-    "lng": 74.8190582,
-    "photo": true,
-    "description": "Located in Munshi Bagh near Lal Chowk, Ahdoos Hotel is known for serving authentic Kashmiri cuisine in a warm, traditional setting alongside an on-site bakery that sells cookies. Visitors appreciate the polite staff and the convenience of available guest rooms, though the busy central location can make the parking area somewhat congested.",
-    "cuisine": "hotel, north indian restaurant, indian restaurant, lodging",
     "nearestLandmark": {
       "name": "Lal Chowk",
       "km": 0.8
@@ -4323,27 +4008,6 @@
     "nearestLandmark": {
       "name": "Jhelum River",
       "km": 2.0
-    }
-  },
-  {
-    "id": "ChIJaxLmWESP4TgRV4ZXa_kvz6w",
-    "name": "Shikara Ghat no. 21",
-    "rating": 4.1,
-    "reviews": 30,
-    "neighborhood": "Rainawari",
-    "knownFor": "Shikara",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Oberio, 3VM5+6R4, Boulevard Rd, Rainawari, Srinagar, 190001",
-    "phone": null,
-    "lat": 34.083002199999996,
-    "lng": 74.8595702,
-    "photo": true,
-    "description": "Located in Rainawari opposite Barista Diner, Shikara Ghat no. 21 is a Dal Lake jetty offering manual boat rides, motor shikaras, and small per-person cruises. It is a convenient spot for families and friends to tour the area, though visitors frequently advise negotiating rates in advance to avoid overcharging.",
-    "cuisine": "tourist attraction",
-    "nearestLandmark": {
-      "name": "Shankaracharya Temple",
-      "km": 1.5
     }
   },
   {
@@ -4998,27 +4662,6 @@
     }
   },
   {
-    "id": "ChIJxQ_-YX6F4TgR8V-mqBeegyc",
-    "name": "Hotel Taj Residency",
-    "rating": 3.9,
-    "reviews": 579,
-    "neighborhood": "Naupura",
-    "knownFor": "Taj Vivanta",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Bhagi roop singh, Miskeen Bagh Nawpora link Rd, Karapura Pain, Naupura, Srinagar, 190003",
-    "phone": "096222 22330",
-    "lat": 34.0901329,
-    "lng": 74.82685640000001,
-    "photo": true,
-    "description": "Located in Naupura with a 3.9-star rating from over 500 reviews, Hotel Taj Residency is recognized for its warm, professional service and welcoming atmosphere. Visitors frequently highlight the spacious, well-maintained rooms equipped with modern furniture and heating blankets, alongside the delicious food offered on the property. The polite staff consistently goes out of their way to ensure guests enjoy a comfortable and relaxing stay.",
-    "cuisine": "hotel, lodging",
-    "nearestLandmark": {
-      "name": "Dal Lake",
-      "km": 1.4
-    }
-  },
-  {
     "id": "ChIJQ0J41gOQ4TgR1R-zLIO_U1E",
     "name": "Arabian Barbecue Restaurant",
     "rating": 3.9,
@@ -5163,27 +4806,6 @@
     "nearestLandmark": {
       "name": "Lal Chowk",
       "km": 1.4
-    }
-  },
-  {
-    "id": "ChIJqZE7cwCP4TgRnYauSJNVhg0",
-    "name": "Hotel Taj",
-    "rating": 3.9,
-    "reviews": 18,
-    "neighborhood": "Kothi Bagh",
-    "knownFor": "Taj Vivanta",
-    "delicacy": null,
-    "amenities": "goodForChildren",
-    "address": "Auqaf Building, MA Road, Maisuma, Kothi Bagh, Srinagar, 190001",
-    "phone": null,
-    "lat": 34.0720349,
-    "lng": 74.8093921,
-    "photo": true,
-    "description": "Situated in Kothi Bagh near Aftab Market, Hotel Taj offers luxury dining paired with panoramic 360-degree views of Dal Lake and scenic sunsets. Visitors frequently highlight the backyard near the pool area for photography and note good hospitality, though some mention that food and beverage service can be slow. Guest experiences vary, with reviews ranging from praise for the upscale setting to recommendations to explore other options.",
-    "cuisine": "hotel, lodging",
-    "nearestLandmark": {
-      "name": "Lal Chowk",
-      "km": 0.1
     }
   },
   {
