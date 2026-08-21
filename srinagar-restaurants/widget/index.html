@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Srinagar Restaurants Widget</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --ink: #1c1c1c;
+    --muted: #666666;
+    --bg: #ffffff;
+    --surface-2: #fafafa;
+    --border: #e5e5e5;
+    --accent: #2f6b4f;
+    --accent-dark: #204b38;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .widget {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 360px;
+  }
+  .w-header {
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface-2);
+  }
+  .w-header .w-title { font-weight: 700; font-size: 0.88rem; margin: 0; }
+  .w-header .w-sub { font-size: 0.72rem; color: var(--muted); margin: 0.1rem 0 0; }
+  .w-list { padding: 0.4rem 0; }
+  .w-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.5rem 0.9rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .w-row:hover { background: var(--surface-2); }
+  .w-name { font-size: 0.82rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .w-meta { font-size: 0.72rem; color: var(--muted); }
+  .w-rating { font-size: 0.78rem; font-weight: 700; color: var(--accent-dark); white-space: nowrap; flex-shrink: 0; }
+  .w-footer {
+    padding: 0.5rem 0.9rem;
+    border-top: 1px solid var(--border);
+    background: var(--surface-2);
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  .w-footer a { color: var(--accent-dark); font-weight: 600; text-decoration: none; }
+  .w-footer a:hover { text-decoration: underline; }
+  .w-loading { padding: 1rem; font-size: 0.8rem; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="widget">
+  <div class="w-header">
+    <p class="w-title">🍽️ Top Restaurants in Srinagar</p>
+    <p class="w-sub">Real ratings from Google Places</p>
+  </div>
+  <div class="w-list" id="list">
+    <p class="w-loading">Loading…</p>
+  </div>
+  <div class="w-footer">
+    Data by <a href="https://nabeelnisar.com/srinagar-restaurants/" target="_blank" rel="noopener">SrinagarEats</a>
+  </div>
+</div>
+
+<script>
+fetch('../data/restaurants.json')
+  .then(r => r.json())
+  .then(data => {
+    const top = data
+      .filter(r => r.reviews >= 15)
+      .sort((a, b) => b.rating - a.rating || b.reviews - a.reviews)
+      .slice(0, 5);
+    const list = document.getElementById('list');
+    list.innerHTML = top.map(r => `
+      <a class="w-row" href="https://nabeelnisar.com/srinagar-restaurants/" target="_blank" rel="noopener">
+        <span>
+          <span class="w-name">${escapeHTML(r.name)}</span><br>
+          <span class="w-meta">${escapeHTML(r.neighborhood)}</span>
+        </span>
+        <span class="w-rating">${r.rating}★</span>
+      </a>
+    `).join('');
+  })
+  .catch(() => {
+    document.getElementById('list').innerHTML = '<p class="w-loading">Couldn\'t load data.</p>';
+  });
+
+function escapeHTML(s) {
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+</script>
+
+</body>
+</html>

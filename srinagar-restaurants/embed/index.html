@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Srinagar Restaurants Widget for Your Website</title>
+<meta name="description" content="Add a free, live-updating 'Top Restaurants in Srinagar' widget to your travel blog, hotel, or tourism site — real Google Places data, one line of code, always current.">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LHT0KRBB3D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LHT0KRBB3D');
+</script>
+
+<style>
+  :root {
+    --ink: #1c1c1c;
+    --muted: #666666;
+    --bg: #ffffff;
+    --surface-2: #fafafa;
+    --border: #e5e5e5;
+    --accent: #2f6b4f;
+    --accent-dark: #204b38;
+    --accent-tint: #eef5f0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem; }
+  a { color: var(--accent-dark); }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 0.9rem 0; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-weight: 700; font-size: 0.95rem; color: var(--ink); text-decoration: none; }
+  .brand span { color: var(--accent); }
+  .topbar nav a { color: var(--muted); text-decoration: none; font-size: 0.88rem; margin-left: 1.4rem; }
+
+  header.hero { padding: 3rem 0 2.2rem; border-bottom: 1px solid var(--border); }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; font-weight: 700; color: var(--accent); margin: 0 0 0.7rem; }
+  h1 { font-size: clamp(1.7rem, 3.6vw, 2.3rem); line-height: 1.22; margin: 0 0 1rem; }
+  .lede { font-size: 1.02rem; color: var(--muted); max-width: 60ch; margin: 0; }
+
+  main { padding: 2.6rem 0 1rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; margin: 2.4rem 0 0.6rem; }
+  .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 1rem; max-width: 60ch; }
+
+  .preview-frame {
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: var(--surface-2);
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 2rem;
+  }
+  .preview-frame iframe { border: none; width: 360px; height: 320px; }
+
+  .code-box {
+    background: #1c1c1c;
+    color: #e5e5e5;
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.82rem;
+    overflow-x: auto;
+    position: relative;
+    margin: 1rem 0 0.6rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .copy-btn {
+    background: var(--accent-dark);
+    color: #fff;
+    border: none;
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .copy-btn:hover { background: var(--accent); }
+  .copy-note { font-size: 0.82rem; color: var(--accent-dark); margin-left: 0.7rem; }
+
+  ul.perks { padding-left: 1.2rem; }
+  ul.perks li { margin-bottom: 0.4rem; font-size: 0.95rem; }
+
+  footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.6rem 0 2.5rem; color: var(--muted); font-size: 0.86rem; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/srinagar-restaurants/">Srinagar<span>Eats</span></a>
+    <nav><a href="/srinagar-restaurants/">Guide</a></nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Free Widget · No Signup Required</p>
+    <h1>Add a Live Srinagar Restaurants Widget to Your Site</h1>
+    <p class="lede">Run a travel blog, hotel, guesthouse, or tourism site about Kashmir? Drop this widget in and it shows your visitors real, live-updating top-rated restaurants in Srinagar — sourced from actual Google Places data, not a static list that goes stale.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h2>Live Preview</h2>
+  <p class="sub">This is exactly what it looks like — pulling real, current data right now.</p>
+  <div class="preview-frame">
+    <iframe src="/srinagar-restaurants/widget/" title="Top Srinagar Restaurants Widget Preview" loading="lazy"></iframe>
+  </div>
+
+  <h2>Embed Code</h2>
+  <p class="sub">Copy this and paste it anywhere in your site's HTML — a sidebar, a footer, a blog post.</p>
+  <div class="code-box" id="codeBox">&lt;iframe src="https://nabeelnisar.com/srinagar-restaurants/widget/" width="360" height="320" style="border:none;max-width:100%;" loading="lazy" title="Top Srinagar Restaurants"&gt;&lt;/iframe&gt;</div>
+  <button class="copy-btn" id="copyBtn">Copy code</button>
+  <span class="copy-note" id="copyNote"></span>
+
+  <h2>Why Use This</h2>
+  <ul class="perks">
+    <li><strong>Always current</strong> — the widget pulls live data, so it never shows an outdated recommendation.</li>
+    <li><strong>Real data</strong> — ratings and review counts come directly from Google Places, not guessed or hand-picked.</li>
+    <li><strong>Free, no signup</strong> — just paste the code. No account, no API key, no attribution requirement beyond the small credit link already built in.</li>
+    <li><strong>Fast and lightweight</strong> — a small static page, not a heavy tracking script.</li>
+  </ul>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Part of the <a href="/srinagar-restaurants/">Srinagar Restaurant Guide</a>, part of <a href="/">nabeelnisar.com</a>. <a href="/privacy-policy/">Privacy Policy</a></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copyBtn').addEventListener('click', () => {
+  const code = document.getElementById('codeBox').textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    const note = document.getElementById('copyNote');
+    note.textContent = 'Copied!';
+    setTimeout(() => { note.textContent = ''; }, 2000);
+  });
+});
+</script>
+
+</body>
+</html>
