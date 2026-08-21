@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About SrinagarEats</title>
+<meta name="description" content="Who built SrinagarEats and why: a real-data restaurant guide for Srinagar, Kashmir, made by Nabeel Nisar Bhat, a wireless sensing researcher at imec, originally from Srinagar.">
+<link rel="canonical" href="https://nabeelnisar.com/srinagar-restaurants/about/">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LHT0KRBB3D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LHT0KRBB3D');
+</script>
+
+<style>
+  :root {
+    --ink: #1c1c1c;
+    --muted: #666666;
+    --bg: #ffffff;
+    --surface-2: #fafafa;
+    --border: #e5e5e5;
+    --accent: #2f6b4f;
+    --accent-dark: #204b38;
+    --accent-tint: #eef5f0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 1.5rem; }
+  a { color: var(--accent-dark); }
+
+  .topbar { border-bottom: 1px solid var(--border); padding: 0.9rem 0; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .brand { font-weight: 700; font-size: 0.95rem; color: var(--ink); text-decoration: none; }
+  .brand span { color: var(--accent); }
+  .topbar nav a { color: var(--muted); text-decoration: none; font-size: 0.88rem; margin-left: 1.4rem; }
+
+  header.hero { padding: 2.6rem 0 2rem; border-bottom: 1px solid var(--border); }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; font-weight: 700; color: var(--accent); margin: 0 0 0.7rem; }
+  h1 { font-size: clamp(1.7rem, 3.8vw, 2.4rem); line-height: 1.2; margin: 0 0 1rem; }
+  .lede { font-size: 1.05rem; color: var(--muted); max-width: 60ch; margin: 0; }
+
+  main { padding: 2.2rem 0 1rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; margin: 2.2rem 0 0.7rem; }
+  p { font-size: 1rem; color: #333; margin: 0 0 1rem; max-width: 62ch; }
+
+  .profile-card {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.3rem;
+    margin: 1.6rem 0;
+    background: var(--surface-2);
+  }
+  .profile-initials {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--accent-dark);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  .profile-card h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+  .profile-card p { margin: 0; font-size: 0.9rem; color: var(--muted); }
+
+  .contact-box { border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem 1.4rem; margin: 2rem 0; background: var(--surface-2); }
+  .contact-box p { margin: 0; }
+
+  footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.6rem 0 2.5rem; color: var(--muted); font-size: 0.86rem; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="/srinagar-restaurants/">Srinagar<span>Eats</span></a>
+    <nav>
+      <a href="/srinagar-restaurants/#browse">Browse</a>
+      <a href="/srinagar-restaurants/#guides">Guides</a>
+      <a href="/srinagar-restaurants/insights/">Insights</a>
+    </nav>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">About This Site</p>
+    <h1>Who Built SrinagarEats, and Why</h1>
+    <p class="lede">A real-data restaurant guide for Srinagar, made by someone who actually grew up eating this food.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="profile-card">
+    <div class="profile-initials">NN</div>
+    <div>
+      <h3>Nabeel Nisar Bhat</h3>
+      <p>Researcher, wireless sensing @ imec. Originally from Srinagar, Kashmir.</p>
+    </div>
+  </div>
+
+  <h2>Why This Site Exists</h2>
+  <p>I grew up in Srinagar, and every time I looked for a solid, trustworthy list of where to eat, I found the same problem: generic "top 10" articles written once and never touched again, review aggregators cluttered with duplicate or miscategorized listings, and travel blogs recycling the same five restaurant names without ever explaining why.</p>
+  <p>By day I work as a researcher in wireless sensing at imec, so working with real data is what I do. I decided to point that at something closer to home: pull actual Google Places ratings and reviews for restaurants across Srinagar, analyze what real diners actually say, and build a guide that updates from real data instead of guesswork.</p>
+
+  <h2>How the Site Is Built</h2>
+  <p>Every restaurant listed here comes from real Google Places data, ratings, review counts, addresses, and amenities pulled directly from the source, not typed in by hand. The praise and complaint themes on the <a href="/srinagar-restaurants/insights/">Insights page</a> are synthesized from actual review text using an AI model, but grounded strictly in what real reviewers wrote, nothing invented. The guide posts, like <a href="/srinagar-restaurants/where-to-get-real-wazwan/">Where to Get Real Wazwan</a> and <a href="/srinagar-restaurants/best-chinese-restaurants/">Best Chinese Restaurants</a>, are written and fact-checked by hand against that same underlying data.</p>
+  <p>The full methodology for how ratings are calculated and how the review analysis works is documented on the <a href="/srinagar-restaurants/insights/">Insights page</a>.</p>
+
+  <div class="contact-box">
+    <p><strong>Get in touch:</strong> spotted an error, have a restaurant to suggest, or just want to say hello? Use the feedback form on the <a href="/srinagar-restaurants/">main guide</a>, or reach out at <a href="mailto:nisarnabeel9@gmail.com">nisarnabeel9@gmail.com</a>.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Part of the <a href="/srinagar-restaurants/">Srinagar Restaurant Guide</a>, part of <a href="/">nabeelnisar.com</a>. <a href="/privacy-policy/">Privacy Policy</a></p>
+    <p>Curious what else I've built? Try the <a href="https://appaidetector-mpwfejkgqlkcq5ztcxu4dy.streamlit.app/" target="_blank" rel="noopener">AI Image Detector</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
