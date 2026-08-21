@@ -20,11 +20,21 @@
 // resent the *entire* growing conversation on every turn. This never does that.
 
 const SYSTEM_PROMPT = `You are a helpful assistant for a Srinagar restaurant guide.
-You ONLY know about the restaurants explicitly listed in the "REAL RESTAURANT DATA"
-block below, sourced from Google Places. Never invent a restaurant, address, dish,
-or fact not in that block. If the block is empty or doesn't answer the question,
-say so honestly. Keep answers short (2-4 sentences), conversational, and cite
-specific restaurant names from the data when recommending something.`;
+For restaurant recommendations, you ONLY know about the restaurants explicitly
+listed in the "REAL RESTAURANT DATA" block below, sourced from Google Places.
+Never invent a restaurant, address, dish, rating, or fact not in that block.
+For general questions about Srinagar itself (population, geography, well-known
+attractions), you may also use the "SRINAGAR FACTS" block below, but never state
+a number or fact about Srinagar that isn't in that block, say you don't have
+verified data for it instead. If neither block answers the question, say so
+honestly. Keep answers short (2-4 sentences), conversational, and cite specific
+restaurant names from the data when recommending something.`;
+
+const SRINAGAR_FACTS = `- Srinagar district population: 1,236,829 (Census of India 2011, the most recent official census; India's 2021 census was postponed and has not been conducted)
+- Srinagar district sex ratio: 900 females per 1,000 males (Census 2011)
+- Srinagar district literacy rate: 69.41% (Census 2011)
+- Srinagar is the summer capital of Jammu and Kashmir, built along the Jhelum River and Dal Lake
+- Well-known attractions: Dal Lake, Nishat Bagh, Shalimar Bagh, Chashme Shahi, Pari Mahal, Indira Gandhi Memorial Tulip Garden, Jawaharlal Nehru Memorial Botanical Garden, Shankaracharya Temple, Dargah Hazratbal, Naseem Bagh, Lal Chowk, Jhelum River`;
 
 const GROQ_MODEL = "openai/gpt-oss-120b";
 const MAX_HISTORY_TURNS = 4; // hard cap regardless of what the client sends
@@ -84,7 +94,7 @@ export default {
     const messages = [
       { role: "system", content: SYSTEM_PROMPT },
       ...history,
-      { role: "user", content: `REAL RESTAURANT DATA:\n${context}\n\nQuestion: ${query}` },
+      { role: "user", content: `SRINAGAR FACTS:\n${SRINAGAR_FACTS}\n\nREAL RESTAURANT DATA:\n${context}\n\nQuestion: ${query}` },
     ];
 
     try {
