@@ -116,7 +116,10 @@
   .method-note { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; font-size: 0.86rem; color: var(--muted); margin-top: 2.5rem; }
 
   footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.6rem 0 2.5rem; color: var(--muted); font-size: 0.86rem; }
+
+  .route-map { height: 420px; border-radius: 10px; margin: 0.8rem 0; z-index: 0; }
 </style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 
@@ -171,6 +174,7 @@
       </div>
       <p>IndiGo connects Amsterdam to Mumbai, not Delhi, so factor in a domestic leg if Delhi or further north is your real destination. As of now, that route is genuinely flying a widebody: a Boeing 787-9 wet-leased from Norse Atlantic Airways, tracked under Norse Atlantic's own ATC callsign (NBT22), not IndiGo's. But that arrangement has a shelf life, IndiGo confirmed in August 2026 it's winding the lease down, with its Delhi-London 787 service pausing from 25 October 2026 and widebody service not fully returning until its own A350s arrive in 2027. Some Europe routes may shift to the narrowbody A321XLR in the meantime, so check the aircraft type for your specific dates.</p>
       <p>Budget for one more thing: meals are typically included, but a blanket, pillow, and eye shade are a separate paid add-on you pre-book, not handed out free like on the legacy carriers below.</p>
+      <p>One underrated reason to fly IndiGo specifically: it has a real, ongoing codeshare with Turkish Airlines (in place since 2018, covering Mumbai among its Indian destinations), so if your direct flight gets cancelled or disrupted, there's a real fallback routing through Istanbul on the same ticket. I've used exactly this during a Middle East disruption, rerouted via Istanbul, no separate booking needed.</p>
     </div>
   </div>
 
@@ -196,36 +200,9 @@
   <div class="route-diagram">
     <h4>Why the "direct" flight still takes 9-10 hours</h4>
     <p class="sub">Both IndiGo's Mumbai flight and Air India's Delhi flight fly the same real corridor, verified against live flight tracking, not a straight line over Iran and Pakistan, but a longer detour south through Egypt and the Gulf.</p>
-    <svg viewBox="0 0 820 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flight path diagram from Amsterdam south through Vienna, Cairo, Riyadh, and Dubai, branching to Mumbai and Delhi">
-      <path d="M 60,50 C 150,80 190,90 230,105 C 300,130 340,150 380,175 C 440,200 480,205 520,200 C 570,193 610,190 650,192" fill="none" stroke="#2f6b4f" stroke-width="3" stroke-linecap="round"/>
-      <path d="M 650,192 C 690,193 720,205 748,222" fill="none" stroke="#2f6b4f" stroke-width="3" stroke-linecap="round"/>
-      <path d="M 650,192 C 685,175 715,150 748,120" fill="none" stroke="#2f6b4f" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/>
-      <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif">
-        <circle cx="60" cy="50" r="5" fill="#204b38"/>
-        <text x="60" y="34" font-size="13" font-weight="700" fill="#1c1c1c" text-anchor="middle">Amsterdam</text>
-
-        <circle cx="230" cy="105" r="4" fill="#666"/>
-        <text x="230" y="123" font-size="11" fill="#666" text-anchor="middle">Vienna</text>
-
-        <circle cx="380" cy="175" r="4" fill="#666"/>
-        <text x="380" y="193" font-size="11" fill="#666" text-anchor="middle">Cairo</text>
-
-        <circle cx="520" cy="200" r="4" fill="#666"/>
-        <text x="520" y="218" font-size="11" fill="#666" text-anchor="middle">Riyadh</text>
-
-        <circle cx="650" cy="192" r="4" fill="#666"/>
-        <text x="650" y="177" font-size="11" fill="#666" text-anchor="middle">Dubai</text>
-
-        <circle cx="748" cy="222" r="5" fill="#204b38"/>
-        <text x="748" y="240" font-size="13" font-weight="700" fill="#1c1c1c" text-anchor="middle">Mumbai</text>
-        <text x="748" y="255" font-size="9" fill="#2f6b4f" text-anchor="middle">IndiGo 6E22</text>
-
-        <circle cx="748" cy="120" r="5" fill="#204b38"/>
-        <text x="748" y="105" font-size="13" font-weight="700" fill="#1c1c1c" text-anchor="middle">Delhi</text>
-        <text x="748" y="90" font-size="9" fill="#2f6b4f" text-anchor="middle">Air India AI156</text>
-      </g>
-    </svg>
-    <p class="sub" style="margin-top:0.6rem;">The dotted line (Dubai to Delhi) is Air India's final leg; the solid line is the shared corridor and IndiGo's route into Mumbai. Both avoid a shorter path directly over Iran and Pakistan.</p>
+    <div id="routeMap" class="route-map"></div>
+    <p class="sub" style="margin-top:0.6rem;">Solid line: the shared corridor and IndiGo's route into Mumbai. Dashed line: Air India's final leg from the Gulf into Delhi.</p>
+    <p style="margin-top:0.8rem;">The real reason for the detour isn't just distance, it's airspace. Pakistan closed its airspace to all Indian-registered and Indian-operated aircraft in April 2025, and India closed its airspace to Pakistani carriers in return. That closure has been repeatedly extended since, with the latest notice keeping it in place through September 2026. Air India's own disclosures cite fuel costs up 29% on affected routes and some long-haul journeys stretched by as much as three hours because of it. Every direct Europe-India flight on an Indian carrier, IndiGo included, has to route around that closed airspace, which is exactly the southern detour through Egypt and the Gulf shown above.</p>
   </div>
 
   <div class="airline-card" id="lufthansa">
@@ -284,6 +261,54 @@
     <p>Part of <a href="/blogs/">Nabeel's Blog</a>, part of <a href="/">nabeelnisar.com</a>. <a href="/privacy-policy/">Privacy Policy</a></p>
   </div>
 </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function () {
+  var mapEl = document.getElementById('routeMap');
+  if (!mapEl || typeof L === 'undefined') return;
+
+  var map = L.map('routeMap', { scrollWheelZoom: false }).setView([32, 45], 3);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+    maxZoom: 10,
+  }).addTo(map);
+
+  var amsterdam = [52.31, 4.76];
+  var vienna = [48.11, 16.57];
+  var cairo = [30.06, 31.24];
+  var riyadh = [24.71, 46.68];
+  var dubai = [25.25, 55.36];
+  var mumbai = [19.09, 72.87];
+  var delhi = [28.56, 77.10];
+
+  var sharedCorridor = [amsterdam, vienna, cairo, riyadh, dubai];
+  var toMumbai = [dubai, mumbai];
+  var toDelhi = [dubai, delhi];
+
+  L.polyline(sharedCorridor, { color: '#2f6b4f', weight: 3 }).addTo(map);
+  L.polyline(toMumbai, { color: '#2f6b4f', weight: 3 }).addTo(map);
+  L.polyline(toDelhi, { color: '#2f6b4f', weight: 3, dashArray: '2 8' }).addTo(map);
+
+  var stops = [
+    { pos: amsterdam, label: 'Amsterdam' },
+    { pos: vienna, label: 'Vienna' },
+    { pos: cairo, label: 'Cairo' },
+    { pos: riyadh, label: 'Riyadh' },
+    { pos: dubai, label: 'Dubai' },
+    { pos: mumbai, label: 'Mumbai — IndiGo 6E22' },
+    { pos: delhi, label: 'Delhi — Air India AI156' },
+  ];
+  stops.forEach(function (s) {
+    L.circleMarker(s.pos, { radius: 5, color: '#204b38', fillColor: '#204b38', fillOpacity: 1 })
+      .addTo(map)
+      .bindTooltip(s.label, { permanent: false, direction: 'top' });
+  });
+
+  var bounds = L.latLngBounds(sharedCorridor.concat([mumbai, delhi]));
+  map.fitBounds(bounds, { padding: [24, 24] });
+})();
+</script>
 
 </body>
 </html>
