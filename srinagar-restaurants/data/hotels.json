@@ -1,0 +1,1154 @@
+[
+  {
+    "name": "ASH VALE",
+    "lat": 34.1329472,
+    "lng": 74.8775082,
+    "type": "hotel"
+  },
+  {
+    "name": "Aala Group Reidency",
+    "lat": 34.1042658,
+    "lng": 74.8289973,
+    "type": "hotel"
+  },
+  {
+    "name": "Adlife Luxury",
+    "lat": 34.0817912,
+    "lng": 74.8202438,
+    "type": "hotel"
+  },
+  {
+    "name": "Ahdoos Hotel",
+    "lat": 34.0725926,
+    "lng": 74.8191086,
+    "type": "hotel"
+  },
+  {
+    "name": "Ajaz",
+    "lat": 34.0871043,
+    "lng": 74.8294574,
+    "type": "guest_house"
+  },
+  {
+    "name": "Akbar Residency",
+    "lat": 34.0749435,
+    "lng": 74.8327914,
+    "type": "hotel"
+  },
+  {
+    "name": "Batra Hotel",
+    "lat": 34.0752663,
+    "lng": 74.8316416,
+    "type": "hotel"
+  },
+  {
+    "name": "Best View Resort",
+    "lat": 34.0877908,
+    "lng": 74.8347581,
+    "type": "guest_house"
+  },
+  {
+    "name": "Budshah Guest House",
+    "lat": 34.0718323,
+    "lng": 74.8075093,
+    "type": "hotel"
+  },
+  {
+    "name": "Butterfly",
+    "lat": 34.0843845,
+    "lng": 74.8232282,
+    "type": "hotel"
+  },
+  {
+    "name": "Chicago group of houseboats",
+    "lat": 34.0879182,
+    "lng": 74.8375673,
+    "type": "hotel"
+  },
+  {
+    "name": "Chinar Residency",
+    "lat": 34.1562729,
+    "lng": 74.8849151,
+    "type": "guest_house"
+  },
+  {
+    "name": "City Grace",
+    "lat": 34.0903335,
+    "lng": 74.820695,
+    "type": "hotel"
+  },
+  {
+    "name": "Comforts",
+    "lat": 34.0842088,
+    "lng": 74.8234673,
+    "type": "hotel"
+  },
+  {
+    "name": "Dal Fog",
+    "lat": 34.0811737,
+    "lng": 74.8289674,
+    "type": "guest_house"
+  },
+  {
+    "name": "Darussalam Restaurant & Inn",
+    "lat": 34.0782899,
+    "lng": 74.795104,
+    "type": "hotel"
+  },
+  {
+    "name": "Diplomat",
+    "lat": 34.0865464,
+    "lng": 74.8429859,
+    "type": "hotel"
+  },
+  {
+    "name": "Ennco Resorts",
+    "lat": 34.063598,
+    "lng": 74.8084702,
+    "type": "hotel"
+  },
+  {
+    "name": "Entrance Lalit Grand Palace",
+    "lat": 34.0803609,
+    "lng": 74.8603995,
+    "type": "hotel"
+  },
+  {
+    "name": "Fair Mount, Airport Road, Humhama Srinagar",
+    "lat": 34.0209839,
+    "lng": 74.7711454,
+    "type": "hotel"
+  },
+  {
+    "name": "Fortune Resorts Heevan",
+    "lat": 34.135472,
+    "lng": 74.8760238,
+    "type": "hotel"
+  },
+  {
+    "name": "Four Points By Sheraton",
+    "lat": 34.0675776,
+    "lng": 74.8443691,
+    "type": "hotel"
+  },
+  {
+    "name": "Fouzia",
+    "lat": 34.0861966,
+    "lng": 74.8296384,
+    "type": "guest_house"
+  },
+  {
+    "name": "Gafoora Lake View Guest House",
+    "lat": 34.1148391,
+    "lng": 74.8797035,
+    "type": "guest_house"
+  },
+  {
+    "name": "Grand Valley Inn",
+    "lat": 34.1446496,
+    "lng": 74.873778,
+    "type": "hotel"
+  },
+  {
+    "name": "Green Hill",
+    "lat": 34.0838796,
+    "lng": 74.8383109,
+    "type": "hotel"
+  },
+  {
+    "name": "HOTEL GRAND ALDEN",
+    "lat": 34.0694282,
+    "lng": 74.8465292,
+    "type": "hotel"
+  },
+  {
+    "name": "Hamzah Hills",
+    "lat": 34.1379391,
+    "lng": 74.8770279,
+    "type": "hotel"
+  },
+  {
+    "name": "HeemalHotel Heemal",
+    "lat": 34.0819524,
+    "lng": 74.8339882,
+    "type": "hotel"
+  },
+  {
+    "name": "Hilal Palace",
+    "lat": 34.0855034,
+    "lng": 74.8286296,
+    "type": "guest_house"
+  },
+  {
+    "name": "Hill Site",
+    "lat": 34.0845291,
+    "lng": 74.8388536,
+    "type": "hotel"
+  },
+  {
+    "name": "Holiday Inn",
+    "lat": 34.0833885,
+    "lng": 74.835263,
+    "type": "hotel"
+  },
+  {
+    "name": "Holiday Villa",
+    "lat": 34.0894593,
+    "lng": 74.822257,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Akbar",
+    "lat": 34.0816536,
+    "lng": 74.8298558,
+    "type": "guest_house"
+  },
+  {
+    "name": "Hotel Apna Ghar",
+    "lat": 34.0831997,
+    "lng": 74.8209305,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Arjumand",
+    "lat": 34.0807457,
+    "lng": 74.8285329,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Asian Park",
+    "lat": 34.0813941,
+    "lng": 74.8184017,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Azhar",
+    "lat": 34.0875387,
+    "lng": 74.811625,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Broadway",
+    "lat": 34.0754898,
+    "lng": 74.8224416,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Burge Green OYO",
+    "lat": 34.0694382,
+    "lng": 74.783944,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Burj",
+    "lat": 34.0950381,
+    "lng": 74.8205213,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Burj",
+    "lat": 34.0948864,
+    "lng": 74.8206073,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel City Grace",
+    "lat": 34.0907842,
+    "lng": 74.8212556,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Comrade Inn",
+    "lat": 34.065423,
+    "lng": 74.8223165,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Dar-Es-Salam",
+    "lat": 34.1136513,
+    "lng": 74.8364373,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Darbar And Restaurant",
+    "lat": 34.0762762,
+    "lng": 74.8302158,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Dawar Heevon",
+    "lat": 34.0883793,
+    "lng": 74.8430791,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Deewan Khan",
+    "lat": 34.0388486,
+    "lng": 74.7971798,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Downtown",
+    "lat": 34.0850857,
+    "lng": 74.8202318,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Golden Tulip",
+    "lat": 34.042139,
+    "lng": 74.788746,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Grand Habib",
+    "lat": 34.0680806,
+    "lng": 74.8319197,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Grand Habib",
+    "lat": 34.0681364,
+    "lng": 74.8318137,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Grand Mahal",
+    "lat": 34.141125,
+    "lng": 74.8767187,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Grand Mamta",
+    "lat": 34.0836586,
+    "lng": 74.8254313,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Grand Mumtaz",
+    "lat": 34.0763251,
+    "lng": 74.8220983,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Grand Rayan",
+    "lat": 34.0446451,
+    "lng": 74.7893502,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Grand Tulip",
+    "lat": 34.0419487,
+    "lng": 74.7886739,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Heidi",
+    "lat": 34.1539408,
+    "lng": 74.8878743,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Heritage Luxury",
+    "lat": 34.0344473,
+    "lng": 74.7846405,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Hillside",
+    "lat": 34.1047124,
+    "lng": 74.8311399,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel International",
+    "lat": 34.0729195,
+    "lng": 74.8369526,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Jahangir",
+    "lat": 34.0717439,
+    "lng": 74.8049103,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Lake Avenue",
+    "lat": 34.117511,
+    "lng": 74.8816804,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Maharaja",
+    "lat": 34.0811005,
+    "lng": 74.8281934,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Malik",
+    "lat": 34.082707,
+    "lng": 74.8340939,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Malik Palace",
+    "lat": 34.0808306,
+    "lng": 74.8305331,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Marhaba United",
+    "lat": 34.0858773,
+    "lng": 74.8189181,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Mount Inn",
+    "lat": 34.084434,
+    "lng": 74.8388168,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel New Al Humza Iqbal Market Karan Nagar",
+    "lat": 34.0792408,
+    "lng": 74.7995782,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel New Park",
+    "lat": 34.0844928,
+    "lng": 74.8374674,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel New Rigadoon",
+    "lat": 34.081424,
+    "lng": 74.8276887,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel New Sahil",
+    "lat": 34.0166343,
+    "lng": 74.80971,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Nishat View OYO",
+    "lat": 34.1408539,
+    "lng": 74.876629,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Opera Inn",
+    "lat": 34.0819348,
+    "lng": 74.7854869,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Pacific",
+    "lat": 34.0819612,
+    "lng": 74.8270627,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Paradise",
+    "lat": 34.0823945,
+    "lng": 74.8334731,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Pine Spring",
+    "lat": 34.0805442,
+    "lng": 74.8297472,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Rocks",
+    "lat": 34.0748654,
+    "lng": 74.8328101,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Royal Bahar",
+    "lat": 34.0835573,
+    "lng": 74.8217475,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Royal Batoo",
+    "lat": 34.0843685,
+    "lng": 74.8238496,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Royal Inn",
+    "lat": 34.0821043,
+    "lng": 74.8272414,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Royal Park",
+    "lat": 34.025945,
+    "lng": 74.8217447,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Royal Samad",
+    "lat": 34.0803147,
+    "lng": 74.820117,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Sadaf",
+    "lat": 34.0745422,
+    "lng": 74.8147759,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Season Palace",
+    "lat": 34.0862228,
+    "lng": 74.8430969,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Shah Abas",
+    "lat": 34.0852205,
+    "lng": 74.838721,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Shefaf",
+    "lat": 34.0993112,
+    "lng": 74.8229961,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Six Season",
+    "lat": 34.0287706,
+    "lng": 74.8306712,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Snow Land",
+    "lat": 34.0807251,
+    "lng": 74.8352711,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Snow Palace",
+    "lat": 34.0676978,
+    "lng": 74.8286012,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Sobo Central Restaurant OYO",
+    "lat": 34.0999319,
+    "lng": 74.7690702,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Solar Residency",
+    "lat": 34.0678946,
+    "lng": 74.8339184,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Solomon Heights",
+    "lat": 34.0696404,
+    "lng": 74.8431609,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Sterling",
+    "lat": 34.0657151,
+    "lng": 74.8250708,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Sun Shine",
+    "lat": 34.0828946,
+    "lng": 74.8345176,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Sunrise Lal Mandi",
+    "lat": 34.0665328,
+    "lng": 74.8106693,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Taj",
+    "lat": 34.0719691,
+    "lng": 74.8093988,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel The Chocolate Box",
+    "lat": 34.0871677,
+    "lng": 74.8413151,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel The Relax OYO",
+    "lat": 34.0873481,
+    "lng": 74.8227537,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel The Residency",
+    "lat": 34.0724724,
+    "lng": 74.8194288,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Town Centre",
+    "lat": 34.0780122,
+    "lng": 74.7990091,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Tramboo Continental",
+    "lat": 34.0806835,
+    "lng": 74.8303839,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Vilasta",
+    "lat": 34.0627185,
+    "lng": 74.8267191,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Zabarvan",
+    "lat": 34.0817301,
+    "lng": 74.8319962,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Zam Zam",
+    "lat": 34.0506475,
+    "lng": 74.8053769,
+    "type": "hotel"
+  },
+  {
+    "name": "Hotel Zamarud",
+    "lat": 34.083359,
+    "lng": 74.8352702,
+    "type": "hotel"
+  },
+  {
+    "name": "House Boat Romeo",
+    "lat": 34.0683456,
+    "lng": 74.8110118,
+    "type": "guest_house"
+  },
+  {
+    "name": "Houseboat Mavis",
+    "lat": 34.0863862,
+    "lng": 74.8322299,
+    "type": "guest_house"
+  },
+  {
+    "name": "Houseboat Movieland",
+    "lat": 34.0863429,
+    "lng": 74.8323055,
+    "type": "guest_house"
+  },
+  {
+    "name": "Houseboat Young Life",
+    "lat": 34.0856088,
+    "lng": 74.8354052,
+    "type": "hotel"
+  },
+  {
+    "name": "Humza",
+    "lat": 34.0845307,
+    "lng": 74.8388173,
+    "type": "hotel"
+  },
+  {
+    "name": "Iqbal",
+    "lat": 34.0754056,
+    "lng": 74.8336517,
+    "type": "guest_house"
+  },
+  {
+    "name": "Jamal Resorts",
+    "lat": 34.1341701,
+    "lng": 74.8758862,
+    "type": "hotel"
+  },
+  {
+    "name": "John Friends House",
+    "lat": 34.0829947,
+    "lng": 74.8295536,
+    "type": "guest_house"
+  },
+  {
+    "name": "Kabir",
+    "lat": 34.0870428,
+    "lng": 74.8445189,
+    "type": "hotel"
+  },
+  {
+    "name": "Kashmir Mahal Resorts",
+    "lat": 34.1284659,
+    "lng": 74.8792367,
+    "type": "hotel"
+  },
+  {
+    "name": "King Soleman",
+    "lat": 34.0703478,
+    "lng": 74.8320061,
+    "type": "guest_house"
+  },
+  {
+    "name": "King's Palace",
+    "lat": 34.0868834,
+    "lng": 74.8442003,
+    "type": "hotel"
+  },
+  {
+    "name": "Kohlees",
+    "lat": 34.0749411,
+    "lng": 74.832659,
+    "type": "hotel"
+  },
+  {
+    "name": "Krimson",
+    "lat": 34.0374664,
+    "lng": 74.794217,
+    "type": "hotel"
+  },
+  {
+    "name": "Lake Victoria Houseboats",
+    "lat": 34.0880576,
+    "lng": 74.8360354,
+    "type": "hotel"
+  },
+  {
+    "name": "Lake Victoria houseboats",
+    "lat": 34.0859338,
+    "lng": 74.8341643,
+    "type": "hotel"
+  },
+  {
+    "name": "Lee Heritage",
+    "lat": 34.0708239,
+    "lng": 74.8137043,
+    "type": "hotel"
+  },
+  {
+    "name": "Lemon Tree",
+    "lat": 34.0687931,
+    "lng": 74.8382014,
+    "type": "hotel"
+  },
+  {
+    "name": "Lone Star Hotel",
+    "lat": 34.0427675,
+    "lng": 74.8003277,
+    "type": "hotel"
+  },
+  {
+    "name": "Madhuban",
+    "lat": 34.0875342,
+    "lng": 74.844467,
+    "type": "hotel"
+  },
+  {
+    "name": "Malik Palace",
+    "lat": 34.0808835,
+    "lng": 74.8302799,
+    "type": "hotel"
+  },
+  {
+    "name": "Manora Palace",
+    "lat": 34.0864192,
+    "lng": 74.8428642,
+    "type": "hotel"
+  },
+  {
+    "name": "Miss America House Boat",
+    "lat": 34.0888273,
+    "lng": 74.8377701,
+    "type": "guest_house"
+  },
+  {
+    "name": "Monson",
+    "lat": 34.0879627,
+    "lng": 74.8315354,
+    "type": "hotel"
+  },
+  {
+    "name": "Mumtaz Hotel",
+    "lat": 34.0701128,
+    "lng": 74.8038044,
+    "type": "hotel"
+  },
+  {
+    "name": "My Kashmir Home",
+    "lat": 34.1366386,
+    "lng": 74.8758304,
+    "type": "hotel"
+  },
+  {
+    "name": "Nagin Lake Houseboat",
+    "lat": 34.1156932,
+    "lng": 74.8294934,
+    "type": "hotel"
+  },
+  {
+    "name": "Nagsh Residency",
+    "lat": 34.1437068,
+    "lng": 74.8746337,
+    "type": "hotel"
+  },
+  {
+    "name": "New Guest House",
+    "lat": 34.1266795,
+    "lng": 74.8407367,
+    "type": "guest_house"
+  },
+  {
+    "name": "New Heaven Canal Guesthouse",
+    "lat": 34.0867268,
+    "lng": 74.8283007,
+    "type": "guest_house"
+  },
+  {
+    "name": "New Kashmir Houseboat",
+    "lat": 34.085903,
+    "lng": 74.8318999,
+    "type": "guest_house"
+  },
+  {
+    "name": "New Mountain View",
+    "lat": 34.0673992,
+    "lng": 74.8305018,
+    "type": "guest_house"
+  },
+  {
+    "name": "New Princess",
+    "lat": 34.0862297,
+    "lng": 74.8300292,
+    "type": "guest_house"
+  },
+  {
+    "name": "New Sea Palace Houseboats",
+    "lat": 34.0889062,
+    "lng": 74.8382406,
+    "type": "hotel"
+  },
+  {
+    "name": "New Zeenath",
+    "lat": 34.0810677,
+    "lng": 74.8287426,
+    "type": "guest_house"
+  },
+  {
+    "name": "Noor",
+    "lat": 34.0812121,
+    "lng": 74.8290618,
+    "type": "guest_house"
+  },
+  {
+    "name": "OYO German Residency",
+    "lat": 34.084488,
+    "lng": 74.8195431,
+    "type": "hotel"
+  },
+  {
+    "name": "OYO Hotel Azad",
+    "lat": 34.084994,
+    "lng": 74.8196629,
+    "type": "hotel"
+  },
+  {
+    "name": "OYO Hotel Essar",
+    "lat": 34.0652669,
+    "lng": 74.8032768,
+    "type": "hotel"
+  },
+  {
+    "name": "Orania",
+    "lat": 34.1393053,
+    "lng": 74.8841999,
+    "type": "hotel"
+  },
+  {
+    "name": "Paradise Gateway",
+    "lat": 34.133473,
+    "lng": 74.8765953,
+    "type": "hotel"
+  },
+  {
+    "name": "Parimahal",
+    "lat": 34.0809935,
+    "lng": 74.8305772,
+    "type": "hotel"
+  },
+  {
+    "name": "Pleasure",
+    "lat": 34.0835837,
+    "lng": 74.8243697,
+    "type": "hotel"
+  },
+  {
+    "name": "Pride Continental",
+    "lat": 34.0817768,
+    "lng": 74.8321049,
+    "type": "hotel"
+  },
+  {
+    "name": "Quebec Houseboat",
+    "lat": 34.0873783,
+    "lng": 74.8359978,
+    "type": "hotel"
+  },
+  {
+    "name": "Rachna",
+    "lat": 34.0874508,
+    "lng": 74.8444364,
+    "type": "hotel"
+  },
+  {
+    "name": "Raj Palace",
+    "lat": 34.0857575,
+    "lng": 74.8290606,
+    "type": "guest_house"
+  },
+  {
+    "name": "Rose Petal Srinagar",
+    "lat": 34.0674237,
+    "lng": 74.8223722,
+    "type": "hotel"
+  },
+  {
+    "name": "Royal Batoo",
+    "lat": 34.0841376,
+    "lng": 74.8237305,
+    "type": "hotel"
+  },
+  {
+    "name": "Royal Boulevard",
+    "lat": 34.0829491,
+    "lng": 74.837486,
+    "type": "hotel"
+  },
+  {
+    "name": "Royal Comfort Regency",
+    "lat": 34.0881624,
+    "lng": 74.8435086,
+    "type": "hotel"
+  },
+  {
+    "name": "Ruby Hotel",
+    "lat": 34.0719171,
+    "lng": 74.8168716,
+    "type": "hotel"
+  },
+  {
+    "name": "Saleem",
+    "lat": 34.0821475,
+    "lng": 74.829664,
+    "type": "guest_house"
+  },
+  {
+    "name": "Shabir",
+    "lat": 34.0853603,
+    "lng": 74.828339,
+    "type": "guest_house"
+  },
+  {
+    "name": "Shafaaf Plaza",
+    "lat": 34.1432872,
+    "lng": 74.8747741,
+    "type": "hotel"
+  },
+  {
+    "name": "Shagoo",
+    "lat": 34.093475,
+    "lng": 74.843125,
+    "type": "guest_house"
+  },
+  {
+    "name": "Shagoo house",
+    "lat": 34.093376,
+    "lng": 74.8430546,
+    "type": "guest_house"
+  },
+  {
+    "name": "Shahenshak Palace",
+    "lat": 34.0809558,
+    "lng": 74.8305158,
+    "type": "hotel"
+  },
+  {
+    "name": "Shaneel Residency",
+    "lat": 34.0836527,
+    "lng": 74.8243133,
+    "type": "hotel"
+  },
+  {
+    "name": "Sharjah",
+    "lat": 34.0847271,
+    "lng": 74.8227716,
+    "type": "hotel"
+  },
+  {
+    "name": "Shining Star",
+    "lat": 34.0860444,
+    "lng": 74.8294844,
+    "type": "guest_house"
+  },
+  {
+    "name": "Sona Palace",
+    "lat": 34.0857673,
+    "lng": 74.8290791,
+    "type": "guest_house"
+  },
+  {
+    "name": "Stars Queen",
+    "lat": 34.0819525,
+    "lng": 74.8297722,
+    "type": "guest_house"
+  },
+  {
+    "name": "Sultan P.Guest House",
+    "lat": 34.0851769,
+    "lng": 74.8229574,
+    "type": "guest_house"
+  },
+  {
+    "name": "Sultan Residence",
+    "lat": 34.1134813,
+    "lng": 74.8369593,
+    "type": "hotel"
+  },
+  {
+    "name": "Sun n Sun",
+    "lat": 34.0833504,
+    "lng": 74.835227,
+    "type": "hotel"
+  },
+  {
+    "name": "Sunshine Inn",
+    "lat": 34.0812751,
+    "lng": 74.8292792,
+    "type": "guest_house"
+  },
+  {
+    "name": "Swiss Hotel",
+    "lat": 34.0868127,
+    "lng": 74.8444824,
+    "type": "hotel"
+  },
+  {
+    "name": "Swiss Hotel",
+    "lat": 34.0867516,
+    "lng": 74.8446929,
+    "type": "hotel"
+  },
+  {
+    "name": "The Countryside Resots",
+    "lat": 34.0354638,
+    "lng": 74.8640084,
+    "type": "hotel"
+  },
+  {
+    "name": "The Kausar Hotel and Restaurant",
+    "lat": 34.0610077,
+    "lng": 74.8176318,
+    "type": "hotel"
+  },
+  {
+    "name": "The Lalit Grand Palace Srinagar",
+    "lat": 34.0802064,
+    "lng": 74.8652634,
+    "type": "hotel"
+  },
+  {
+    "name": "The Shehanshah Palace",
+    "lat": 34.0811271,
+    "lng": 74.8308566,
+    "type": "hotel"
+  },
+  {
+    "name": "The Valley View Hotel",
+    "lat": 34.0826601,
+    "lng": 74.7974848,
+    "type": "hotel"
+  },
+  {
+    "name": "Tramboo Continental",
+    "lat": 34.0805479,
+    "lng": 74.8299469,
+    "type": "hotel"
+  },
+  {
+    "name": "Tramboo Continental",
+    "lat": 34.0809543,
+    "lng": 74.8286379,
+    "type": "hotel"
+  },
+  {
+    "name": "Triden Kashmir Resort",
+    "lat": 34.1452129,
+    "lng": 74.8374684,
+    "type": "hotel"
+  },
+  {
+    "name": "Tukfash",
+    "lat": 34.0820909,
+    "lng": 74.8296659,
+    "type": "guest_house"
+  },
+  {
+    "name": "Victoria Palace",
+    "lat": 34.0866331,
+    "lng": 74.8426784,
+    "type": "hotel"
+  },
+  {
+    "name": "Vivanta by Taj",
+    "lat": 34.1023074,
+    "lng": 74.88162,
+    "type": "hotel"
+  },
+  {
+    "name": "Welcome Hotel",
+    "lat": 34.083385,
+    "lng": 74.8352968,
+    "type": "hotel"
+  },
+  {
+    "name": "Welcome Reaidency",
+    "lat": 34.0628614,
+    "lng": 74.8457749,
+    "type": "hotel"
+  },
+  {
+    "name": "Yasmin Resort",
+    "lat": 34.0206898,
+    "lng": 74.7983833,
+    "type": "hotel"
+  },
+  {
+    "name": "Zabarwan Guest House",
+    "lat": 34.1343265,
+    "lng": 74.8400567,
+    "type": "guest_house"
+  },
+  {
+    "name": "ehsan guesthouse",
+    "lat": 34.0966133,
+    "lng": 74.8313575,
+    "type": "guest_house"
+  },
+  {
+    "name": "jalazad house boat",
+    "lat": 34.0708123,
+    "lng": 74.8274828,
+    "type": "hotel"
+  }
+]

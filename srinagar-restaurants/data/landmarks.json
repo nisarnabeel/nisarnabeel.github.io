@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Dal Lake",
+    "lat": 34.0934876,
+    "lng": 74.8410779,
+    "type": "lake"
+  },
+  {
+    "name": "Jhelum River",
+    "lat": 34.0824511,
+    "lng": 74.8063565,
+    "type": "river"
+  },
+  {
+    "name": "Nishat Bagh",
+    "lat": 34.1251962,
+    "lng": 74.8815649,
+    "type": "garden"
+  },
+  {
+    "name": "Shalimar Bagh",
+    "lat": 34.1495805,
+    "lng": 74.8729526,
+    "type": "garden"
+  },
+  {
+    "name": "Chashme Shahi",
+    "lat": 34.0858234,
+    "lng": 74.8867829,
+    "type": "garden"
+  },
+  {
+    "name": "Pari Mahal",
+    "lat": 34.0809483,
+    "lng": 74.8768189,
+    "type": "historic site"
+  },
+  {
+    "name": "Indira Gandhi Memorial Tulip Garden",
+    "lat": 34.0966884,
+    "lng": 74.8808794,
+    "type": "garden"
+  },
+  {
+    "name": "Jawaharlal Nehru Memorial Botanical Garden",
+    "lat": 34.0913354,
+    "lng": 74.8822323,
+    "type": "garden"
+  },
+  {
+    "name": "Shankaracharya Temple",
+    "lat": 34.0789037,
+    "lng": 74.8435948,
+    "type": "temple"
+  },
+  {
+    "name": "Dargah Hazratbal",
+    "lat": 34.1289619,
+    "lng": 74.8425283,
+    "type": "shrine"
+  },
+  {
+    "name": "Naseem Bagh",
+    "lat": 34.1380127,
+    "lng": 74.8382954,
+    "type": "garden"
+  },
+  {
+    "name": "Lal Chowk",
+    "lat": 34.0712565,
+    "lng": 74.8104927,
+    "type": "city center"
+  }
+]
